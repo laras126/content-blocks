@@ -12,10 +12,10 @@ Since the included starter theme is pretty bare, I slapped this together with so
 
 1. Install the [Timber plugin](https://github.com/jarednova/timber/)
 2. Clone this repo into wp-content/themes
-3. Rename the 'simple-sassy-starter' directory to 'assets'*
+3. Rename the 'simple-sassy-starter' directory to 'assets' (Note below)
 4. ```npm install```
 5. Enqueue main.css and scripts.js (this is something I will include in here, but haven't yet)
-5. ```grunt watch```
-6. Code!
+6. ```grunt watch```
+7. Code!
 
-* The assets folder is a submodule of Simple Sassy Starter, but assets is a more sensible folder name. You might want to remove the submodule by [doing this](http://stackoverflow.com/questions/1260748/remove-a-git-submodule), since once you start coding Sass you won't want to pull from the repo.
+Note: The assets folder is a submodule of Simple Sassy Starter, but assets is a more sensible folder name. You might want to remove the submodule by [doing this](http://stackoverflow.com/questions/1260748/remove-a-git-submodule), since once you start coding Sass you won't want to pull from the repo.
