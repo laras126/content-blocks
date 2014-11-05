@@ -43,10 +43,7 @@ module.exports = function(grunt) {
               require: 'breakpoint-slicer'
             },
             files: {
-                'assets/css/main.css': 'assets/scss/main.scss',
-                // 'assets/css/main-Press.min.css': 'assets/scss/main-Press.scss',
-                // 'assets/css/main-Pixel.min.css': 'assets/scss/main-Pixel.scss',
-                // 'assets/css/main-PressPlay.min.css': 'assets/scss/main-PressPlay.scss',
+                'assets/css/main.css': 'assets/scss/main.scss'
             }
           }
         },
@@ -65,8 +62,6 @@ module.exports = function(grunt) {
         watch: {
             scripts: {
                 files: ['assets/js/*.js', 'assets/**/*.scss'],
-                // Add 'svgstore' here when the include issue is figured out
-                // http://css-tricks.com/svg-sprites-use-better-icon-fonts/
                 tasks: ['concat', 'uglify', 'sass'],
                 options: {
                     spawn: false,
@@ -74,9 +69,7 @@ module.exports = function(grunt) {
             },
 
             sass: {
-                files: ['assets/css/*.scss'],
-                files: ['assets/css/*/*.scss'],
-                files: ['assets/css/*/*.scss'],
+                files: ['assets/css/*.scss', 'assets/css/*/*.scss'],
                 tasks: ['compass'],
                 options: {
                     spawn: false,
@@ -90,11 +83,10 @@ module.exports = function(grunt) {
 		          livereload: true
 		        },
 		        files: [
-		          'assets/css/main.css',
-		          'assets/js/build/scripts.js',
-		          'templates/*.html',
-              'templates/*/*.html',
-		          '*.php'
+                    'assets/css/main.css',
+                    'assets/js/build/scripts.js',
+                    'templates/*/*.html',
+                    '*.twig'
 		        ]
 		    },
 
@@ -112,16 +104,13 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify' );
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-sass');
-    // grunt.loadNpmTasks('grunt-svgstore');
     
     // Register tasks
-      grunt.registerTask('default', [
+    grunt.registerTask('default', [
         'sass',
-        'uglify'
-      ]);
-
-      grunt.registerTask('dev', [
-        'watch'
+        'concat',
+        'uglify',
+        'jshint'
       ]);
 
 };
