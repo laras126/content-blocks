@@ -1,6 +1,6 @@
 {
   "name": "timber-starter-kit",
-  "version": "0.0.0",
+  "version": "1.2",
   "description": "The Timber starter theme with Sass and Grunt.",
   "main": "index.php",
   "scripts": {
