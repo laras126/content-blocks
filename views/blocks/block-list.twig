@@ -1,0 +1,50 @@
+{% extends "blocks/block.twig" %}
+
+{# List Block #}
+
+{% block content %}
+
+	{% set type = blck.list_type %}
+	{% set display = blck.list_display %}
+
+	{% if type == 'artifacts' %}
+		{% set list = blck.connected_artifacts %}
+	{% elseif type == 'free_form' %}
+		{% set list = blck.freeform_items %}
+	{% endif %}
+
+	{% if blck.list_title %}
+		<div class="inner-squish decor-wrap">
+			<h4 class="list-title decor"><span>{{blck.list_title}}</span></h4>	
+		</div>
+	{% endif %}
+
+	<ul class="list list-{{display}} list-{{list|length}}">
+
+		{% for item in list %}
+			<li>
+				<div class="item-support">
+					{% if item.image %}
+						<img class="lazy" data-original="{{TimberImage(item.image).src('medium')}}" src="{{site.theme.link}}/assets/img/util/loader.gif" width="300" alt="{{item.post_title}}" alt="{{item.post_title}}"/>
+						<noscript><img src="{{TimberImage(item.image).src('medium')}}" alt="{{item.post_title}}" height="200" width="200"></noscript>
+					{% endif %}
+				</div>
+				<div class="item-main">
+					{% if type == 'artifacts' %}
+						<h5 class="item-title">{{item.post_title}}</h5>
+						<p>{{item.short_description}}</p>
+					{% elseif type == 'free_form' %}
+						<h5 class="item-title">{{item.item_title}}</h5>
+						<p>{{item.description}}</p>
+						{% for related in item.related_content %}
+							{{related.link}}
+							<p><a href="{{related.link}}" title="{{related.post_title}}">Read more on our {{related.post_title}} page.</a></p>
+						{% endfor %}
+					{% endif %}
+				</div>
+			</li>
+		{% endfor %}
+			
+	</ul> <!-- /.list-{{display}} -->
+
+{% endblock %}

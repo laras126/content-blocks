@@ -1,0 +1,207 @@
+{
+    "key": "group_54b843e095d4c",
+    "title": "Homepage Content",
+    "fields": [
+        {
+            "key": "field_54b84ee29a6c8",
+            "label": "Services Subheader",
+            "name": "services_subheader",
+            "prefix": "",
+            "type": "text",
+            "instructions": "A catchy, intro title like \"How can we help you?\".",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_54b84ef89a6c9",
+            "label": "Services Lead",
+            "name": "services_lead",
+            "prefix": "",
+            "type": "textarea",
+            "instructions": "A sentence introducing the services below:",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 2,
+            "new_lines": "br",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_54b843eda5e2e",
+            "label": "Homepage Services",
+            "name": "homepage_services",
+            "prefix": "",
+            "type": "repeater",
+            "instructions": "Add services to the homepage. They will display in a row of four, similar to the \"Major\" list view.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "min": "",
+            "max": "",
+            "layout": "table",
+            "button_label": "Add Row",
+            "sub_fields": [
+                {
+                    "key": "field_54b8442aa5e2f",
+                    "label": "Service Name",
+                    "name": "service_name",
+                    "prefix": "",
+                    "type": "text",
+                    "instructions": "Photo Scans, Audio Transfer, Video, etc.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_54b84439a5e30",
+                    "label": "Service Image",
+                    "name": "service_image",
+                    "prefix": "",
+                    "type": "image",
+                    "instructions": "Upload a square image to represent the service. Should be at least 300 x 300, and not much bigger. ",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "thumbnail",
+                    "library": "all"
+                },
+                {
+                    "key": "field_54b84493a5e31",
+                    "label": "Service Description",
+                    "name": "service_description",
+                    "prefix": "",
+                    "type": "textarea",
+                    "instructions": "A tweet length description of the service.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": "",
+                    "new_lines": "br",
+                    "readonly": 0,
+                    "disabled": 0
+                },
+                {
+                    "key": "field_54b844bfa5e32",
+                    "label": "Linked Service",
+                    "name": "linked_service",
+                    "prefix": "",
+                    "type": "page_link",
+                    "instructions": "Select the associated service to link to.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "dfi_service"
+                    ],
+                    "taxonomy": "",
+                    "allow_null": 0,
+                    "multiple": 0
+                }
+            ]
+        },
+        {
+            "key": "field_54b850154d097",
+            "label": "Questions Prompt",
+            "name": "questions_prompt",
+            "prefix": "",
+            "type": "text",
+            "instructions": "The text displaying below the \"Questions? (646) 519-2447\".",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_type",
+                "operator": "==",
+                "value": "front_page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content",
+        "excerpt",
+        "custom_fields",
+        "discussion",
+        "comments",
+        "revisions",
+        "slug",
+        "author",
+        "format",
+        "page_attributes",
+        "featured_image",
+        "categories",
+        "tags",
+        "send-trackbacks"
+    ],
+    "modified": 1421365386
+}

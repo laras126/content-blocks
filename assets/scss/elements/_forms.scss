@@ -1,0 +1,172 @@
+
+
+// -----
+// Form styles
+// -----
+
+// Remove the blue outline from Chrome
+*:focus {
+    outline: 0;
+}
+
+label, select {
+	// display: block;
+}
+
+label {
+	margin-top: $h4;
+	margin-bottom: $sml/2;
+	font-family: $form-font;
+}
+
+input[type="search"] {
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	-webkit-appearance: textfield;
+	box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {
+	-webkit-appearance: none;
+}
+
+textarea {
+	overflow: auto;
+	vertical-align: top;
+}
+
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"] {
+	
+	width: 100%;
+	@extend %form-base;
+	border: $accent-border;
+
+	&:focus {
+		border-color: $alert-info;
+		background-color: $white;
+	}
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+	margin: 4px 0 0;
+	margin-right: $sml/2;
+	margin-top: 1px \9;
+	*margin-top: 0;
+	line-height: normal;
+	cursor: pointer;
+}
+
+input[type="file"],
+input[type="image"],
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type="radio"],
+input[type="checkbox"] {
+}
+
+input[type="submit"],
+button {
+	@extend %btn;
+}
+
+
+select,
+input[type="file"] {
+	*margin-top: 4px; /* In IE7, the height of the select element cannot be changed by height, only font-size */
+}
+
+select:focus,
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+	outline: $accent-border;
+	outline: 5px auto -webkit-focus-ring-color;
+	outline-offset: -2px;
+}
+
+fieldset {
+	border: 0;
+}
+
+
+
+// ----
+// Gravity forms
+// ----
+
+
+.gform_fields {
+	padding: 0;
+	margin: 0;	
+}
+
+.gfield_label {
+	@include meta;
+	@include upperspace;
+	font-weight: 700;
+	margin-bottom: $sml/2;
+}
+
+.gfield,
+.gfield_checkbox {
+	@extend %unstyle-list;
+	margin-top: $sml;	
+}
+
+.dfi-field-name {
+	@include make-md-column((7/2));
+
+	&:first-child {
+		padding-left: 0;
+	}
+
+	.ginput_left,
+	.ginput_right {
+		@include make-sm-column((7/2), false);
+	}
+}
+
+.dfi-field-email {
+	@include make-md-column((7/2), false);
+}
+
+.gform_footer,
+.dfi-field-message,
+.dfi-field-signup {
+	@include make-xs-column(7, false);
+}
+
+.gfield_description,
+.gfield_checkbox label  {
+	@extend %meta;
+}
+
+.gform_footer {
+	margin-top: $h3;
+}
+
+.ginput_complex label{
+	@extend %meta-light;
+	@include upperspace;
+	
+	margin-top: $sml/2;
+	margin-bottom: $sml;
+	font-weight: 400;
+}
+

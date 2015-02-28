@@ -1,0 +1,39 @@
+
+// ----
+// Generate Utility Classes
+// ----
+
+@for $i from 1 to $grid-columns {
+    .col-xs-#{$i} { @include make-xs-column($i); }
+    .col-xs-push-#{$i} { @include make-xs-column-push($i); }
+    .col-xs-pull-#{$i} { @include make-xs-column-pull($i); }
+    // .col-xs-#{$i}-offset { @include make-xs-column-offset($i); }
+    .col-xs-#{$i}-np { @include make-xs-column($i, 0); }
+
+}
+@for $i from 1 to $grid-columns {
+    .col-sm-#{$i} { @include make-sm-column($i); }
+    .col-sm-push-#{$i} { @include make-sm-column-push($i); }
+    .col-sm-pull-#{$i} { @include make-sm-column-pull($i); }
+    .col-sm-offset-#{$i} { @include make-sm-column-offset($i); }
+    .col-sm-#{$i}-np { @include make-sm-column($i, 0); }
+}
+@for $i from 1 to $grid-columns {
+    .col-md-#{$i} { @include make-md-column($i); }
+    .col-md-push-#{$i} { @include make-md-column-push($i); }
+    .col-md-#{$i}-pull { @include make-md-column-pull($i); }
+    .col-md-#{$i}-np { @include make-md-column($i, 0); }
+    // .col-md-#{$i}-offset { @include make-md-column-offset($i); }
+}
+@for $i from 1 to $grid-columns {
+    .col-lg-#{$i} { @include make-lg-column($i); }
+    .col-lg-push-#{$i} { @include make-lg-column-push($i); }
+    .col-lg-pull-#{$i} { @include make-lg-column-pull($i); }
+    .col-lg-#{$i}-np { @include make-lg-column($i, 0); }
+
+    .col-lg-offset-#{$i} { @include make-lg-column-offset($i); }
+}
+
+
+
+

@@ -1,0 +1,304 @@
+
+/*  
+
+Harry Roberts says:
+
+"Only use @extend when the rulesets that you are trying 
+to DRY out are inherently and thematically related."
+
+- http://csswizardry.com/2014/11/when-to-use-extend-when-to-use-a-mixin/
+- http://www.sitepoint.com/avoid-sass-extend/
+
+These are mixins because they are "helpers" and not used
+in a thematically related fashion.
+
+There are a few classes printed here as well as mixins.
+Those are primarily for prototyping purposes, but not
+exclusively.
+
+*/
+
+
+// ----
+// Formatting
+// ----
+
+@mixin center-block() {
+    margin: 0 auto;
+    display: block;
+}
+
+.clearfix {
+    @include clearfix;
+}
+
+%img_full {
+    width: 100%;
+}
+
+%full_at_base {
+    // @include make-xs-column(12);
+}
+
+%pad_base {
+    padding: $base;
+}
+
+%pad_tb {
+    padding: $base 0;
+}
+
+
+
+
+
+// ----
+// Typography
+// ----
+
+
+// Change text alignment at a certain breakpoint.
+
+@mixin change-text-align($base, $bp, $new) {
+    text-align: $base;
+    
+    @include bp($bp) {
+        text-align: $new;
+    }
+}
+
+
+// Font Size Mixin
+
+// Gah.
+// a) This may be overly abstracted and not necessary.
+// b) Ran into the interpolation issue, so had to write this gross function.
+
+@function output-size($value) {
+    @if $value == h1 {
+        @return $h1;
+    }
+    @elseif $value == h2 {
+        @return $h2;
+    }
+    @elseif $value == h3 {
+        @return $h3;
+    }
+    @elseif $value == h4 {
+        @return $h4;
+    }
+    @elseif $value == h5 {
+        @return $h5;
+    }
+    @elseif $value == h6 {
+        @return $h6;
+    }
+    @elseif $value == base {
+        @return $base;
+    }
+    @elseif $value == sml {
+        @return $sml;
+    }
+    @elseif $value == xsml {
+        @return $xsml;
+    }
+}
+
+@mixin font-size($size) {
+    font-size: output-size($size);
+}
+
+
+// Uppercase and letterspacing.
+
+@mixin upperspace {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+// Small, sans-serif text.
+// Used primarily for forms and complimentary information.
+
+@mixin meta {
+    font-size: $sml;
+    font-family: $form-font;
+    margin: 0;
+}
+
+
+
+
+// ----
+// Visual Design
+// ----
+
+
+// Change background and text color.
+
+@mixin rotate($text: $text-light, $bkgd: $text-dark) {
+    background-color: $bkgd;
+    color: $text;
+}
+
+
+
+
+
+
+// ----
+// Content
+// ----
+
+
+%img_highlight {
+    border: $accent-border;
+}
+
+
+// Alerts
+
+%alert,
+.alert {
+    @include rotate($text-dark, $accent-vlight);
+    padding: $base;
+}
+
+
+
+
+
+
+
+
+// ----
+// Lists
+// ----
+
+@mixin unstyle-list() {
+    list-style: none;
+}
+
+%unstyle-list {
+    list-style: none;
+}
+
+@mixin horizontal-list() {
+    ul {
+        list-style-type: none;
+
+      &>li {
+            display: inline-block;    
+        }
+    }
+}
+
+%horizontal-list-center {
+    text-align: center;
+    @include horizontal-list;
+}
+
+
+
+
+
+// Hold
+
+
+@mixin form-base($pad-tb, $pad-rl, $font) {
+    padding: $pad-tb $pad-rl;
+    font-family: $font;
+}
+
+%form-base {
+    @include form-base($sml/3, $sml/2, $form-font);
+}
+
+
+%block {
+	padding: $h4 $h3;
+}
+
+
+.hide-after-lg {
+    @include bp(large) {
+        display: none; 
+    }
+}
+
+.hide-until-md, 
+%hide-until-md {
+   	display: none !important;
+    @include bp(med) {
+        display: inline-block !important; 
+    }   
+}
+
+.hide-after-md, 
+%hide-after-md {
+	@include bp(med) {
+        display: none !important;
+    }
+}
+
+%rotate {
+	color: $rotate-text;
+	background-color: $rotate-bkgd;
+}
+
+
+// Typography helpers
+
+.meta,
+%meta {
+    @include meta;
+}
+
+    %meta-light {
+        @include meta;
+        color: $text-med;
+    }
+
+    %meta-dark {
+        @include meta;
+        color: $text-med;
+    }
+
+
+.decor {
+    @include meta;
+    border-bottom: $accent-border; 
+    position:relative; 
+    
+    span { 
+        position: relative; 
+        top: $sml/1.5; 
+        padding: 0 $sml 0 0;
+        background-color: $body-bkgd;
+    }
+}
+
+.decor-wrap{
+    display: block; 
+    margin: 0;
+    @include clearfix;
+}
+
+
+// Interactive (bad description?)
+
+    .stuck {
+        @include bp(med) {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: $ztop;
+        }
+    }
+
+    .lazy {
+        // display: none;
+        // background-col: url('../img/util/loader.gif');
+        // background-position: center center;
+        // background-repeat: no-repeat;
+    }

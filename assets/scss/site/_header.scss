@@ -1,0 +1,143 @@
+.header-sub {
+	
+	display: none;
+
+	@include bp(med) {
+		display: block;
+	}
+
+	padding-top: $xsml;
+    background: linear-gradient(rgba($accent-dark, 0.8), rgba($accent-dark, 0));	
+	position: absolute;
+	width: 100%;
+	z-index: $ztop;
+    
+    li a {
+    	color: $text-light;	
+
+    	&:hover {
+            color: $accent-light;
+        }
+    }
+}
+
+	.header-sub-tag {
+		@include make-md-column(3);
+		color: $text-light;
+		@include meta;
+		padding-top: 5px;
+	}
+
+	.header-nav-top {
+		@include make-md-column(4);
+		@include bp(med) {
+			padding-bottom: $xsml;
+			
+			a {
+				font-weight: normal;
+				padding-top: 0;
+				@include meta;
+			}
+		}
+	}
+
+
+.site-cta {
+	@include rotate($text-dark, $accent-vlight);
+	padding: $xsml $sml;
+	text-align: center;
+	position: relative;
+
+	p {
+		@include meta;
+	}
+}
+
+.site-cta-close {
+	position: absolute;
+	right: 10px;
+	top: 25%;
+	color: $alert-info;
+	font-size: $h4;
+}
+
+.site-header {
+	border-bottom: 3px solid $alert-info;
+
+	@include bp(med) {
+	    // background: linear-gradient(rgba($accent-dark, 0.8), rgba($accent-dark, 0));	
+	    // padding-bottom: $sml;
+	    // border-bottom: 0;
+	}
+	
+ 	// position: absolute;
+ 	// width: 100%;
+ 	// z-index: $ztop;
+	
+	// color: $text-dark;
+}	
+
+.header-brand {
+	@include make-xs-column(6.5, false);
+	@include make-md-column(2.5, false);
+	display: table-row !important;
+	padding: $xsml 0 0;
+
+	@include bp(med) {
+		padding-bottom: $xsml;
+	}
+}
+
+.header-tag {
+	// @include make-xs-column(4.5, false);
+	// @include make-xs-column(4, false);
+	@include meta;
+	.sml {
+	font-size: $xsml;	
+	}
+	
+	padding-left: $base;
+	padding-top: $sml/2;
+	// width: percentage(2/3);
+}
+
+.header-logo {
+	max-width: 70px;
+	max-height: 60px;
+	fill: $text-light;
+	// padding-top: $sml;
+	position: relative;
+
+	@include bp(med) {
+		max-width: 120px;
+		top: 0;
+		max-height: 100px;
+	}
+
+	@include bp(large) {
+		// max-width: 150px;
+	}
+}
+
+
+.header-tag, 
+.header-logo {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.header-nav-link {
+	@include make-xs-column(0.5, false);
+	position: relative;
+}
+
+.header-nav {
+	padding: $xsml 0 0;
+	position: relative;
+	
+	@include bp(large) {
+		top: $xsml/2;
+	}
+    @include make-xs-column(7, false); 
+    @include make-md-column(4.5, false);
+}

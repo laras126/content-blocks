@@ -1,0 +1,20 @@
+.block_cta {
+	text-align: center;
+	// @include rotate($text-light, $alert-info);
+
+
+	.btn-cta {
+		// background-color: $accent-dark;
+	}
+
+	.inner {
+		padding: $base 0 $h3;
+		border-top: $accent-border;
+		border-bottom: $accent-border;
+	}
+}
+
+.lead-cta {
+	font-family: $sans-serif;
+	margin-bottom: $base;
+}

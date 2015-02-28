@@ -1,0 +1,76 @@
+
+// Hamburger Menu Icon
+// http://codepen.io/lexstefan/pen/mwtcn
+
+.menu-link {
+
+    padding-top: $base;
+
+    a {
+        float: right;
+    }
+
+    span {
+        transition: all 0.25s ease-in-out;
+        width: 25px;
+        border-radius: 1px;
+        height: 3px;
+        display: block;
+        background: $text-dark;
+        margin: 0 0 4px 0;
+    }
+}
+
+    .menu-link span:last-child {
+        margin:0;
+    }
+    
+    .menu-link.open span:nth-of-type(1) {
+        transform: rotate(45deg);
+        margin: 8px 0 0 0;
+    }
+
+    .menu-link.open span:nth-of-type(2) {
+        opacity:0;
+    }
+
+    .menu-link.open span:nth-of-type(3) {
+        transform: rotate(-45deg);
+        margin: -10px 0 0 0;
+    }
+
+
+// Remove the burger
+
+@include bp(med) {
+    .menu-link {
+       display: none;
+    }
+
+    .js .header-nav {
+        max-height: none;
+    }
+
+    .header-nav {
+        overflow: visible;
+    }
+
+    .subnav {
+        background-color: transparent;
+        position: absolute;
+        z-index: $ztop*10;
+        top: $h1;
+        right: 0;
+
+        &.open {
+            overflow: visible;
+        }
+
+        a {
+            padding-top: 0;
+            font-size: $sml;
+            color: $text-light;
+        }
+    }
+}
+

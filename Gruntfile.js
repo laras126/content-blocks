@@ -18,7 +18,7 @@ module.exports = function(grunt) {
             dist: {
                 src: [
                     'assets/js/libs/*.js',
-                    'assets/js/*.js'
+                    'assets/js/*.js',
                     'assets/js/_*.js'
                 ],
                 dest: 'assets/js/build/scripts.js',
@@ -28,11 +28,7 @@ module.exports = function(grunt) {
         sass: {
           dist: {
             options: {
-              style: 'expanded',
-              // compass: true,
-              // Source maps are available, but require Sass 3.3.0 to be installed
-              // https://github.com/gruntassets/js/grunt-contrib-sass#sourcemap
-              sourcemap: true
+              style: 'expanded'
             },
             files: {
                 'assets/css/main.css': 'assets/scss/main.scss'
@@ -40,16 +36,7 @@ module.exports = function(grunt) {
           }
         },
 
-        svgstore: {
-          options: {
-            prefix : 'shape-', // This will prefix each <g> ID
-          },
-          default : {
-              files: {
-                'views/partials/svg-defs.svg': ['assets/img/svgs/*.svg'],
-              }
-            }
-        },
+ 
 
         watch: {
             scripts: {

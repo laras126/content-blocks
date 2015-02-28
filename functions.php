@@ -76,12 +76,16 @@
 			wp_enqueue_script('jquery');
 		}
 
+		// Enqueue stylesheet
+		wp_enqueue_style( 'tsk-styles', get_template_directory_uri() . '/assets/css/main.css', 1.0);
+
 		// Add our JS
 		wp_enqueue_script( 'js', get_template_directory_uri() . '/assets/js/build/scripts.js', array('jquery'), '1.0.0', true );
 	}
 	add_action( 'wp_enqueue_scripts', 'tsk_scripts' );
 
-
+	
+	 
 
 	/* 
 	 * 
@@ -115,7 +119,7 @@
 	function tsk_editor_styles() {
 		add_editor_style( 'assets/css/editor-style.css' );
 	}
-	// add_action( 'after_setup_theme', 'tsk_editor_styles' );
+	add_action( 'after_setup_theme', 'tsk_editor_styles' );
 
 
 

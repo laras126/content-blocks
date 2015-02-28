@@ -1,0 +1,44 @@
+
+%btn,
+.btn {
+    border: none;
+    padding: $sml/2 $sml;
+    display: inline-block;
+    font-family: $form-font;
+    @include button($accent-med, $text-light);
+}
+
+%btn-block,
+.btn-block {
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+.btn-cta {
+	@include button($alert-info);
+}
+
+.btn-success {
+	@include button($alert-success);
+}
+
+
+
+
+.link-more {
+	@include button($alert-info);
+}
+
+.link-edit,
+.link-more {
+    // display: inline-block;
+    // margin: 0 auto;
+	@include meta;
+    text-align: center;
+    margin-top: $sml;
+	font-weight: 700;
+	// color: $alert-danger;
+}

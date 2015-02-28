@@ -1,0 +1,82 @@
+
+// ----
+// Visual Design
+// ----
+
+// Button
+@mixin button( $button-color, $text-color: $white ) {
+	background: $button-color;
+	font-weight: 700;
+	border-radius: 2px;
+	
+	// TODO: BAD BAD
+	// Remove important
+	// Or is this better than a new style to override the <a> color?
+	color: $text-color !important;
+	
+	@extend %btn;
+
+	&:hover,
+	&:focus {
+		background: darken( $button-color, 10% );
+		color: $text-color;
+	}
+
+	&:active {
+		background: darken( $button-color, 40% );
+	}
+}
+
+
+
+
+// ----
+// Layout
+// ----
+
+@mixin clearfix() {
+    &:before,
+    &:after {
+        content: " "; // 1
+        display: table; // 2
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+
+
+
+
+
+
+// ----
+// Media Queries
+// ----
+
+
+// http://css-tricks.com/conditional-media-query-mixins/
+$MQs: true;
+
+@mixin bp($point) {
+    @if ($MQs) {
+        $bp-sm: "(min-width: #{$screen-sm})";
+        $bp-md: "(min-width: #{$screen-md})";
+        $bp-lg: "(min-width: #{$screen-lg})";
+        $bp-xl: "(min-width: #{$screen-xl})";
+
+        @if $point == small {
+            @media #{$bp-sm} { @content; }
+        }
+        @else if $point == med {
+            @media #{$bp-md} { @content; }
+        }
+        @else if $point == large {
+            @media #{$bp-lg} { @content; }
+        }
+        @else if $point == xl {
+            @media #{$bp-xl} { @content; }
+        }
+    }
+}

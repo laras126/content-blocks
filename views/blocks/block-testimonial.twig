@@ -1,0 +1,16 @@
+{% extends 'blocks/block.twig' %}
+
+{% block content %}
+		
+	<div class="inner-squish">
+	{% for test in blck.testimonial %}
+		
+		<blockquote>
+			{{test.text}}<br>
+			<div class="text-right meta" style="font-style: normal;">{{test.person_name}} - <a href="{{test.source_link}}" target="blank">{{test.source}}</a></div>
+		</blockquote>
+
+	{% endfor %}
+	</div>
+	
+{% endblock %}

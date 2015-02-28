@@ -1,0 +1,15 @@
+{% extends "blocks/block.twig" %}
+
+{% block content %}
+	
+	<div class="inner-squish">
+		{% for related in blck.page %}
+			<div class="prompt">
+				<a href="{{related.guid}}"><span class="meta">Explore</span></a>
+			</div>
+			<h5 class="related-title">{{related.post_title}}</h5>
+			<p>{{blck.description}} <a class="link-more" style="float:right;" href="{{related.guid}}"><strong>Read more <span class="icon in-btn icon-fast-forward"></span></strong></a></p>
+		{% endfor %}
+	</div>
+
+{% endblock %}

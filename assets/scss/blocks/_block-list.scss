@@ -1,0 +1,157 @@
+
+
+.block_list {
+	margin-bottom: $h2;
+}
+
+
+
+// ----
+// General Lists
+// ----
+
+.list {
+	@include clearfix;
+	margin-bottom: $h3;
+	
+	& > li {
+		list-style: none;
+		width: 100%;
+		margin-top: $h3;
+	}
+}
+
+	.list-title {
+		@include upperspace;
+		@include meta;
+	}
+
+
+	// Minor lists are 2 across
+
+	.list-minor {
+		@extend .inner;
+
+		& > li {
+			@include make-md-column(7/2, false);
+
+			@include bp(med) {
+		        &:nth-child(2n+1){
+		            clear: left;
+		            padding-right: $gutter/2;
+		        }  
+		    }
+		}
+	}
+
+	// Major lists are 3 across
+	
+	.list-3 > li {
+		@include make-md-column(7/3, false);
+
+		@include bp(med) {
+			&:nth-child(3n+1){
+				clear: left;
+			}  
+	    }  
+	}
+
+	
+	.list-home > li {
+		@include make-md-column(7/4, false);
+
+		@include bp(med) {
+			&:nth-child(4n+1){
+				clear: left;
+			}  
+	    }  
+
+		a {
+			color: $text-dark;
+		}
+    	
+		@include bp(med) {
+			transition: all 0.25s ease;
+
+			&:hover {
+			     transform:scale(1.15);
+			}
+
+			&:active {
+			     transform:scale(1);
+			}
+		}		
+		
+	}
+
+
+
+// ----
+// List items
+// ----
+
+.item-support {
+
+	img {	
+		@include center-block;
+	}
+
+	.list-minor & {
+		img {
+			padding: $base 25%; 
+
+			@include bp(small) {
+				padding: 0;
+			}
+		}
+	}
+	
+	padding-right: $gutter/2;
+	width: 100%;
+
+	@include make-sm-column(1.5, false);
+	@include make-sm-column-push(0);	
+	
+	.list-major & {
+		@include make-md-column(5);
+		@include make-md-column-push(1);	
+	}
+
+	
+}
+
+.item-main {
+	@include make-xs-column(7, false);
+	@include make-sm-column(5.5, false);
+	@include change-text-align(center, small, left);
+	
+	.list-major & {
+
+		@include make-md-column(7);
+
+		@include bp(med) {
+			text-align: center;
+		}
+	}
+
+	.list-minor & {
+		h5 {
+			margin-top: 0;
+		}
+
+		p {
+			margin-top: $xsml;
+
+		}
+	}
+	
+	p, li {
+		font-family: $sans-serif;			
+		@include bp(small) {
+			@include font-size(sml);	
+		}
+	}
+}
+
+
+

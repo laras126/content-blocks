@@ -1,0 +1,57 @@
+
+figure {
+	margin: 0;
+}
+
+.caption {
+	@include font-size(sml);
+	@include change-text-align(center, large, left);
+
+	@include make-xs-column(7);
+	@include make-lg-column(1.5, false);
+
+	border-top: $accent-border;
+	
+	padding-top: $xsml;
+	padding-bottom: $sml;
+	
+	@include bp(large) {
+		float: left;
+		border-bottom: none;
+	}
+}
+
+	img.caption-image {
+		width: 100%;
+		@include bp(med) {
+
+		}
+		@include make-lg-column(5.5, false);
+		border-top: $accent-border;
+		
+
+	}
+
+.textimage-image {
+	@include make-sm-column(4, false);
+
+	@include bp(small) {
+		padding-right: $gutter;
+	}
+
+	@include bp(med) {
+		margin-left: percentage(1/7)*-1;
+	}
+	
+	@include bp(large) {
+		margin-left: percentage(2/7)*-1;
+	}
+
+	padding-bottom: $gutter/2;
+	position: relative;
+}
+
+.textimage-text {
+	@include make-sm-column(4.5, false);
+	@include make-sm-column-offset(1);
+}

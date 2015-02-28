@@ -1,0 +1,40 @@
+
+.block_related_page {
+	background-color: $accent-vlight;
+	padding-bottom: $base;
+}
+
+.related-title {
+	margin-top: $base;
+}
+
+.prompt-wrap {}
+
+	.prompt {
+		@include upperspace;
+		position: relative;
+		top: 0;
+		
+		@include bp(large) {
+			// transform: rotate(-90deg);
+			// IMPORTANT: Can't leave this like this
+			// transform-origin: left bottom;
+			// position: absolute;
+			// left: -$base;
+			// top: 82px;
+		}
+		
+		span {
+			position: relative;
+			padding: $sml/2 $sml;
+			@include rotate($text-light, $alert-success);
+			position: relative;
+			z-index: $zmid;
+
+			@include bp(large) {
+				// left: -$sml;
+			}
+
+			@include upperspace;
+		}
+	}
