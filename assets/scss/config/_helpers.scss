@@ -32,22 +32,6 @@ exclusively.
     @include clearfix;
 }
 
-%img_full {
-    width: 100%;
-}
-
-%full_at_base {
-    // @include make-xs-column(12);
-}
-
-%pad_base {
-    padding: $base;
-}
-
-%pad_tb {
-    padding: $base 0;
-}
-
 
 
 
@@ -177,6 +161,7 @@ exclusively.
 
 @mixin unstyle-list() {
     list-style: none;
+    padding-left: 0;
 }
 
 %unstyle-list {
@@ -204,7 +189,6 @@ exclusively.
 
 // Hold
 
-
 @mixin form-base($pad-tb, $pad-rl, $font) {
     padding: $pad-tb $pad-rl;
     font-family: $font;
@@ -214,18 +198,13 @@ exclusively.
     @include form-base($sml/3, $sml/2, $form-font);
 }
 
-
-%block {
-	padding: $h4 $h3;
-}
-
-
 .hide-after-lg {
     @include bp(large) {
         display: none; 
     }
 }
 
+// Ew!
 .hide-until-md, 
 %hide-until-md {
    	display: none !important;
@@ -265,28 +244,34 @@ exclusively.
     }
 
 
-.decor {
-    @include meta;
-    border-bottom: $accent-border; 
-    position:relative; 
-    
-    span { 
-        position: relative; 
-        top: $sml/1.5; 
-        padding: 0 $sml 0 0;
-        background-color: $body-bkgd;
-    }
-}
+// This can be used to add a border around a title, like this:
 
-.decor-wrap{
-    display: block; 
-    margin: 0;
-    @include clearfix;
-}
+//  <div class="decor-wrap">
+//      <h4 class="decor"><span>{{blck.list_title}}</span></h4>  
+//  </div>
+
+// .decor {
+//     @include meta;
+//     border-bottom: $accent-border; 
+//     position:relative; 
+    
+//     span { 
+//         position: relative; 
+//         top: $sml/1.5; 
+//         padding: 0 $sml 0 0;
+//         background-color: $body-bkgd;
+//     }
+// }
+
+// .decor-wrap{
+//     display: block; 
+//     margin: 0;
+//     @include clearfix;
+// }
 
 
 // Interactive (bad description?)
-
+// If you'd like a sticky nav...
     .stuck {
         @include bp(med) {
             position: fixed;
@@ -294,11 +279,4 @@ exclusively.
             width: 100%;
             z-index: $ztop;
         }
-    }
-
-    .lazy {
-        // display: none;
-        // background-col: url('../img/util/loader.gif');
-        // background-position: center center;
-        // background-repeat: no-repeat;
     }

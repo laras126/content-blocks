@@ -103,8 +103,6 @@ nav a {
             color: $accent-light;
         }
     }
-
-    // margin: 0 0;
 }
 
     .subnav {        
@@ -137,27 +135,6 @@ nav a {
 
     a {
         color: $alert-info;
-    }
-}
-
-.item-split {
-    @include make-xs-column(3.5, false);
-
-    span {
-        font-size: $sml;
-        color: $accent-light;
-    }
-}
-
-.menu-item-cta {
-    margin: $xsml 0;
-
-    @include bp(med) {
-        margin: 0;
-    }
-
-    a {
-        @include button($alert-success);
     }
 }
 
@@ -195,51 +172,26 @@ nav a {
 .content-nav {
 
     ul {
-        display: none;    
-
-        @include bp(med) {
-            display: block;
-        }
+        @include unstyle-list;
+        @include bp(med) {}
     }
-    
-    text-align: center;
-    margin-top: -5px;
-    
-    @include horizontal-list;
-    @include rotate($bkgd: $alert-info);
 
 } // .content-nav
 
     .content-nav-item {
-        transition: all 0.3s ease-in-out;
+        
+        &:hover {}
 
-        // Compensating for d-ib whitespace. Ew.
-        margin-left: -6px;
-    
-        &:hover {
-            background-color: darken($alert-info, 10%);
-        }
+        &:active {}
 
-        &:active {
-            background-color: darken($alert-info, 20%);
-        }
-
-        a {
-            padding: $base;
-            display: block;
-            color: $text-light;
-            @include meta;
-            @include upperspace;
-        }
+        a {}
 
     }
 
     .content-nav-active {
-        position: relative;
-        background-color: $text-dark;
-
+      
         &:hover {
-            background-color: $text-dark;
+
         }
 
         a {
@@ -284,27 +236,6 @@ nav a {
 }
 
 
-// Arrow
-
-.content-nav-arrow {
-    position: relative;
-    background: $alert-info;
-}
-
-.content-nav-arrow:after {
-    top: 100%;
-    left: 50%;
-    content: " ";
-    position: absolute;
-    pointer-events: none;
-    width: 0px;
-    height: 0px;
-    border-style: solid;
-    border-width: 20px 50px 0 50px;
-    border-color: darken($alert-info, 10%) transparent transparent transparent;
-    margin-left: -50px;
-
-}
 
 
 

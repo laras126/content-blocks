@@ -35,9 +35,6 @@ ul, ol {
 
 .lead {
 	@include font-size(h4);
-	// font-family: $lead-font;
-	// margin-bottom: 0;
-	// text-align: center;
 }
 
 
@@ -169,22 +166,3 @@ ul, ol {
 		top: 25%;
 		left: 25%;
 	}
-// .section-content {
-// 	position: relative;
-// 	z-index: $zmid;
-// }
-
-// %film-strip-base {
-// 	width: 100%;
-// 	border-width: 25px 0 0 0;
-// }
-
-// .film-strip {
-// 	// @extend %film-strip-base;	
-// 	// border-image: url(../img/svgs/film-top.svg) 100% 25% 100% 25% round;
-// }
-
-// .film-strip-white {
-// 	@extend %film-strip-base;	
-// 	border-image: url(../img/svgs/film-top-white.svg) 50% 25% 50% 25% round; 
-// }

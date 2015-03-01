@@ -21,10 +21,7 @@
 	}
 }
 
-	.list-title {
-		@include upperspace;
-		@include meta;
-	}
+	.list-title {}
 
 
 	// Minor lists are 2 across
@@ -33,7 +30,6 @@
 		@extend .inner;
 
 		& > li {
-			@include make-md-column(7/2, false);
 
 			@include bp(med) {
 		        &:nth-child(2n+1){
@@ -47,7 +43,6 @@
 	// Major lists are 3 across
 	
 	.list-3 > li {
-		@include make-md-column(7/3, false);
 
 		@include bp(med) {
 			&:nth-child(3n+1){
@@ -56,33 +51,6 @@
 	    }  
 	}
 
-	
-	.list-home > li {
-		@include make-md-column(7/4, false);
-
-		@include bp(med) {
-			&:nth-child(4n+1){
-				clear: left;
-			}  
-	    }  
-
-		a {
-			color: $text-dark;
-		}
-    	
-		@include bp(med) {
-			transition: all 0.25s ease;
-
-			&:hover {
-			     transform:scale(1.15);
-			}
-
-			&:active {
-			     transform:scale(1);
-			}
-		}		
-		
-	}
 
 
 
@@ -106,28 +74,21 @@
 		}
 	}
 	
-	padding-right: $gutter/2;
-	width: 100%;
-
-	@include make-sm-column(1.5, false);
-	@include make-sm-column-push(0);	
+	padding-right: $gutter/2;	
 	
-	.list-major & {
-		@include make-md-column(5);
-		@include make-md-column-push(1);	
-	}
+	.list-major & {}
 
 	
 }
 
 .item-main {
-	@include make-xs-column(7, false);
-	@include make-sm-column(5.5, false);
+	// @include make-xs-column(7, false);
+	// @include make-sm-column(5.5, false);
 	@include change-text-align(center, small, left);
 	
 	.list-major & {
 
-		@include make-md-column(7);
+		// @include make-md-column(7);
 
 		@include bp(med) {
 			text-align: center;
@@ -148,7 +109,8 @@
 	p, li {
 		font-family: $sans-serif;			
 		@include bp(small) {
-			@include font-size(sml);	
+			// @include font-size(med);	
+			font-size: $sml;
 		}
 	}
 }

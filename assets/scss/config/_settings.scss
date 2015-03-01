@@ -6,7 +6,7 @@
 
 $screen-sm:     34em;
 $screen-md:     56em;
-$screen-lg:   	1087px;
+$screen-lg:   	64em;
 $screen-xl:     74em;
 
 $screen-contain: 78em;
@@ -18,47 +18,42 @@ $screen-contain: 78em;
 // ---- Colors
 // ----
 
+$white: 			#F2F2F2;
+$blue: 				#1C7FA6;
+$l-teal: 			desaturate(#BDF2E3, 10%);
+$green: 			#1BBF54;
+$l-green: 			#D9F2A2;
 
-$white: 		#ffffff;
-$black: 		#111;
-$grey: 			#999;
-
-$red: 			#e14939;
-$oldgreen: 		#6EC7BE;
-$blue:			#3C7AAA;
-$yellow: 		#FFCC53;
-$navy:	 		#222334;
-$tan: 			#faf3db;		
-$newgreen: 		#80C25D;
-$dred: 			#D14A29;
-$orange: 		lighten(#D14A29, 20%);
-$light-tan: 	#fdfaf1;
+$grey: 				#9E9E9E;
 
 
 // Semantic variable names
 
-$accent-vlight:		$tan;
-$accent-light:		$yellow;
-$accent-med:		$newgreen;
-$accent-dark:		$navy;
+$accent-vlight:		$l-green;
+$accent-light:		$l-teal;
+$accent-med:		$blue;
+$accent-dark:		darken($blue, 20%);
 
-$alert-danger: 		lighten($dred, 40%);
+$alert-danger: 		lighten($l-green, 40%);
 $alert-warning: 	$accent-light;
 $alert-info: 		$blue;
-$alert-success: 	$accent-med;
+$alert-success: 	$green;
 
-$text-dark: 		$navy;
+$text-dark: 		#333;
 $text-med: 			$grey;
 $text-medlight: 	lighten($text-med, 20%);
 $text-light: 		$white;
 
-$link-color:		$dred;
+$link-color:		$blue;
 $link-hover: 		darken($link-color, 20%);
 
 $twitter: 			#4099FF;
 $facebook: 			#3B5998;
 
+
+
 // Components
+
 $body-bkgd: 		$white;
 $body-text: 		$text-dark;
 
@@ -100,16 +95,16 @@ $h6:  				$sml;
 
 // Fonts
 
-$serif:             'Museo Slab', 'Georgia', serif;
-$sans-serif:        'Museo Sans', 'Helvetica', serif;
+$serif:             'Georgia', serif;
+$sans-serif:        'Helvetica', serif;
 
-$heading-font: 		$sans-serif;
-$body-font: 		$serif;
+$heading-font: 		$serif;
+$body-font: 		$sans-serif;
 $nav-font: 			$sans-serif;
 $form-font: 		$sans-serif;
 $lead-font: 		$sans-serif;
 
-
+$heading-font-weight: 700;
 
 
 
@@ -117,17 +112,7 @@ $lead-font: 		$sans-serif;
 // ---- Utilities 
 // ----
 
-@mixin border($color: $accent-med,  $width: 1px, $side: false) {
-	@if $side != '' {
-		border-#{$side}: #{$width} solid $color;
-	} @else {
-		border: 1px #{$width} $color;
-	}
-}
-
 $accent-border: 	1px solid $accent-med;
-
-
 
 // Z-Index Scale
 $zbase: 			1;

@@ -44,28 +44,6 @@
                     "disabled": 0
                 },
                 {
-                    "key": "field_54f244419f4b5",
-                    "label": "Price",
-                    "name": "price",
-                    "prefix": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": "",
-                    "readonly": 0,
-                    "disabled": 0
-                },
-                {
                     "key": "field_54f23d7123b75",
                     "label": "Section Title",
                     "name": "section_title",
@@ -260,8 +238,8 @@
                                     },
                                     "min": "",
                                     "max": "",
+                                    "layout": "row",
                                     "button_label": "Add Row",
-                                    "layout": "table",
                                     "sub_fields": [
                                         {
                                             "key": "field_54f23d1923b68",
@@ -340,7 +318,7 @@
                                             {
                                                 "field": "field_54f23d1923b64",
                                                 "operator": "==",
-                                                "value": "free_form"
+                                                "value": "connected"
                                             }
                                         ]
                                     ],
@@ -704,5 +682,5 @@
         "tags",
         "send-trackbacks"
     ],
-    "modified": 1425163357
+    "modified": 1425163706
 }

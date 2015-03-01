@@ -2,9 +2,9 @@
 
 {% block content %}
 
-	<div class="inner inner-cta">
+	{# <div class="inner inner-cta"> #}
 		<p class="lead lead-cta">{{blck.cta_text}}</p>
-		<a href="/order" class="btn-cta">Estimate Your Order <span class="icon in-btn icon-fast-forward"></span></a>
-	</div>
+		<a href="{{blck.button_link}}" class="btn-cta">{{blck.button_text}}</a>
+	{# </div> #}
 
 {% endblock %}

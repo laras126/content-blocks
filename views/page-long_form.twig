@@ -1,0 +1,16 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+	{% include 'partials/section-nav.twig'%}
+	
+	{{post.summary}}
+	
+	{% for section in post.get_field('sections') %}
+		<h3>{{section.section_title}}</h3>
+		{{section.lead}}
+		<br>
+		{% include 'partials/flexcontent-logic.twig' %}
+	{% endfor %}
+	
+{% endblock %}

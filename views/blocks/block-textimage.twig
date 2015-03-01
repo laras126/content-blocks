@@ -8,13 +8,11 @@
 			<noscript><img src="{{TimberImage(blck.image).src|resize(800)}}" alt="{{item.post_title}}" width="800"></noscript>
 		</figure>
 	{% elseif blck.text_format == 'paragraph'%}
-	<div class="inner-squish">
 		<h4>{{blck.text_heading}}</h4>
 		<div class="textimage-image">
 			<img class="lazy" src="{{site.theme.link}}/assets/img/util/loader.gif" width="600" height="auto" data-original="{{TimberImage(blck.image).src|resize(600)}}" alt="{{item.post_title}}" alt="{{item.post_title}}"/>
 			<noscript><img src="{{TimberImage(blck.image).src|resize(600)}}" alt="{{item.post_title}}" width="600"></noscript>
 		</div>
 		{{blck.text}}
-	</div>
 	{% endif %}
 {% endblock %}

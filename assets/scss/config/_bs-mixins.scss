@@ -23,7 +23,7 @@
 // Grid Settings
 // ----
 
-$grid-columns:              7 !default;
+$grid-columns:              4 !default;
 //** Padding between columns. Gets divided in half for the left and right.
 $gutter:                    $h3 !default;
 
@@ -55,7 +55,6 @@ $gutter:                    $h3 !default;
 %container {
   margin-right: auto;
   margin-left: auto;
-  width: 90%;
   max-width: $screen-contain;
 }
 
@@ -69,6 +68,7 @@ $gutter:                    $h3 !default;
 .inner {
   max-width: $screen-contain;
 }
+
 
 // ----
 // Rows
@@ -155,7 +155,6 @@ $gutter:                    $h3 !default;
 }
 
 
-
 // Medium
 
 @mixin make-md-column($columns, $gutter: $gutter) {
@@ -212,22 +211,22 @@ $gutter:                    $h3 !default;
 
 // Utility/Wrappers
 
-.inner {
-    @include make-md-column(7, false);
-    @include make-lg-column(5, false);
-    @include make-lg-column-offset(1);
-    max-width: $screen-md;
-}
+// .inner {
+//     @include make-md-column(7, false);
+//     @include make-lg-column(5, false);
+//     @include make-lg-column-offset(1);
+//     max-width: $screen-md;
+// }
 
-.inner-full {
-    @extend %bs-pad;
-}
+// .inner-full {
+//     @extend %bs-pad;
+// }
 
-.inner-squish {
-    @include make-md-column(6, false);
-    @include make-md-column-offset(0.5);
+// .inner-squish {
+//     @include make-md-column(6, false);
+//     @include make-md-column-offset(0.5);
 
-    @include make-lg-column(4, false);
-    @include make-lg-column-offset(1.5);
-}
+//     @include make-lg-column(4, false);
+//     @include make-lg-column-offset(1.5);
+// }
 

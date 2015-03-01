@@ -1,97 +1,33 @@
 
 .site-footer {
-	font-family: $sans-serif;
-	@include rotate($text-dark, $tan);
 	
 	ul {
 		@extend %unstyle-list;
-	}
-
-	li {
-		@include bp(small) {
-			@include font-size(sml);	
-		}
-	}
-
-	.block {
-		@include rotate($text-light, $alert-success);
-		padding: $base 0 $h3;
-		text-align: center;
 	}
 }
 
 	.colophon {
 		
-		p {
-			@include font-size(xsml);	
-			color: $text-med;
-		}
-		padding-bottom: $base;
+		p {}
 
 		a {
-			color: lighten($text-med, 10%);
+
 			&:hover {
 				color: $accent-med;
 			}
 		}
 	}
 
-	.creds {
-		@include make-md-column(3.5, false);
-	}
+	.creds {}
 	
-	.copyright {
-		@include make-md-column(3.5, false);
-		text-align: right;
-	}
-
-	.watermark {
-		@include clearfix;
-		img {
-			opacity:0.4;	
-			@include center-block;
-			@include bp(small) {
-				float:right;
-				display: inline-block;
-			}
-		}	
-	}
+	.copyright {}
 
 
-.widget {
-	@include change-text-align(center, med, left);
+.widget {}
 
-	@include make-xs-column(7);
-	@include make-md-column((7/4));
+	.widget-title {}
 
-	padding-bottom: $h3;
-}
+	.widget-list {}
 
-	.widget-title {
-		@include meta;
-		@include upperspace;
-		margin-bottom: $sml;
-	}
-
-	.widget-list {
-		li {
-			margin-bottom: $sml/2;
-		}
-	}
-
-	.links-social {
-		text-align: center;
-		font-size: $h3;
-
-		span {
-			padding: $xsml;
-		}
-		
-		.icon-twitter {
-			color: $twitter;
-		}
-		.icon-facebook-squared {
-			color: $facebook;
-		}
-	}
+	.links-social {}
 
