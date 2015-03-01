@@ -10,11 +10,18 @@
 	{% include 'partials/section-nav.twig'%}
 	
 	{% for section in post.get_field('sections') %}
-		<header class="contain contain-squish">
-			<h3>{{section.section_title}}</h3>
-			<p class="lead">{{section.lead}}</p>
-		</header>
-		{% include 'partials/flexcontent-logic.twig' %}
+		<section class="page-section" id="{{section.menu_item_title|replace({ (' '): '_' })}}">
+			
+			<header class="section-header">
+				<div class="contain-squish">
+					<h3>{{section.section_title}}</h3>
+					<p class="lead">{{section.lead}}</p>
+				</div>
+			</header>
+
+			{% include 'partials/flexcontent-logic.twig' %}
+		
+		</section>
 	{% endfor %}
 	
 {% endblock %}

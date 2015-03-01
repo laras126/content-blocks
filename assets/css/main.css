@@ -484,21 +484,21 @@ input[type="tel"] {
   }
 }
 
-.contain {
+.contain, .contain-squish, .contain-stretch {
   margin-right: auto;
   margin-left: auto;
   max-width: 64em;
 }
-
-.contain {
-  width: 90%;
-}
-.contain:before, .contain:after {
+.contain:before, .contain-squish:before, .contain-stretch:before, .contain:after, .contain-squish:after, .contain-stretch:after {
   content: " ";
   display: table;
 }
-.contain:after {
+.contain:after, .contain-squish:after, .contain-stretch:after {
   clear: both;
+}
+
+.contain {
+  width: 90%;
 }
 
 @media (min-width: 56em) {
@@ -1321,7 +1321,7 @@ nav a {
 }
 
 .block {
-  margin: 2.88rem 0;
+  padding-bottom: 1.56rem;
 }
 .page-body .block:last-child {
   margin-bottom: 0;

@@ -1,12 +1,11 @@
 .block {
-	margin: $h2 0;
+	padding-bottom: $h4;
 
 	.page-body & {
 		&:last-child {
 			margin-bottom: 0;
 		}
 	}
-
 }
 
 // Block modules

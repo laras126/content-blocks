@@ -56,6 +56,7 @@ $gutter:                    $h3 !default;
     margin-right: auto;
     margin-left: auto;
     max-width: $screen-lg;
+    @include clearfix;
 }
 
 // To contain a primary section of content. 
@@ -63,17 +64,18 @@ $gutter:                    $h3 !default;
 
 .contain {
     @extend %container;
-    @include clearfix;
     width: 90%;
 }
 
     .contain-squish {
+        @extend %container;
         @include bp(med) {
             max-width: $screen-sm;
         }
     }
 
     .contain-stretch {
+        @extend %container;
         @include bp(med) {
             width: 100%;
         }
