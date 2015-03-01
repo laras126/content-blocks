@@ -53,22 +53,31 @@ $gutter:                    $h3 !default;
 
 
 %container {
-  margin-right: auto;
-  margin-left: auto;
-  max-width: $screen-contain;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: $screen-lg;
 }
 
 // To contain a primary section of content. 
 // Max width of the widest inner wrap (below).
+
 .contain {
-  @extend %container;
-  @include clearfix;
+    @extend %container;
+    @include clearfix;
+    width: 90%;
 }
 
-.inner {
-  max-width: $screen-contain;
-}
+    .contain-squish {
+        @include bp(med) {
+            max-width: $screen-sm;
+        }
+    }
 
+    .contain-stretch {
+        @include bp(med) {
+            width: 100%;
+        }
+    }
 
 // ----
 // Rows

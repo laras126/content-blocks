@@ -4,7 +4,6 @@ html {
 
 	@include bp(small) {
 		font-size: $contain-sm;
-		line-height: $line-height-sm;
 	}
 
 	@include bp(small) {
@@ -44,6 +43,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: $heading-font;
 	font-weight: $heading-font-weight;
 	margin-bottom: 0;
+	line-height: $line-height-sm;
 }
 
 h1 {

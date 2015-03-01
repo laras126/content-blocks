@@ -32,14 +32,6 @@ $(document).ready(function() {
 		
 
 
-	// Plugins
-
-	$('.lazy').show().lazyload({
-		effect : 'fadeIn',
-		threshold : 400
-	}); // Am I lazy for using this?
-
-
 
 
 	// ----

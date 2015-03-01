@@ -77,7 +77,11 @@
 		}
 
 		// Enqueue stylesheet
-		wp_enqueue_style( 'tsk-styles', get_template_directory_uri() . '/assets/css/main.css', 1.0);
+		if( WP_ENV == 'production' ) {
+			wp_enqueue_style( 'tsk-styles', get_template_directory_uri() . '/assets/css/main.min.css', 1.0);
+		} else {
+			wp_enqueue_style( 'tsk-styles', get_template_directory_uri() . '/assets/css/main.css', 1.0);
+		}
 
 		// Add our JS
 		wp_enqueue_script( 'js', get_template_directory_uri() . '/assets/js/build/scripts.js', array('jquery'), '1.0.0', true );

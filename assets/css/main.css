@@ -412,11 +412,11 @@ Those are primarily for prototyping purposes, but not
 exclusively.
 
 */
-.clearfix:before, .hero-wrap:before, .menu-item-complex:before, .clearfix:after, .hero-wrap:after, .menu-item-complex:after {
+.clearfix:before, .menu-item-complex:before, .clearfix:after, .menu-item-complex:after {
   content: " ";
   display: table;
 }
-.clearfix:after, .hero-wrap:after, .menu-item-complex:after {
+.clearfix:after, .menu-item-complex:after {
   clear: both;
 }
 
@@ -487,9 +487,12 @@ input[type="tel"] {
 .contain {
   margin-right: auto;
   margin-left: auto;
-  max-width: 78em;
+  max-width: 64em;
 }
 
+.contain {
+  width: 90%;
+}
 .contain:before, .contain:after {
   content: " ";
   display: table;
@@ -498,8 +501,16 @@ input[type="tel"] {
   clear: both;
 }
 
-.inner, .hero-tag-container, .list-minor {
-  max-width: 78em;
+@media (min-width: 56em) {
+  .contain-squish {
+    max-width: 34em;
+  }
+}
+
+@media (min-width: 56em) {
+  .contain-stretch {
+    width: 100%;
+  }
 }
 
 .row {
@@ -546,127 +557,13 @@ input[type="tel"] {
   animation-name: fadeInDown;
 }
 
-@font-face {
-  font-family: "dijifi";
-  src: url("../fonts/dijifi.eot");
-  src: url("../fonts/dijifi.eot?#iefix") format("embedded-opentype"), url("../fonts/dijifi.woff") format("woff"), url("../fonts/dijifi.ttf") format("truetype"), url("../fonts/dijifi.svg#dijifi") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-[data-icon]:before {
-  font-family: "dijifi" !important;
-  content: attr(data-icon);
-  font-style: normal !important;
-  font-weight: normal !important;
-  font-variant: normal !important;
-  text-transform: none !important;
-  speak: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-[class^="icon-"]:before,
-[class*=" icon-"]:before {
-  font-family: "dijifi" !important;
-  font-style: normal !important;
-  font-weight: normal !important;
-  font-variant: normal !important;
-  text-transform: none !important;
-  speak: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-fast-forward:before {
-  content: "a";
-}
-
-.icon-facebook-squared:before {
-  content: "b";
-}
-
-.icon-call-phone:before {
-  content: "d";
-}
-
-.icon-mail:before {
-  content: "e";
-}
-
-.icon-up-open:before {
-  content: "f";
-}
-
-.icon-down-open:before {
-  content: "g";
-}
-
-.icon-right-open:before {
-  content: "h";
-}
-
-.icon-left-open:before {
-  content: "i";
-}
-
-.icon-cancel:before {
-  content: "j";
-}
-
-.icon-camera:before {
-  content: "k";
-}
-
-.icon-youtube-play:before {
-  content: "l";
-}
-
-.icon-filmstrip:before {
-  content: "m";
-}
-
-.icon-volume-up:before {
-  content: "n";
-}
-
-.icon-twitter:before {
-  content: "o";
-}
-
-.in-btn {
-  margin-left: 0.36rem;
-  position: relative;
-  top: 3px;
-  color: #c1eee1;
-}
-
-.directional-icon {
-  font-size: 1.2rem;
-}
-.directional-icon:before {
-  color: #F2F2F2;
-}
-
-.icon-google-plus-square {
-  color: white;
-  font-size: 1.56rem;
-}
-
-.icon-facebook-square {
-  color: #1C7FA6;
-  font-size: 1.56rem;
-}
-
 html {
   font-size: 90%;
-  line-height: 1.3;
+  line-height: 1.5;
 }
 @media (min-width: 34em) {
   html {
     font-size: 98%;
-    line-height: 1.5;
   }
 }
 @media (min-width: 34em) {
@@ -701,6 +598,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Georgia", serif;
   font-weight: 700;
   margin-bottom: 0;
+  line-height: 1.3;
 }
 
 h1 {
@@ -1151,114 +1049,6 @@ ul, ol {
   font-size: 1.56rem;
 }
 
-.hero {
-  position: relative;
-  overflow: hidden;
-  color: #F2F2F2;
-}
-.hero .icon-down-open {
-  font-size: 2.4rem;
-  padding-top: 1.2rem;
-  line-height: 0;
-}
-
-.hero-full-bkgd {
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-color: #333;
-  width: 100%;
-}
-
-.hero-video video {
-  display: none;
-  opacity: 0;
-  top: 0;
-  left: 0;
-  position: absolute;
-  min-width: 100%;
-  min-height: 100%;
-}
-@media (min-width: 64em) {
-  .hero-video video {
-    display: block;
-  }
-}
-
-.hero-image {
-  opacity: 0;
-  width: 100%;
-}
-
-.hero-video-placeholder {
-  opacity: 0;
-}
-@media (min-width: 64em) {
-  .hero-video-placeholder {
-    opacity: 1;
-  }
-}
-
-.hero-text {
-  padding-top: 3.6rem;
-  padding-bottom: 3.6rem;
-}
-
-.hero-wrap {
-  padding-top: 33.33333%;
-  background-image: radial-gradient(ellipse at 40% center, rgba(51, 51, 51, 0.3) 0, #333);
-  position: relative;
-  z-index: 3;
-  padding-bottom: 2.4rem;
-}
-@media (min-width: 56em) {
-  .hero-wrap {
-    background-image: radial-gradient(ellipse at 20% center, rgba(51, 51, 51, 0) 0, #333);
-  }
-}
-@media (min-width: 64em) {
-  .hero-wrap {
-    padding-top: 50%;
-  }
-}
-@media (min-width: 74em) {
-  .hero-wrap {
-    padding-top: 33.33333%;
-  }
-}
-.page-header .hero-wrap {
-  padding-top: 3.6rem;
-}
-@media (min-width: 34em) {
-  .page-header .hero-wrap {
-    padding-top: 30%;
-  }
-}
-@media (min-width: 56em) {
-  .page-header .hero-wrap {
-    padding-top: 13.33333%;
-  }
-  .home .page-header .hero-wrap {
-    padding-top: 20%;
-  }
-}
-
-@media (min-width: 74em) {
-  .hero-tag-container {
-    max-width: 100%;
-  }
-}
-
-#headerImageLoader {
-  display: none;
-}
-
-.test-spin {
-  position: absolute;
-  top: 25%;
-  left: 25%;
-}
-
 nav a {
   font-family: "Helvetica", serif;
 }
@@ -1483,13 +1273,10 @@ nav a {
 
 .page-header {
   text-align: center;
-  border-bottom: 3px solid #1C7FA6;
-  background-color: #333;
 }
 
 .page-title {
   position: relative;
-  text-shadow: 2px 1px 1px #333;
 }
 @media (min-width: 56em) {
   .page-title {
@@ -1505,7 +1292,6 @@ nav a {
 .page-body {
   position: relative;
   z-index: 3;
-  background-color: #F2F2F2;
 }
 
 @media (min-width: 56em) {
@@ -1528,10 +1314,6 @@ nav a {
 .section-content {
   position: relative;
   padding-bottom: 3.6rem;
-}
-
-.content-active {
-  background-color: #1C7FA6;
 }
 
 .colophon a:hover {

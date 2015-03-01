@@ -9,8 +9,6 @@ $screen-md:     56em;
 $screen-lg:   	64em;
 $screen-xl:     74em;
 
-$screen-contain: 78em;
-
 
 
 
@@ -51,7 +49,6 @@ $twitter: 			#4099FF;
 $facebook: 			#3B5998;
 
 
-
 // Components
 
 $body-bkgd: 		$white;
@@ -78,8 +75,8 @@ $contain-sm: 		98%;
 $contain: 			90%;
 
 $base:  			1.2rem;
-$line-height-base: 	1.3;
-$line-height-sm: 	1.5;
+$line-height-base: 	1.5;
+$line-height-sm: 	1.3;
 
 $xsml: 				$base*0.6;
 $sml:  				$base*0.75;

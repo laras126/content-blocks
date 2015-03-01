@@ -2,14 +2,18 @@
 
 {% block content %}
 
+	<header class="page-header">
+		<h2>{{post.title}}</h2>
+		<p class="page-tagline">{{post.summary}}</p>
+	</header>
+
 	{% include 'partials/section-nav.twig'%}
 	
-	{{post.summary}}
-	
 	{% for section in post.get_field('sections') %}
-		<h3>{{section.section_title}}</h3>
-		{{section.lead}}
-		<br>
+		<header class="contain contain-squish">
+			<h3>{{section.section_title}}</h3>
+			<p class="lead">{{section.lead}}</p>
+		</header>
 		{% include 'partials/flexcontent-logic.twig' %}
 	{% endfor %}
 	
