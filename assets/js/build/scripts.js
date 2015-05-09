@@ -39,60 +39,60 @@ $(document).ready(function() {
 	// ----
 
 	// This jumps...will need to fix
-	 var scroll_class = 'stuck',
-		$nav = $('.content-nav'),
-		nav_ht = $nav.outerHeight(),
-		header_ht = $('.page-header').outerHeight() + $('.site-header').outerHeight(),
-		total_ht = header_ht;
+	//  var scroll_class = 'stuck',
+	// 	$nav = $('.content-nav'),
+	// 	nav_ht = $nav.outerHeight(),
+	// 	header_ht = $('.page-header').outerHeight() + $('.site-header').outerHeight(),
+	// 	total_ht = header_ht;
   	
 
-	// 1. Highlight current item
-	// 2. Slide to current section on click
-	$('.content-nav a').not('.directional-icon').click( function() {
+	// // 1. Highlight current item
+	// // 2. Slide to current section on click
+	// $('.content-nav a').not('.directional-icon').click( function() {
 
-		var hash = $(this).attr('href');
-		var $target = $(hash + ' .section-title');
+	// 	var hash = $(this).attr('href');
+	// 	var $target = $(hash + ' .section-title');
 
-		// Slide to section corresponding to clicked hash
-		$('html,body').animate({
-			scrollTop: $target.offset().top - nav_ht*1.5
-        }, 700);
+	// 	// Slide to section corresponding to clicked hash
+	// 	$('html,body').animate({
+	// 		scrollTop: $target.offset().top - nav_ht*1.5
+ //        }, 700);
 
-		return false;
-	}); // END click
+	// 	return false;
+	// }); // END click
 
-	$('.top-link a').on( 'click', function() {
-		var hash = $('#pageTop');
-		var $target = $(hash);
+	// $('.top-link a').on( 'click', function() {
+	// 	var hash = $('#pageTop');
+	// 	var $target = $(hash);
 
-		// Slide to section corresponding to clicked hash
-		$('html,body').animate({
-			scrollTop: $target.offset().top
-        }, 700);
+	// 	// Slide to section corresponding to clicked hash
+	// 	$('html,body').animate({
+	// 		scrollTop: $target.offset().top
+ //        }, 700);
 
-        return false;
+ //        return false;
 
-	});
-
-
+	// });
 
 
-	// Highlight the current item according to position on the screen
-	// http://stackoverflow.com/questions/9979827/change-active-menu-item-on-page-scroll
-	// (continued below)
+
+
+	// // Highlight the current item according to position on the screen
+	// // http://stackoverflow.com/questions/9979827/change-active-menu-item-on-page-scroll
+	// // (continued below)
 	
-	// Cache selectors
-	var topMenu = $(".content-nav"),
-    topMenuHeight = topMenu.outerHeight()+40,
+	// // Cache selectors
+	// var topMenu = $(".content-nav"),
+ //    topMenuHeight = topMenu.outerHeight()+40,
     
-    // All list items
-    menuItems = topMenu.find("a"),
+ //    // All list items
+ //    menuItems = topMenu.find("a"),
     
-    // Anchors corresponding to menu items
-    scrollItems = menuItems.map(function(){
-		var item = $($(this).attr("href"));
-      	if (item.length) { return item; }
-    });
+ //    // Anchors corresponding to menu items
+ //    scrollItems = menuItems.map(function(){
+	// 	var item = $($(this).attr("href"));
+ //      	if (item.length) { return item; }
+ //    });
 
 
 
