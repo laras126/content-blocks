@@ -1,30 +1,32 @@
 {
   "name": "timber-starter-kit",
-  "version": "1.2.0",
-  "description": "The Timber starter theme with Sass and Grunt.",
-  "main": "index.php",
+  "version": "0.0.0",
+  "description": "Themeing kit for Timber",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "~3.8.11",
+    "gulp-rename": "~1.2.2",
+    "gulp-concat": "~2.5.2",
+    "gulp-uglify": "~1.2.0",
+    "gulp-jshint": "~1.10.0",
+    "gulp-sass": "~2.0.0",
+    "gulp-svgmin": "~1.1.2",
+    "gulp-svgstore": "~5.0.1",
+    "gulp-cssmin": "~0.1.7",
+    "gulp-autoprefixer": "~2.2.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "timber-starter-kit.git"
+    "url": "git://github.com/laras126/timber-starter-kit.git"
   },
-  "keywords": [
-    "timber",
-    "starter",
-    "theme",
-    "wordpress",
-    "twig"
-  ],
   "author": "Lara Schenck",
-  "license": "WTFPL",
-  "devDependencies": {
-    "grunt-cli": "~0.1.13",
-    "grunt-contrib-concat": "~0.5.0",
-    "grunt-contrib-watch": "~0.6.1",
-    "grunt-contrib-jshint": "~0.10.0",
-    "grunt-contrib-sass": "~0.8.1",
-    "grunt-svgstore": "~0.4.1"
-  }
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/laras126/timber-starter-kit/issues"
+  },
+  "homepage": "https://github.com/laras126/timber-starter-kit"
 }
