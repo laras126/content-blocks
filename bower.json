@@ -1,0 +1,30 @@
+{
+  "name": "MTNmeister",
+  "version": "1",
+  "homepage": "http://mtnmeister.com",
+  "authors": [
+    "Lara Schenck",
+    "lara@notlaura.com"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "assets/vendor",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "modernizr": "2.8.2",
+    "jquery": "1.11.1",
+    "respond": "1.4.2"
+  },
+  "description": "Custom theme using Timber for WordPress",
+  "moduleType": [
+    "node"
+  ],
+  "devDependencies": {
+    "modernizr": "~2.8.3"
+  }
+}

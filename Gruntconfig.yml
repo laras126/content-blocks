@@ -1,0 +1,4 @@
+scssDir: assets/scss/
+jsSrcDir: assets/js/src/
+jsConcatDir: assets/js/build/
+cssDir: assets/css/
