@@ -1,7 +1,7 @@
 
-# Welome to the Content Blocks Starter
+# Content Blocks FTW
 
-A content strategy for WordPress built with [Timber](https://github.com/jarednova/timber/) and [Advanced Custom Fields](http://advancedcustomfields.com).
+Content Blocks are a content strategy for WordPress built with [Timber](https://github.com/jarednova/timber/) and [Advanced Custom Fields](http://advancedcustomfields.com). No longer shall we create our WordPress sites with HTML in the content editor! Let's fill out nice fields and separate our concerns instead of adding `<br>`s everywhere. C'mon, we all do.
 
 ### Naming Conventions
 
