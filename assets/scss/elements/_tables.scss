@@ -1,42 +1,42 @@
-// Tables
-// Yes, I may use tables sometime!
 
-table {
-    width: 100%;
-    font-family: $form-font;
-    margin-bottom: 1.5em;
+// // ----
+// // Tables
+// // ----
 
-    caption {
-        margin: 0 0 7px;
-        font-size: 0.75em;
-        color: $text-light;
-        @include upperspace;
-    }
-}
+// table {
+//     width: 100%;
+//     font-family: $font-form;
+//     margin-bottom: 1.5em;
 
-tr {
-    // border-bottom: 1px solid $accent-light;
+//     caption {
+//         margin: 0 0 7px;
+//         font-size: 0.75em;
+//         color: $color-text-light;
+//         @include upperspace;
+//     }
+// }
 
-    &:nth-child(even) {
-        // background-color: $accent-light;
-    }
-}
+// tr {
+//     &:nth-child(even) {
+//         background-color: $color-accent-vlight;
+//     }
+// }
 
-td {
-    padding: 7px;
-    // border-right: 1px solid $accent-light;
+// td {
+//     padding: 7px;
+//     border-right: 1px solid $color-accent-light;
 
-    &:last-child {
-        border-right: 0;
-    }
-}
+//     &:last-child {
+//         border-right: 0;
+//     }
+// }
 
-th {
-    background-color: $accent-light;
-    border-bottom: 1px solid $accent-light;
-    border-right: 1px solid $accent-light;
+// th {
+//     background-color: $color-accent-light;
+//     border-bottom: 1px solid $color-accent-light;
+//     border-right: 1px solid $color-accent-light;
 
-    &:last-child {
-        border-right: 0;
-    }
-}
+//     &:last-child {
+//         border-right: 0;
+//     }
+// }

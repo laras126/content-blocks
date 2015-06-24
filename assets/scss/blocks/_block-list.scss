@@ -1,118 +1,118 @@
 
 
-.block_list {
-	margin-bottom: $h2;
-}
+// .block_list {
+// 	margin-bottom: $h2;
+// }
 
 
 
-// ----
-// General Lists
-// ----
+// // ----
+// // General Lists
+// // ----
 
-.list {
-	@include clearfix;
-	margin-bottom: $h3;
+// .list {
+// 	@include clearfix;
+// 	margin-bottom: $h3;
 	
-	& > li {
-		list-style: none;
-		width: 100%;
-		margin-top: $h3;
-	}
-}
+// 	& > li {
+// 		list-style: none;
+// 		width: 100%;
+// 		margin-top: $h3;
+// 	}
+// }
 
-	.list-title {}
+// 	.list-title {}
 
 
-	// Minor lists are 2 across
+// 	// Minor lists are 2 across
 
-	.list-minor {
+// 	.list-minor {
 
-		& > li {
+// 		& > li {
 
-			@include bp(med) {
-		        &:nth-child(2n+1){
-		            clear: left;
-		            padding-right: $gutter/2;
-		        }  
-		    }
-		}
-	}
+// 			@include bp(med) {
+// 		        &:nth-child(2n+1){
+// 		            clear: left;
+// 		            padding-right: $gutter/2;
+// 		        }  
+// 		    }
+// 		}
+// 	}
 
-	// Major lists are 3 across
+// 	// Major lists are 3 across
 	
-	.list-3 > li {
+// 	.list-3 > li {
 
-		@include bp(med) {
-			&:nth-child(3n+1){
-				clear: left;
-			}  
-	    }  
-	}
-
-
+// 		@include bp(med) {
+// 			&:nth-child(3n+1){
+// 				clear: left;
+// 			}  
+// 	    }  
+// 	}
 
 
-// ----
-// List items
-// ----
 
-.item-support {
 
-	img {	
-		@include center-block;
-	}
+// // ----
+// // List items
+// // ----
 
-	.list-minor & {
-		img {
-			padding: $base 25%; 
+// .item-support {
 
-			@include bp(small) {
-				padding: 0;
-			}
-		}
-	}
+// 	img {	
+// 		@include center-block;
+// 	}
+
+// 	.list-minor & {
+// 		img {
+// 			padding: $size-base 25%; 
+
+// 			@include bp(small) {
+// 				padding: 0;
+// 			}
+// 		}
+// 	}
 	
-	padding-right: $gutter/2;	
+// 	padding-right: $gutter/2;	
 	
-	.list-major & {}
+// 	.list-major & {}
 
 	
-}
+// }
 
-.item-main {
-	// @include make-xs-column(7, false);
-	// @include make-sm-column(5.5, false);
-	@include change-text-align(center, small, left);
+// .item-main {
+// 	// @include make-xs-column(7, false);
+// 	// @include make-sm-column(5.5, false);
+// 	@include change-text-align(center, small, left);
 	
-	.list-major & {
+// 	.list-major & {
 
-		// @include make-md-column(7);
+// 		// @include make-md-column(7);
 
-		@include bp(med) {
-			text-align: center;
-		}
-	}
+// 		@include bp(med) {
+// 			text-align: center;
+// 		}
+// 	}
 
-	.list-minor & {
-		h5 {
-			margin-top: 0;
-		}
+// 	.list-minor & {
+// 		h5 {
+// 			margin-top: 0;
+// 		}
 
-		p {
-			margin-top: $xsml;
+// 		p {
+// 			margin-top: $xsml;
 
-		}
-	}
+// 		}
+// 	}
 	
-	p, li {
-		font-family: $sans-serif;			
-		@include bp(small) {
-			// @include font-size(med);	
-			font-size: $sml;
-		}
-	}
-}
+// 	p, li {
+// 		font-family: $sans-serif;			
+// 		@include bp(small) {
+// 			// @include font-size(med);	
+// 			font-size: $sml;
+// 		}
+// 	}
+// }
 
 
 

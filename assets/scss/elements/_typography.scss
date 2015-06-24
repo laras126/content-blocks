@@ -1,125 +1,125 @@
-html {
-	font-size: $contain;
-	line-height: $line-height-base;
+// html {
+// 	font-size: $contain;
+// 	line-height: $line-height-base;
 
-	@include bp(small) {
-		font-size: $contain-sm;
-	}
+// 	@include bp(small) {
+// 		font-size: $contain-sm;
+// 	}
 
-	@include bp(small) {
-		font-size: $contain-md;
-	}
+// 	@include bp(small) {
+// 		font-size: $contain-md;
+// 	}
 
-	@include bp(small) {
-		font-size: $contain-lg;
-	}
-}
+// 	@include bp(small) {
+// 		font-size: $contain-lg;
+// 	}
+// }
 
-body {
-	font-family: $body-font;
-	font-size: $base; 
-	color: $text-dark;
-}
+// body {
+// 	font-family: $body-font;
+// 	font-size: $size-base; 
+// 	color: $text-dark;
+// }
 
-a {
-	color: $link-color;
-	text-decoration: none;
+// a {
+// 	color: $link-color;
+// 	text-decoration: none;
 
-	&:hover, &:focus {
-		color: $link-hover;
-	}
+// 	&:hover, &:focus {
+// 		color: $link-hover;
+// 	}
 
-	&:active {
+// 	&:active {
 		
-	}
+// 	}
 
-	// mobile tap color 
-	&:link {
-		-webkit-tap-highlight-color : rgba( 0, 0, 0, 0.3 );
-	}
-}
+// 	// mobile tap color 
+// 	&:link {
+// 		-webkit-tap-highlight-color : rgba( 0, 0, 0, 0.3 );
+// 	}
+// }
 
-h1, h2, h3, h4, h5, h6 {
-	font-family: $heading-font;
-	font-weight: $heading-font-weight;
-	margin-bottom: 0;
-	line-height: $line-height-sm;
-}
+// h1, h2, h3, h4, h5, h6 {
+// 	font-family: $heading-font;
+// 	font-weight: $heading-font-weight;
+// 	margin-bottom: 0;
+// 	line-height: $line-height-sm;
+// }
 
-h1 {
-	@include font-size(h1);
-	margin-top: $h3;
-}
+// h1 {
+// 	@include font-size(h1);
+// 	margin-top: $h3;
+// }
 
-h2 {
-	@include font-size(h2);
-	margin-top: $h3;
-}
+// h2 {
+// 	@include font-size(h2);
+// 	margin-top: $h3;
+// }
 
-h3 {
-	@include font-size(h3);
-	margin-top: $h3;
-}
+// h3 {
+// 	@include font-size(h3);
+// 	margin-top: $h3;
+// }
 
-h4 { 
-	@include font-size(h4);
-	margin-top: $h4;
-}
+// h4 { 
+// 	@include font-size(h4);
+// 	margin-top: $h4;
+// }
 
-h5 {
-	@include font-size(h5);
-	margin-top: $base;
-}
+// h5 {
+// 	@include font-size(h5);
+// 	margin-top: $size-base;
+// }
 
-h6 {	
-	@include font-size(h6);
-	margin-top: $base;
-}
+// h6 {	
+// 	@include font-size(h6);
+// 	margin-top: $size-base;
+// }
 
-p {
-	@include font-size(base);
-	margin-top: $base;
-	margin-bottom: 0;
-}
+// p {
+// 	@include font-size(base);
+// 	margin-top: $size-base;
+// 	margin-bottom: 0;
+// }
 
-small {
-	@include font-size(sml);
-}
+// small {
+// 	@include font-size(sml);
+// }
 
-strong {
-	font-weight: normal;
-	font-weight: 700;
-}
+// strong {
+// 	font-weight: normal;
+// 	font-weight: 700;
+// }
 
-blockquote {
-	@include font-size(h4);
-	font-style: italic;
+// blockquote {
+// 	@include font-size(h4);
+// 	font-style: italic;
 	
-	overflow: visible;
+// 	overflow: visible;
 
-	margin-left: 0;
-	margin: 0;
-	padding: 0 0 0 $h4;
+// 	margin-left: 0;
+// 	margin: 0;
+// 	padding: 0 0 0 $h4;
 
-	@include bp(med) {
-		padding-left: 0;
-	}
+// 	@include bp(med) {
+// 		padding-left: 0;
+// 	}
 
-	&:before {
-		background-image: url(../img/svgs/quotes-left.svg);
-		background-repeat: no-repeat;
+// 	&:before {
+// 		background-image: url(../img/svgs/quotes-left.svg);
+// 		background-repeat: no-repeat;
 
-		content: " ";
+// 		content: " ";
 		
-		width: $h3;
-		height: $h3;
+// 		width: $h3;
+// 		height: $h3;
 		
-		position: absolute;
-		left: -$h4;
+// 		position: absolute;
+// 		left: -$h4;
 
-		@include bp(med) {
-			left: -$h3;
-		}
-	}
-}
+// 		@include bp(med) {
+// 			left: -$h3;
+// 		}
+// 	}
+// }
 

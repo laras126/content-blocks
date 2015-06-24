@@ -1,0 +1,25 @@
+
+/// @group buttons
+
+$buttons: (
+    danger: ($color-alert-danger, $color-text-light),
+    warning: ($color-alert-warning, $color-text-light)
+    success: ($color-alert-success, $color-text-light),
+);
+ 
+.btn {
+    display: inline-block;
+    padding: .5em;
+    background: #ccc;
+    color: #666;
+   
+    @each $name, $colors in $buttons {
+        $bgcolor: nth($colors, 1);
+        $fontcolor: nth($colors, 2);
+
+        &--#{$name} {
+            background-color: $bgcolor;
+            color: $fontcolor;
+        }  
+    }
+}

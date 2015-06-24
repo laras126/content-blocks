@@ -19,7 +19,10 @@
 				</div>
 			</header>
 
-			{% include 'partials/flexcontent-logic.twig' %}
+				{% for block in section.blocks %} 
+					{% include 'blocks/block-logic.twig' %}
+				{% endfor %}
+
 		
 		</section>
 	{% endfor %}

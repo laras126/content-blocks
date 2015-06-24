@@ -1,9 +1,7 @@
 
 $(document).ready(function() {
 	
-	$('body').addClass('js');
-
-	console.log('Check it: https://github.com/laras126/notlaura.com');
+	console.log('Check it: https://github.com/laras126/content-blocks-starter');
 
 
 	// ----
@@ -17,7 +15,7 @@ $(document).ready(function() {
 	    $menulink = $('.menu-link'),
 	    $menuTrigger = $('.has-subnav > a');
 
-	$menulink.click( function(e) {
+	$menulink.on('click', function(e) {
 		e.preventDefault();
 		$menulink.toggleClass('open');
 		$menu.toggleClass('open');
@@ -161,14 +159,14 @@ $(document).ready(function() {
 	// Hack to keep out widows
 	// http://css-tricks.com/preventing-widows-in-post-titles/
    
-	$('.item-title, .section-title, .main p, .lead').each( function() {
-		var wordArray = $(this).text().split(" ");
-		if (wordArray.length > 3) {
-			wordArray[wordArray.length-2] += "&nbsp;" + wordArray[wordArray.length-1];
-			wordArray.pop();
-	    	$(this).html(wordArray.join(" "));
-	  	}
-	});
+	// $('.item-title, .section-title, .main p, .lead').each( function() {
+	// 	var wordArray = $(this).text().split(" ");
+	// 	if (wordArray.length > 3) {
+	// 		wordArray[wordArray.length-2] += "&nbsp;" + wordArray[wordArray.length-1];
+	// 		wordArray.pop();
+	//     	$(this).html(wordArray.join(" "));
+	//   	}
+	// });
 
 
 });

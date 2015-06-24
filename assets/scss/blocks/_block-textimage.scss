@@ -1,32 +1,32 @@
 
-figure {
-	margin: 0;
-}
+// figure {
+// 	margin: 0;
+// }
 
-.caption {}
+// .caption {}
 
-	img.caption-image {
-		border-top: $accent-border;
-	}
+// 	img.caption-image {
+// 		border-top: $accent-border;
+// 	}
 
-.textimage-image {
+// .textimage-image {
 
-	@include bp(small) {
-		padding-right: $gutter;
-	}
+// 	@include bp(small) {
+// 		padding-right: $gutter;
+// 	}
 
-	@include bp(med) {
-		margin-left: percentage(1/7)*-1;
-	}
+// 	@include bp(med) {
+// 		margin-left: percentage(1/7)*-1;
+// 	}
 	
-	@include bp(large) {
-		margin-left: percentage(2/7)*-1;
-	}
+// 	@include bp(large) {
+// 		margin-left: percentage(2/7)*-1;
+// 	}
 
-	padding-bottom: $gutter/2;
-	position: relative;
-}
+// 	padding-bottom: $gutter/2;
+// 	position: relative;
+// }
 
-.textimage-text {
+// .textimage-text {
 	
-}
+// }

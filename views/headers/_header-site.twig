@@ -1,3 +1,7 @@
+{% extends 'headers/header.twig' %}
+
+{% block header_content %}
+
 <h1 class="hdr-logo" role="banner">
     <a class="hdr-logo-link" href="/" title="Timber" rel="home">{{site.name}}</a>
 </h1>
@@ -10,3 +14,5 @@
     {% endfor %}
     </ul>
 </nav><!-- #access -->
+
+{% endblock %}

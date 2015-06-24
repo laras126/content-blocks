@@ -1,22 +1,27 @@
 
 {# NOTE: block is shortened to blck to account for naming conflict with Twig blocks. #}
 
-<h2>Block logic</h2>
-
 {% set block_class = block.acf_fc_layout %}
 
 {% if block.acf_fc_layout == 'block_text' %}
+    <h2>block_text</h2>
     {% include 'blocks/_block-text.twig' %}   
 {% elseif block.acf_fc_layout == 'block_textimage' %}
+    <h2>block_textimage</h2>
     {% include 'blocks/_block-textimage.twig' %}
-{% elseif block.acf_fc_layout == 'block_related_page' %}
-    {% include 'blocks/_block-related.twig' %}
-{% elseif block.acf_fc_layout == 'block_blank' %}
+{# {% elseif block.acf_fc_layout == 'block_related_page' %} #}
+    {# <h2>block_related</h2> #}
+    {# {% include 'blocks/_block-related.twig' %} #}
+{% elseif block.acf_fc_layout == 'block_html' %}
+    <h2>block_html</h2>
     {% include 'blocks/_block-html.twig' %}
 {% elseif block.acf_fc_layout == 'block_list' %}
+    <h2>block_list</h2>
     {% include 'blocks/_block-list.twig' %}
 {% elseif block.acf_fc_layout == 'block_cta' %}
+    <h2>block_cta</h2>
     {% include 'blocks/_block-cta.twig' %}
 {% elseif block.acf_fc_layout == 'block_quote' %}
+    <h2>block_quote</h2>
     {% include 'blocks/_block-quote.twig' %}
 {% endif %}

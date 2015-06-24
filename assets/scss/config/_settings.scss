@@ -1,5 +1,4 @@
 
-
 // ----
 // ---- Screen sizes
 // ----
@@ -8,7 +7,6 @@ $screen-sm:     34em;
 $screen-md:     56em;
 $screen-lg:   	64em;
 $screen-xl:     74em;
-
 
 
 
@@ -27,39 +25,64 @@ $grey: 				#9E9E9E;
 
 // Semantic variable names
 
-$accent-vlight:		$l-green;
-$accent-light:		$l-teal;
-$accent-med:		$blue;
-$accent-dark:		darken($blue, 20%);
+// Color Scheme
+$color-accent-vlight:	$l-green;
+$color-accent-light:	$l-teal;
+$color-accent-med:		$blue;
+$color-accent-dark:		darken($blue, 20%);
 
-$alert-danger: 		lighten($l-green, 40%);
-$alert-warning: 	$accent-light;
-$alert-info: 		$blue;
-$alert-success: 	$green;
+// Alerts
+$color-alert-danger: 	lighten($l-green, 40%);
+$color-alert-warning: 	$color-accent-light;
+$color-alert-info: 		$blue;
+$color-alert-success: 	$green;
 
-$text-dark: 		#333;
-$text-med: 			$grey;
-$text-medlight: 	lighten($text-med, 20%);
-$text-light: 		$white;
+// Text colors
+$color-text-dark: 		#333;
+$color-text-med: 		$grey;
+$color-text-medlight: 	lighten($color-text-med, 20%);
+$color-text-light: 		$white;
 
-$link-color:		$blue;
-$link-hover: 		darken($link-color, 20%);
+// Links
+$color-link-color:		$blue;
+$color-link-hover: 		darken($color-link-color, 20%);
+$color-link-active: 	darken($color-link-color, 40%);
 
-$twitter: 			#4099FF;
-$facebook: 			#3B5998;
+// Body
+$color-body-bkgd: 		$white;
+$color-body-text: 		$color-text-dark;
+
+// Main rotation
+$color-rotate-bkgd: 	$color-accent-dark;
+$color-rotate-text: 	$color-text-light;
+$color-rotate-link: 	$color-text-light;
+
+$color-table-rotate: 	lighten($color-alert-info, 50%);
 
 
-// Components
 
-$body-bkgd: 		$white;
-$body-text: 		$text-dark;
+// ----
+// ---- Size Scale 
+// ----
 
-$rotate-bkgd: 		$accent-dark;
-$rotate-text: 		$text-light;
-$rotate-link: 		$text-light;
+// Rem Unit Scale
 
-$table-rotate: 		lighten($alert-info, 50%);
+$size-contain-lg: 		110%;
+$size-contain-md: 		102%;
+$size-contain-sm: 		98%;
+$size-contain: 			90%;
 
+$size-base:  		1.2rem;
+
+$size-xsml: 		$size-base*0.6;
+$size-sml:  		$size-base*0.75;
+
+$size-h1:  			$size-base*3;
+$size-h2:  			$size-base*2.4;
+$size-h3:  			$size-base*2;
+$size-h4:  			$size-base*1.3;
+$size-h5:  			$size-base*1.1;
+$size-h6:  			$size-sml;
 
 
 
@@ -67,41 +90,20 @@ $table-rotate: 		lighten($alert-info, 50%);
 // ---- Typography 
 // ----
 
-// Rem Unit Scale
+$serif:		'Georgia', serif;
+$sans-serif:	'Helvetica', serif;
 
-$contain-lg: 		110%;
-$contain-md: 		102%;
-$contain-sm: 		98%;
-$contain: 			90%;
-
-$base:  			1.2rem;
 $line-height-base: 	1.5;
 $line-height-sm: 	1.3;
 
-$xsml: 				$base*0.6;
-$sml:  				$base*0.75;
+$font-heading: 		$serif;
+$font-body: 		$sans-serif;
+$font-nav: 			$sans-serif;
+$font-form: 		$sans-serif;
+$font-lead: 		$sans-serif;
 
-$h1:  				$base*3;
-$h2:  				$base*2.4;
-$h3:  				$base*2;
-$h4:  				$base*1.3;
-$h5:  				$base*1.1;
-$h6:  				$sml;
+$font-weight-heading: 700;
 
-
-
-// Fonts
-
-$serif:             'Georgia', serif;
-$sans-serif:        'Helvetica', serif;
-
-$heading-font: 		$serif;
-$body-font: 		$sans-serif;
-$nav-font: 			$sans-serif;
-$form-font: 		$sans-serif;
-$lead-font: 		$sans-serif;
-
-$heading-font-weight: 700;
 
 
 
@@ -109,11 +111,11 @@ $heading-font-weight: 700;
 // ---- Utilities 
 // ----
 
-$accent-border: 	1px solid $accent-med;
+$border-accent: 	1px solid $color-accent-med;
 
 // Z-Index Scale
-$zbase: 			1;
-$zback: 			$zbase+1;
-$zmid: 				$zbase+2;
-$ztop: 				$zbase+3;
+$z-base: 			1;
+$z-back: 			$z-base+1;
+$z-mid: 			$z-base+2;
+$z-top: 			$z-base+3;
 

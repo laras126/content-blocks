@@ -143,7 +143,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "return_format": "array",
+                            "return_format": "url",
                             "preview_size": "thumbnail",
                             "library": "all",
                             "min_width": "",
@@ -530,6 +530,18 @@
                 "param": "page_template",
                 "operator": "!=",
                 "value": "page-long_form.php"
+            },
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
             }
         ]
     ],
@@ -551,5 +563,5 @@
         "tags",
         "send-trackbacks"
     ],
-    "modified": 1435176822
+    "modified": 1435180095
 }

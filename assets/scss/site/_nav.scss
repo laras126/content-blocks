@@ -1,262 +1,262 @@
 
-nav a {
-    font-family: $nav-font;
-}
+// nav a {
+//     font-family: $nav-font;
+// }
 
-%horiz-menu-spacing {
-     @include bp(med) {
-        text-align: right !important; // Gahh sorry.
+// %horiz-menu-spacing {
+//      @include bp(med) {
+//         text-align: right !important; // Gahh sorry.
         
-        .menu-item {
-            margin-right: $base;
+//         .menu-item {
+//             margin-right: $size-base;
 
-            display: inline-block;
-            border: 0;
+//             display: inline-block;
+//             border: 0;
 
-            &:last-child {
-                padding-right: 0;
-                margin-right: 0;
-            }
+//             &:last-child {
+//                 padding-right: 0;
+//                 margin-right: 0;
+//             }
 
-            &.menu-item-complex {
-                display: none;
-            }
+//             &.menu-item-complex {
+//                 display: none;
+//             }
 
-            &:last-child {
-                border-bottom: none;
-            }
-        }
-    }
+//             &:last-child {
+//                 border-bottom: none;
+//             }
+//         }
+//     }
 
-    @include bp(large) {
-        .menu-item {
-            margin-right: $h3;    
-        }
-    }
-}
-
-
-// General menu styles
-
-.menu-items {
-    margin: 0;
-    text-align: center;
-
-    a {
-        @include font-size(base);
-        display: block;
-        border-bottom: 1px solid lighten($text-med, 20%);
-        padding-top: $xsml;
-        padding-bottom: $xsml;
-
-        @include bp(med) {
-            border-bottom: 0;
-            padding-top: $xsml/2;
-            padding-bottom: $xsml/2;
-        }
-    }
-}
-
-    .menu-item {
-        @extend %unstyle-list;
-    }
+//     @include bp(large) {
+//         .menu-item {
+//             margin-right: $h3;    
+//         }
+//     }
+// }
 
 
+// // General menu styles
+
+// .menu-items {
+//     margin: 0;
+//     text-align: center;
+
+//     a {
+//         @include font-size(base);
+//         display: block;
+//         border-bottom: 1px solid lighten($text-med, 20%);
+//         padding-top: $xsml;
+//         padding-bottom: $xsml;
+
+//         @include bp(med) {
+//             border-bottom: 0;
+//             padding-top: $xsml/2;
+//             padding-bottom: $xsml/2;
+//         }
+//     }
+// }
+
+//     .menu-item {
+//         @extend %unstyle-list;
+//     }
 
 
 
-// ----
-// Header Menus
-// ----
 
 
-// Toggle nav, courtesy Brad Frost
-// http://codepen.io/bradfrost/pen/sHvaz
-// I simplified some, though
+// // ----
+// // Header Menus
+// // ----
 
 
-// Main menu
+// // Toggle nav, courtesy Brad Frost
+// // http://codepen.io/bradfrost/pen/sHvaz
+// // I simplified some, though
 
-.header-nav,
-.subnav {
-    overflow: hidden;
-    max-height: 0;
 
-    &.open {
-        max-height: 55em;
-    }
-}
+// // Main menu
 
-.header-nav {
-    position: relative;
-    transition: 0.5s max-height ease-in-out;
-}
+// .header-nav,
+// .subnav {
+//     overflow: hidden;
+//     max-height: 0;
 
-.menu-main {
-    @extend %horiz-menu-spacing;
+//     &.open {
+//         max-height: 55em;
+//     }
+// }
+
+// .header-nav {
+//     position: relative;
+//     transition: 0.5s max-height ease-in-out;
+// }
+
+// .menu-main {
+//     @extend %horiz-menu-spacing;
     
-    .menu-item a {
-        font-weight: 700;
-        color: $text-dark;
+//     .menu-item a {
+//         font-weight: 700;
+//         color: $text-dark;
 
-        &:hover {
-            color: $accent-light;
-        }
-    }
-}
+//         &:hover {
+//             color: $accent-light;
+//         }
+//     }
+// }
 
-    .subnav {        
-        background-color: $accent-vlight;
-    }
+//     .subnav {        
+//         background-color: $accent-vlight;
+//     }
 
-.menu-subtle {
-    @extend %horiz-menu-spacing;
+// .menu-subtle {
+//     @extend %horiz-menu-spacing;
 
-    .menu-item {
-        margin-right: $h4;
-    }
+//     .menu-item {
+//         margin-right: $h4;
+//     }
 
-    .special {
-        color: $alert-success;
-    }
-}
-
-
+//     .special {
+//         color: $alert-success;
+//     }
+// }
 
 
-// ----
-// Menu items
-// ----
 
-.menu-item-complex {
-    @extend .clearfix;
-    // background-color: $accent-light;
-    text-align: center;
 
-    a {
-        color: $alert-info;
-    }
-}
+// // ----
+// // Menu items
+// // ----
 
-    .header-nav li.has-subnav > a:after {
-        content: '\25bc';
-        padding-left: $sml/2;
-        color: $accent-med;
-        font-size: $sml*0.75;
-    }
+// .menu-item-complex {
+//     @extend .clearfix;
+//     // background-color: $accent-light;
+//     text-align: center;
 
-    .header-nav li.has-subnav > a.open:after {
-        content: '\25b2';
-    }
+//     a {
+//         color: $alert-info;
+//     }
+// }
+
+//     .header-nav li.has-subnav > a:after {
+//         content: '\25bc';
+//         padding-left: $sml/2;
+//         color: $accent-med;
+//         font-size: $sml*0.75;
+//     }
+
+//     .header-nav li.has-subnav > a.open:after {
+//         content: '\25b2';
+//     }
         
 
 
 
 
-// ----
-// Hamburger icon
-// ----
+// // ----
+// // Hamburger icon
+// // ----
 
-@import 'burger';
-
-
+// @import 'burger';
 
 
 
-// ----
-// Content Nav 
-//----
 
-// Shows up on "complex content" pages, or those with section blocks. Mainly Services.
 
-.content-nav {
+// // ----
+// // Content Nav 
+// //----
 
-    ul {
-        @include unstyle-list;
-        @include bp(med) {}
-    }
+// // Shows up on "complex content" pages, or those with section blocks. Mainly Services.
 
-} // .content-nav
+// .content-nav {
 
-    .content-nav-item {
+//     ul {
+//         @include unstyle-list;
+//         @include bp(med) {}
+//     }
+
+// } // .content-nav
+
+//     .content-nav-item {
         
-        &:hover {}
+//         &:hover {}
 
-        &:active {}
+//         &:active {}
 
-        a {}
+//         a {}
 
-    }
+//     }
 
-    .content-nav-active {
+//     .content-nav-active {
       
-        &:hover {
+//         &:hover {
 
-        }
+//         }
 
-        a {
-            transition: all 0.25s ease-in-out;
-        }
-    }
+//         a {
+//             transition: all 0.25s ease-in-out;
+//         }
+//     }
 
-.top-link {
+// .top-link {
 
-}
+// }
 
-.top-link-top {
-    transition: all 0.25s ease-in-out;
-    width: 0;
-    opacity: 0;
-    padding: 0;
-}
+// .top-link-top {
+//     transition: all 0.25s ease-in-out;
+//     width: 0;
+//     opacity: 0;
+//     padding: 0;
+// }
 
-.top-link-bottom {
-    position: fixed;
-    bottom: 5px;
-    right: 5px;
-    z-index: $ztop;
+// .top-link-bottom {
+//     position: fixed;
+//     bottom: 5px;
+//     right: 5px;
+//     z-index: $ztop;
 
-    width: 50px;
-    display: none;
+//     width: 50px;
+//     display: none;
 
-    padding-top: $xsml/3;
-    padding-bottom: $xsml/3;
+//     padding-top: $xsml/3;
+//     padding-bottom: $xsml/3;
     
     
 
-    a {    
-        text-align: center;
-        @include button($alert-info);
-    }
+//     a {    
+//         text-align: center;
+//         @include button($alert-info);
+//     }
 
-    @include bp(large) {
-        opacity: 0;
-    }
+//     @include bp(large) {
+//         opacity: 0;
+//     }
 
-}
-
-
+// }
 
 
 
-// ----
-// Footer Nav 
-//----
 
-.menu-footer {
 
-    .menu-items {
-        // This is a little nesty...
-        @include bp(med) {
-            text-align: left;
+// // ----
+// // Footer Nav 
+// //----
 
-            a {
-                padding: 0;
-                @include meta;
-            }
-        }
-    }
-}
+// .menu-footer {
+
+//     .menu-items {
+//         // This is a little nesty...
+//         @include bp(med) {
+//             text-align: left;
+
+//             a {
+//                 padding: 0;
+//                 @include meta;
+//             }
+//         }
+//     }
+// }
 
 
 

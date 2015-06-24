@@ -3,6 +3,10 @@
 
 A content strategy for WordPress built with [Timber](https://github.com/jarednova/timber/) and [Advanced Custom Fields](http://advancedcustomfields.com).
 
+## Naming Conventions
+
+All views prefixed with an `_` are extending something. Views partials, Sass partials, and ACF field names are mapped one to one for the most part.
+
 ## Blocks
 
 Blocks are structured chunks of content that remove the need for messy markup interspersed with your content. They are built using ACF Pro's Flexible Content Field.
