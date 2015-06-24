@@ -6,14 +6,11 @@
 {% endblock %}
 
     <body class="{{body_class}} wf-loading" data-template="base.twig" id="pageTop">
-
-        <header class="site-header" role="banner">
-            <div class="contain">
-                {% block header %}
-                    {% include 'headers/_header-site.twig' %}
-                {% endblock %}      
-            </div>
-        </header>
+        
+        {# Is this excessive? #}
+        {% block header %}
+            {% include 'headers/_header-site.twig' with { class: 'header--site', role: 'banner', contain: 'contain' } %}
+        {% endblock %}      
         
         <main id="content" class="main contain" role="main">
 

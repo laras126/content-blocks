@@ -63,6 +63,33 @@ For standard markup or shortcodes.
 
 - `html` - WYSIWG text only, no formatting.
 
+## Base Views
+
+Each directory of views contains a base view that is extended by its variations e.g. `block.twig` is extended by `_block-text.twig`. These are then included in primary templates with context variables. The following notes document the context variables each base template accepts.
+
+(Is this too abstracted? Whatever, it's fun.)
+
+### `headers/header.twig`
+Contains 3 context variables (is that the correct term?):
+1. `contain`: Conditionall prints a container within the `<header>` tags. Takes a string for the class name, should be `contain-[size]`.
+2. `class`: And class names for the `<header>`. Should be BEMmy (I think), like `header--site`.
+3. `role`: An ARIA role if necessary. Just the text for the role, so `banner`, etc.
+
+### `blocks/block.twig`
+...
+
+### `teases/tease.twig`
+...
+
+### `pages/page.twig`
+...
+
+### `singles/single.twig`
+...
+
+### `footers/footer.twig`
+...
+
 ## Getting Started
 
 Coming soon.

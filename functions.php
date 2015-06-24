@@ -48,10 +48,10 @@
 			return $context;
 
 			// Site-wide Settings
-			$context['site_callout_bool'] = get_field('site_callout_bool', 'options');
-			$context['site_callout_text'] = get_field('site_callout_text', 'options');
-			$context['site_footer_copyright'] = get_field('site_footer_copyright', 'options');
-			$context['site_footer_credits'] = get_field('site_footer_credits', 'options');
+			$context['callout_bool'] = get_field('site_callout_bool', 'options');
+			$context['callout_text'] = get_field('site_callout_text', 'options');
+			$context['footer_copyright'] = get_field('site_footer_copyright', 'options');
+			$context['footer_credits'] = get_field('site_footer_credits', 'options');
 	
 		}
 
