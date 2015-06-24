@@ -1,14 +1,14 @@
 {
-  "name": "mtnmeister",
+  "name": "timber-starter-kit",
   "version": "0.1.0",
   "author": "Lara Schenck <lara@notlaura.com>",
-  "homepage": "http://mtnmeister.com",
+  "homepage": "http://notlaura.com",
   "repository": {
     "type": "git",
-    "url": "git://github.com/roots/roots.git"
+    "url": "git://github.com/laras126/timber-starter-kit.git"
   },
   "bugs": {
-    "url": "https://github.com/roots/roots/issues"
+    "url": "https://github.com/laras126/timber-starter-kit/issues"
   },
   "licenses": [
     {
@@ -17,7 +17,6 @@
     }
   ],
   "scripts": {
-    "postinstall": "node node_modules/bower/bin/bower install && grunt dev"
   },
   "engines": {
     "node": ">= 0.10.0"

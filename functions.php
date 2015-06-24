@@ -85,7 +85,7 @@
 		}
 
 	}
-	add_action( 'wp_enqueue_scripts', 'tsk_scripts' );
+	// add_action( 'wp_enqueue_scripts', 'tsk_scripts' );
 
 	
 	 
@@ -97,6 +97,11 @@
 	 */
 
 	
+	// Add Sitewide Options Page
+	if( function_exists('acf_add_options_page') ) {	
+		acf_add_options_page('Site-wide Options');
+	}
+
 
 	// Change Title field placeholders for Custom Post Types
 	// (You'll need to register the types, of course)
@@ -137,19 +142,18 @@
 	add_filter( 'use_default_gallery_style', '__return_false' );
 
 
-	
 	// Add a 'Very Simple' toolbar style for the WYSIWYG editor in ACF
 	// http://www.advancedcustomfields.com/resources/customize-the-wysiwyg-toolbars/
 	function tsk_acf_wysiwyg_toolbar( $toolbars ) {
 
-		$toolbars['Text Based'] = array();
+		$toolbars['Links Only'] = array();
 
 		// Only one row of buttons
-		$toolbars['Text Based'][1] = array('formatselect' , 'bold' , 'link' , 'italic' , 'unlink' );
+		$toolbars['Links Only'][1] = array('bold', 'link', 'unlink' );
 
 		return $toolbars;
 	}
-	// add_filter( 'acf/fields/wysiwyg/toolbars' , 'tsk_acf_wysiwyg_toolbar'  );
+	add_filter( 'acf/fields/wysiwyg/toolbars' , 'tsk_acf_wysiwyg_toolbar'  );
 
 
 

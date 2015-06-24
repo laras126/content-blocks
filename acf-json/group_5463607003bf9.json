@@ -6,7 +6,6 @@
             "key": "field_5463608c32c38",
             "label": "Image",
             "name": "image",
-            "prefix": "",
             "type": "image",
             "instructions": "",
             "required": 0,
@@ -18,13 +17,19 @@
             },
             "return_format": "array",
             "preview_size": "thumbnail",
-            "library": "all"
+            "library": "all",
+            "min_width": 0,
+            "min_height": 0,
+            "min_size": 0,
+            "max_width": 0,
+            "max_height": 0,
+            "max_size": 0,
+            "mime_types": ""
         },
         {
             "key": "field_54636074e7a26",
             "label": "Short Description",
             "name": "short_description",
-            "prefix": "",
             "type": "textarea",
             "instructions": "",
             "required": 0,
@@ -46,7 +51,6 @@
             "key": "field_546360c95b73a",
             "label": "Long Description",
             "name": "long_description",
-            "prefix": "",
             "type": "wysiwyg",
             "instructions": "",
             "required": 0,
@@ -91,5 +95,5 @@
         "send-trackbacks"
     ],
     "local": "json",
-    "modified": 1424650460
+    "modified": 1435160795
 }

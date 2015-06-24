@@ -6,7 +6,6 @@
             "key": "field_54623e9ca254c",
             "label": "Blocks",
             "name": "blocks",
-            "prefix": "",
             "type": "flexible_content",
             "instructions": "Blocks provide a structure for your content.",
             "required": 0,
@@ -30,7 +29,6 @@
                             "key": "field_54623e9ca566c",
                             "label": "Text",
                             "name": "text",
-                            "prefix": "",
                             "type": "wysiwyg",
                             "instructions": "Add text content here. It will display in a column at the center of the page. Take care to use the headings appropriately, and use minimal formatting.",
                             "required": 0,
@@ -59,7 +57,6 @@
                             "key": "field_545a74693eedc",
                             "label": "Text Format",
                             "name": "text_format",
-                            "prefix": "",
                             "type": "radio",
                             "instructions": "What format should the text be?",
                             "required": 0,
@@ -82,7 +79,6 @@
                             "key": "field_545a73ad3eeda",
                             "label": "Text",
                             "name": "text",
-                            "prefix": "",
                             "type": "wysiwyg",
                             "instructions": "The text will display in a paragraph format next to the image. The paragraph text should be related to any text above and below.",
                             "required": 0,
@@ -109,7 +105,6 @@
                             "key": "field_5485990b20199",
                             "label": "Caption",
                             "name": "caption",
-                            "prefix": "",
                             "type": "textarea",
                             "instructions": "The caption to be displayed next to the image.",
                             "required": 0,
@@ -139,7 +134,6 @@
                             "key": "field_545a74233eedb",
                             "label": "Image",
                             "name": "image",
-                            "prefix": "",
                             "type": "image",
                             "instructions": "Upload an image. If a caption format, it's dimensions should be approximately 800x600. If paragraph, it is best to be the height of the text, likely taller than wide.",
                             "required": 0,
@@ -151,7 +145,14 @@
                             },
                             "return_format": "array",
                             "preview_size": "thumbnail",
-                            "library": "all"
+                            "library": "all",
+                            "min_width": 0,
+                            "min_height": 0,
+                            "min_size": 0,
+                            "max_width": 0,
+                            "max_height": 0,
+                            "max_size": 0,
+                            "mime_types": ""
                         }
                     ],
                     "min": "",
@@ -167,7 +168,6 @@
                             "key": "field_545a7b2c8b364",
                             "label": "What type of list?",
                             "name": "list_type",
-                            "prefix": "",
                             "type": "select",
                             "instructions": "",
                             "required": 0,
@@ -178,11 +178,11 @@
                                 "id": ""
                             },
                             "choices": {
-                                "free_form": "Free Form",
-                                "artifacts": "Artifact List"
+                                "list_free_form": "Free Form",
+                                "list_connected_content": "Connected Content"
                             },
                             "default_value": {
-                                "artifacts": "artifacts"
+                                "list_free_form": "list_free_form"
                             },
                             "allow_null": 0,
                             "multiple": 0,
@@ -196,7 +196,6 @@
                             "key": "field_54a1792d4f9c2",
                             "label": "List Title",
                             "name": "list_title",
-                            "prefix": "",
                             "type": "text",
                             "instructions": "Only needed if it requires separation from the previous block. Limit to 3 words.",
                             "required": 0,
@@ -218,7 +217,6 @@
                             "key": "field_54a1747ea852c",
                             "label": "List Display",
                             "name": "list_display",
-                            "prefix": "",
                             "type": "radio",
                             "instructions": "Major is recommended for items with photos, Minor for items with icons.",
                             "required": 0,
@@ -240,8 +238,7 @@
                         {
                             "key": "field_545a7d8239b3d",
                             "label": "Free Form List",
-                            "name": "freeform_items",
-                            "prefix": "",
+                            "name": "list_type_freeform",
                             "type": "repeater",
                             "instructions": "If the list is not for Artifacts, use this for free form fields.",
                             "required": 0,
@@ -250,7 +247,7 @@
                                     {
                                         "field": "field_545a7b2c8b364",
                                         "operator": "==",
-                                        "value": "free_form"
+                                        "value": "list_free_form"
                                     }
                                 ]
                             ],
@@ -268,7 +265,6 @@
                                     "key": "field_545a7dc339b3e",
                                     "label": "Image",
                                     "name": "image",
-                                    "prefix": "",
                                     "type": "image",
                                     "instructions": "300x300",
                                     "required": 0,
@@ -280,13 +276,19 @@
                                     },
                                     "return_format": "array",
                                     "preview_size": "thumbnail",
-                                    "library": "all"
+                                    "library": "all",
+                                    "min_width": 0,
+                                    "min_height": 0,
+                                    "min_size": 0,
+                                    "max_width": 0,
+                                    "max_height": 0,
+                                    "max_size": 0,
+                                    "mime_types": ""
                                 },
                                 {
                                     "key": "field_545a7f76a0bc4",
                                     "label": "Item Title",
                                     "name": "item_title",
-                                    "prefix": "",
                                     "type": "text",
                                     "instructions": "",
                                     "required": 0,
@@ -308,7 +310,6 @@
                                     "key": "field_545a7f60a0bc3",
                                     "label": "Description",
                                     "name": "description",
-                                    "prefix": "",
                                     "type": "textarea",
                                     "instructions": "A 2-3 sentence description of the item.",
                                     "required": 0,
@@ -330,18 +331,17 @@
                         },
                         {
                             "key": "field_545fae2b2e782",
-                            "label": "Connected Artifacts",
-                            "name": "connected_artifacts",
-                            "prefix": "",
+                            "label": "Connected Content",
+                            "name": "list_type_connected_content",
                             "type": "relationship",
-                            "instructions": "Show a list of connected Formats, Equipment, etc.",
+                            "instructions": "Show a list of connected content.",
                             "required": 0,
                             "conditional_logic": [
                                 [
                                     {
                                         "field": "field_545a7b2c8b364",
                                         "operator": "==",
-                                        "value": "artifacts"
+                                        "value": "list_free_form"
                                     }
                                 ]
                             ],
@@ -350,15 +350,15 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "post_type": [
-                                "dfi_artifact"
-                            ],
-                            "taxonomy": "",
+                            "post_type": [],
+                            "taxonomy": [],
                             "filters": [
                                 "search",
+                                "post_type",
                                 "taxonomy"
                             ],
                             "elements": "",
+                            "min": "",
                             "max": "",
                             "return_format": "object"
                         }
@@ -376,7 +376,6 @@
                             "key": "field_54623f85b5036",
                             "label": "Blank",
                             "name": "blank",
-                            "prefix": "",
                             "type": "wysiwyg",
                             "instructions": "This code should be used for a shortcode or embed code, and not for text or image content.",
                             "required": 0,
@@ -405,7 +404,6 @@
                             "key": "field_548af6f24190f",
                             "label": "Testimonial",
                             "name": "testimonial",
-                            "prefix": "",
                             "type": "relationship",
                             "instructions": "Select the testimonial to display.",
                             "required": 0,
@@ -418,13 +416,14 @@
                             "post_type": [
                                 "dfi_testimonial"
                             ],
-                            "taxonomy": "",
+                            "taxonomy": [],
                             "filters": [
                                 "search"
                             ],
                             "elements": "",
                             "max": 1,
-                            "return_format": "object"
+                            "return_format": "object",
+                            "min": 0
                         }
                     ],
                     "min": "",
@@ -440,7 +439,6 @@
                             "key": "field_548af71041917",
                             "label": "Text",
                             "name": "cta_text",
-                            "prefix": "",
                             "type": "text",
                             "instructions": "Something like \"Use our estimator tool to get a detailed cost estimate of your transfer.\"",
                             "required": 0,
@@ -499,5 +497,5 @@
         "tags",
         "send-trackbacks"
     ],
-    "modified": 1424652817
+    "modified": 1435159477
 }
