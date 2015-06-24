@@ -527,21 +527,9 @@
     "location": [
         [
             {
-                "param": "post_type",
-                "operator": "==",
-                "value": "page"
-            },
-            {
                 "param": "page_template",
                 "operator": "!=",
-                "value": "default"
-            }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "post"
+                "value": "page-long_form.php"
             }
         ]
     ],
@@ -563,5 +551,5 @@
         "tags",
         "send-trackbacks"
     ],
-    "modified": 1435176436
+    "modified": 1435176822
 }

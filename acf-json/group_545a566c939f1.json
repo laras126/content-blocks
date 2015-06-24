@@ -621,7 +621,7 @@
             {
                 "param": "page_template",
                 "operator": "==",
-                "value": "default"
+                "value": "page-long_form.php"
             }
         ]
     ],
@@ -643,5 +643,5 @@
         "tags",
         "send-trackbacks"
     ],
-    "modified": 1435176481
+    "modified": 1435176838
 }
