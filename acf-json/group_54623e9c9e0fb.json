@@ -1,6 +1,6 @@
 {
     "key": "group_54623e9c9e0fb",
-    "title": "Simple Content",
+    "title": "Blocks",
     "fields": [
         {
             "key": "field_54623e9ca254c",
@@ -234,14 +234,14 @@
                             "label": "Free Form List",
                             "name": "list_type_freeform",
                             "type": "repeater",
-                            "instructions": "If the list is not for Artifacts, use this for free form fields.",
+                            "instructions": "Create a free form list of items with text and a accompanying images.",
                             "required": 0,
                             "conditional_logic": [
                                 [
                                     {
                                         "field": "field_545a7b2c8b364",
                                         "operator": "==",
-                                        "value": "list_free_form"
+                                        "value": "free_form"
                                     }
                                 ]
                             ],
@@ -368,7 +368,7 @@
                             "label": "Shortcode\/HTML",
                             "name": "html",
                             "type": "wysiwyg",
-                            "instructions": "This block should be used for a shortcode or embed code, and not for text or image content.",
+                            "instructions": "This block should be used for a shortcode or embed code, and not for text or image content. For example, you could add a SoundCloud clip or YouTube video.",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -534,7 +534,7 @@
             {
                 "param": "page_template",
                 "operator": "!=",
-                "value": "template-long_form.php"
+                "value": "default"
             }
         ],
         [
@@ -563,5 +563,5 @@
         "tags",
         "send-trackbacks"
     ],
-    "modified": 1435175417
+    "modified": 1435176436
 }

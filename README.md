@@ -34,6 +34,8 @@ Block for either a free form list of content with an item description, title, an
 		- `item_title` - Text
 		- `item_description` - WYSIWG Link Only
 		- `item_image` - Image
+- if `connected_content`
+	- `list_type_connected_content` - Relationship
 
 ### `block_quote`
 
