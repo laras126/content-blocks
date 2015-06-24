@@ -19,9 +19,24 @@
             "esc_html": 0
         },
         {
+            "key": "field_558ada98ec42a",
+            "label": "Callout Bar",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top"
+        },
+        {
             "key": "field_552c0bf45d58b",
             "label": "Show callout bar?",
-            "name": "site_callout_tf",
+            "name": "site_callout_bool",
             "type": "true_false",
             "instructions": "This will display as a bar at the top of each page, and is good for news or time-sensitive calls to action.",
             "required": 0,
@@ -37,7 +52,7 @@
         {
             "key": "field_552c0c1b5d58c",
             "label": "Callout Bar Text",
-            "name": "site_callout_bar",
+            "name": "site_callout_text",
             "type": "wysiwyg",
             "instructions": "Enter a message to appear in the callout bar. Keep to about 15-20 words.",
             "required": 0,
@@ -53,8 +68,23 @@
             "media_upload": 1
         },
         {
+            "key": "field_558adabd23242",
+            "label": "Footer Colophon",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top"
+        },
+        {
             "key": "field_558ad11713279",
-            "label": "Footer Copyright",
+            "label": "Copyright",
             "name": "site_footer_copyright",
             "type": "text",
             "instructions": "Add your company name here. This will appear with the copyright symbol followed by the date.",
@@ -67,7 +97,7 @@
             },
             "default_value": "Lara Schenck, LLC",
             "placeholder": "",
-            "prepend": "&copy;",
+            "prepend": "\u00a9",
             "append": 2015,
             "maxlength": "",
             "readonly": 0,
@@ -75,7 +105,7 @@
         },
         {
             "key": "field_558ad12b1327a",
-            "label": "Footer Credits",
+            "label": "Credits",
             "name": "site_footer_credits",
             "type": "wysiwyg",
             "instructions": "Add credits to any tools or people that helped with the site. Leave blank if you like.",
@@ -107,5 +137,5 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "modified": 1435162880
+    "modified": 1435163364
 }

@@ -46,6 +46,13 @@
 			$context['menu'] = new TimberMenu();
 			$context['site'] = $this;
 			return $context;
+
+			// Site-wide Settings
+			$context['site_callout_bool'] = get_field('site_callout_bool', 'options');
+			$context['site_callout_text'] = get_field('site_callout_text', 'options');
+			$context['site_footer_copyright'] = get_field('site_footer_copyright', 'options');
+			$context['site_footer_credits'] = get_field('site_footer_credits', 'options');
+	
 		}
 
 		function add_to_twig($twig){
