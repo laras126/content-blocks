@@ -5,8 +5,7 @@
         {
             "key": "field_545a83096d4b5",
             "label": "Header Display",
-            "name": "header_display",
-            "prefix": "",
+            "name": "page_header_display",
             "type": "radio",
             "instructions": "Select the type of page intro you would like.",
             "required": 0,
@@ -18,8 +17,7 @@
             },
             "choices": {
                 "text": "Text Only",
-                "image": "Header Image",
-                "video": "Video"
+                "image": "Image"
             },
             "other_choice": 0,
             "save_other_choice": 0,
@@ -28,9 +26,8 @@
         },
         {
             "key": "field_545a8498b0f4c",
-            "label": "Image (1200x800)",
-            "name": "fixed_image",
-            "prefix": "",
+            "label": "Image - Desktop (1200x800)",
+            "name": "page_header_image_desktop",
             "type": "image",
             "instructions": "The header image for large devices.",
             "required": 0,
@@ -48,49 +45,30 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "array",
+            "return_format": "url",
             "preview_size": "thumbnail",
-            "library": "all"
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
         },
         {
-            "key": "field_54627e785c4cc",
-            "label": "Video",
-            "name": "video",
-            "prefix": "",
-            "type": "url",
-            "instructions": "The link to the video.",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_545a83096d4b5",
-                        "operator": "==",
-                        "value": "video"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": ""
-        },
-        {
-            "key": "field_54627e9debd7e",
-            "label": "Video Placeholder",
-            "name": "video_placeholder",
-            "prefix": "",
+            "key": "field_558ade731439e",
+            "label": "Image - Tablet (800x600)",
+            "name": "page_header_image_tablet",
             "type": "image",
-            "instructions": "A placeholder image for the video, this will display on phones. Dimensions should be 1200x800.",
+            "instructions": "The image to appear on tablet devices. Leave blank to use desktop image.",
             "required": 0,
             "conditional_logic": [
                 [
                     {
                         "field": "field_545a83096d4b5",
                         "operator": "==",
-                        "value": "video"
+                        "value": "image"
                     }
                 ]
             ],
@@ -101,13 +79,51 @@
             },
             "return_format": "url",
             "preview_size": "thumbnail",
-            "library": "all"
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_558ade2a1439d",
+            "label": "Image - Mobile (500x400)",
+            "name": "page_header_image_mobile",
+            "type": "image",
+            "instructions": "Header image to appear on small screens. Leave blank if the desktop image suffices.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_545a83096d4b5",
+                        "operator": "==",
+                        "value": "image"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
         },
         {
             "key": "field_545a85c3b0f50",
             "label": "Text Only Header",
             "name": "",
-            "prefix": "",
             "type": "message",
             "instructions": "",
             "required": 0,
@@ -125,15 +141,15 @@
                 "class": "",
                 "id": ""
             },
-            "message": "The \"Text Only\" header will display the page title, tagline, and summary."
+            "message": "The \"Text Only\" header will display the page title, tagline, and summary.",
+            "esc_html": 0
         },
         {
-            "key": "field_545a8366b7ae4",
-            "label": "Summary",
-            "name": "summary",
-            "prefix": "",
-            "type": "textarea",
-            "instructions": "1-2 sentences summarizing the page content. This will display below the page title.",
+            "key": "field_558add6512d17",
+            "label": "Header Tagline",
+            "name": "page_header_tagline",
+            "type": "text",
+            "instructions": "A 15-20 word introduction to the page content.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -143,11 +159,29 @@
             },
             "default_value": "",
             "placeholder": "",
-            "maxlength": 350,
-            "rows": 3,
-            "new_lines": "wpautop",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
             "readonly": 0,
             "disabled": 0
+        },
+        {
+            "key": "field_545a8366b7ae4",
+            "label": "Summary",
+            "name": "page_header_summary",
+            "type": "wysiwyg",
+            "instructions": "A short paragraph summarizing the page content. This will display below the page title. Optional.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "visual",
+            "toolbar": "links_only",
+            "media_upload": 0
         }
     ],
     "location": [
@@ -155,27 +189,13 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "dfi_service"
-            }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
                 "value": "page"
-            }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "dfi_case_study"
             }
         ]
     ],
     "menu_order": 0,
     "position": "acf_after_title",
-    "style": "default",
+    "style": "seamless",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": [
@@ -192,6 +212,5 @@
         "tags",
         "send-trackbacks"
     ],
-    "local": "json",
-    "modified": 1424650460
+    "modified": 1435165552
 }

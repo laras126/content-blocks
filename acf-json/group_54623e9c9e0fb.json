@@ -40,12 +40,12 @@
                             },
                             "default_value": "",
                             "tabs": "all",
-                            "toolbar": "text_based",
+                            "toolbar": "basic",
                             "media_upload": 0
                         }
                     ],
                     "min": "",
-                    "max": 4
+                    "max": ""
                 },
                 {
                     "key": "545a739c3eed9",
@@ -56,7 +56,7 @@
                         {
                             "key": "field_545a74693eedc",
                             "label": "Text Format",
-                            "name": "text_format",
+                            "name": "block_textimage_format",
                             "type": "radio",
                             "instructions": "What format should the text be?",
                             "required": 0,
@@ -78,7 +78,7 @@
                         {
                             "key": "field_545a73ad3eeda",
                             "label": "Text",
-                            "name": "text",
+                            "name": "block_textimage_text",
                             "type": "wysiwyg",
                             "instructions": "The text will display in a paragraph format next to the image. The paragraph text should be related to any text above and below.",
                             "required": 0,
@@ -98,13 +98,13 @@
                             },
                             "default_value": "",
                             "tabs": "all",
-                            "toolbar": "text_based",
+                            "toolbar": "full",
                             "media_upload": 0
                         },
                         {
                             "key": "field_5485990b20199",
                             "label": "Caption",
-                            "name": "caption",
+                            "name": "block_textimage_caption",
                             "type": "textarea",
                             "instructions": "The caption to be displayed next to the image.",
                             "required": 0,
@@ -125,7 +125,7 @@
                             "default_value": "",
                             "placeholder": "",
                             "maxlength": "",
-                            "rows": -13,
+                            "rows": 4,
                             "new_lines": "br",
                             "readonly": 0,
                             "disabled": 0
@@ -162,46 +162,18 @@
                     "key": "545a7b248b363",
                     "name": "block_list",
                     "label": "List",
-                    "display": "row",
+                    "display": "block",
                     "sub_fields": [
-                        {
-                            "key": "field_545a7b2c8b364",
-                            "label": "What type of list?",
-                            "name": "list_type",
-                            "type": "select",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "choices": {
-                                "list_free_form": "Free Form",
-                                "list_connected_content": "Connected Content"
-                            },
-                            "default_value": {
-                                "list_free_form": "list_free_form"
-                            },
-                            "allow_null": 0,
-                            "multiple": 0,
-                            "ui": 0,
-                            "ajax": 0,
-                            "placeholder": "",
-                            "disabled": 0,
-                            "readonly": 0
-                        },
                         {
                             "key": "field_54a1792d4f9c2",
                             "label": "List Title",
                             "name": "list_title",
                             "type": "text",
-                            "instructions": "Only needed if it requires separation from the previous block. Limit to 3 words.",
+                            "instructions": "Only needed if it requires separation from the previous block. Limit to a few words, something like \"Our Services\".",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "",
+                                "width": 33,
                                 "class": "",
                                 "id": ""
                             },
@@ -214,6 +186,28 @@
                             "disabled": 0
                         },
                         {
+                            "key": "field_545a7b2c8b364",
+                            "label": "List Type",
+                            "name": "list_type",
+                            "type": "radio",
+                            "instructions": "Would you like to connect existing content, or create customized text?",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": 33,
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "list_free_form": "Free Form",
+                                "list_connected_content": "Connected Content"
+                            },
+                            "other_choice": 0,
+                            "save_other_choice": 0,
+                            "default_value": "",
+                            "layout": "vertical"
+                        },
+                        {
                             "key": "field_54a1747ea852c",
                             "label": "List Display",
                             "name": "list_display",
@@ -222,7 +216,7 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "",
+                                "width": 33,
                                 "class": "",
                                 "id": ""
                             },
@@ -233,7 +227,7 @@
                             "other_choice": 0,
                             "save_other_choice": 0,
                             "default_value": "",
-                            "layout": "horizontal"
+                            "layout": "vertical"
                         },
                         {
                             "key": "field_545a7d8239b3d",
@@ -259,7 +253,7 @@
                             "min": "",
                             "max": "",
                             "layout": "row",
-                            "button_label": "Add Row",
+                            "button_label": "Add Item",
                             "sub_fields": [
                                 {
                                     "key": "field_545a7dc339b3e",
@@ -341,7 +335,7 @@
                                     {
                                         "field": "field_545a7b2c8b364",
                                         "operator": "==",
-                                        "value": "list_free_form"
+                                        "value": "list_connected_content"
                                     }
                                 ]
                             ],
@@ -374,10 +368,10 @@
                     "sub_fields": [
                         {
                             "key": "field_54623f85b5036",
-                            "label": "Blank",
-                            "name": "blank",
+                            "label": "Shortcode\/HTML",
+                            "name": "block_html",
                             "type": "wysiwyg",
-                            "instructions": "This code should be used for a shortcode or embed code, and not for text or image content.",
+                            "instructions": "This block should be used for a shortcode or embed code, and not for text or image content.",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -387,7 +381,7 @@
                             },
                             "default_value": "",
                             "tabs": "text",
-                            "toolbar": "text_based",
+                            "toolbar": "full",
                             "media_upload": 0
                         }
                     ],
@@ -433,14 +427,14 @@
                     "key": "548af71041913",
                     "name": "block_cta",
                     "label": "Call to Action",
-                    "display": "row",
+                    "display": "block",
                     "sub_fields": [
                         {
                             "key": "field_548af71041917",
                             "label": "Text",
-                            "name": "cta_text",
-                            "type": "text",
-                            "instructions": "Something like \"Use our estimator tool to get a detailed cost estimate of your transfer.\"",
+                            "name": "block_cta_text",
+                            "type": "textarea",
+                            "instructions": "Something like \"Get in touch to request a quote or just to say hi.\" Tweet length.",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -450,11 +444,48 @@
                             },
                             "default_value": "",
                             "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": 140,
+                            "maxlength": "",
+                            "rows": 3,
+                            "new_lines": "wpautop",
                             "readonly": 0,
                             "disabled": 0
+                        },
+                        {
+                            "key": "field_558ae470bcbc6",
+                            "label": "Button Text",
+                            "name": "block_cta_btn_text",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": 50,
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_558ae495bcbc7",
+                            "label": "Button Link",
+                            "name": "block_cta_btn_link",
+                            "type": "url",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": 50,
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": ""
                         }
                     ],
                     "min": "",
@@ -497,5 +528,5 @@
         "tags",
         "send-trackbacks"
     ],
-    "modified": 1435159477
+    "modified": 1435166569
 }

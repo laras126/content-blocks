@@ -13,7 +13,7 @@
 		$toolbars['Links Only'] = array();
 
 		// Only one row of buttons
-		$toolbars['Links Only'][1] = array('bold', 'link', 'unlink' );
+		$toolbars['Links Only'][1] = array('link', 'unlink' );
 
 		return $toolbars;
 	}
