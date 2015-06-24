@@ -1,28 +1,30 @@
 {% extends "blocks/block.twig" %}
 
-{# List Block #}
-
 {% block content %}
 
-	{% set type = blck.list_type %}
-	{% set display = blck.list_display %}
+	{% set type = block.list_type %}
+	{% set display = block.list_display %}
 
-	{% if type == 'connected' %}
-		{% set list = blck.connected_content %}
+	{% if type == 'connected_content' %}
+		{% set list = block.list_type_connected_content %}
 	{% elseif type == 'free_form' %}
-		{% set list = blck.freeform_items %}
+		{% set list = block.list_type_free_form %}
 	{% endif %}
 
-	{% if blck.list_title %}
-		<h4 class="list-title">{{blck.list_title}}</h4>
+	{% if block.list_title %}
+		<h4 class="list__title">{{block.list_title}}</h4>
 	{% endif %}
 
 	<ul class="list list-{{display}} list-{{list|length}}">
 
-		{% for item in list %}
-			<li>
+		{% for item in block.list_type_connected_content %}
+
+			<h4>{{item.post_title}}</h4>
+			<p>{{item.header_summary}}</p>
+
+{# 			<li>
 				<div class="item-support">
-					{% if item.image %}
+					{% if item.item_image %}
 						<img class="lazy" src="{{TimberImage(item.image).src('medium')}}" src="{{site.theme.link}}/assets/img/util/loader.gif" width="300" alt="{{item.post_title}}" alt="{{item.post_title}}"/>
 						<noscript><img src="{{TimberImage(item.image).src('medium')}}" alt="{{item.post_title}}" height="200" width="200"></noscript>
 					{% endif %}
@@ -40,7 +42,7 @@
 						{% endfor %}
 					{% endif %}
 				</div>
-			</li>
+			</li> #}
 		{% endfor %}
 			
 	</ul> <!-- /.list-{{display}} -->

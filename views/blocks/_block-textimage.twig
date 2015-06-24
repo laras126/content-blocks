@@ -3,9 +3,9 @@
 {% block content %}
 	{% if block.textimage_format == 'caption'%}
 		{{block.textimage_image}}
-		{{block.textimage_caption}}
+		<p class="block--textimage__caption">{{block.textimage_caption}}</p>
 	{% elseif block.textimage_format == 'paragraph'%}
 		{{block.textimage_image}}
-		{{block.textimage_text}}
+		{{block.textimage_paragraph}}
 	{% endif %}
 {% endblock %}

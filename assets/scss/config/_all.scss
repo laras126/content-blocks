@@ -3,13 +3,12 @@
 @import 'normalize';
 
 // Variables
-@import 'settings';
+@import 'variables';
 
 // Dynamic
 @import 'mixins';
 @import 'helpers';
 
-@import 'bs-mixins';
-// @import 'bs-classes';
+@import 'flexbox';
 
 @import 'animations';
