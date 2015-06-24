@@ -5,7 +5,7 @@
         {
             "key": "field_545a83096d4b5",
             "label": "Header Display",
-            "name": "page_header_display",
+            "name": "header_display",
             "type": "radio",
             "instructions": "Select the type of page intro you would like.",
             "required": 0,
@@ -27,7 +27,7 @@
         {
             "key": "field_545a8498b0f4c",
             "label": "Image - Desktop (1200x800)",
-            "name": "page_header_image_desktop",
+            "name": "header_image_desktop",
             "type": "image",
             "instructions": "The header image for large devices.",
             "required": 0,
@@ -59,7 +59,7 @@
         {
             "key": "field_558ade731439e",
             "label": "Image - Tablet (800x600)",
-            "name": "page_header_image_tablet",
+            "name": "header_image_tablet",
             "type": "image",
             "instructions": "The image to appear on tablet devices. Leave blank to use desktop image.",
             "required": 0,
@@ -91,7 +91,7 @@
         {
             "key": "field_558ade2a1439d",
             "label": "Image - Mobile (500x400)",
-            "name": "page_header_image_mobile",
+            "name": "header_image_mobile",
             "type": "image",
             "instructions": "Header image to appear on small screens. Leave blank if the desktop image suffices.",
             "required": 0,
@@ -147,7 +147,7 @@
         {
             "key": "field_558add6512d17",
             "label": "Header Tagline",
-            "name": "page_header_tagline",
+            "name": "header_tagline",
             "type": "text",
             "instructions": "A 15-20 word introduction to the page content.",
             "required": 0,
@@ -168,7 +168,7 @@
         {
             "key": "field_545a8366b7ae4",
             "label": "Summary",
-            "name": "page_header_summary",
+            "name": "header_summary",
             "type": "wysiwyg",
             "instructions": "A short paragraph summarizing the page content. This will display below the page title. Optional.",
             "required": 0,
@@ -212,5 +212,5 @@
         "tags",
         "send-trackbacks"
     ],
-    "modified": 1435165552
+    "modified": 1435170077
 }

@@ -1,0 +1,20 @@
+{% extends 'headers/header.twig' %}
+
+{% block header_content %}
+	
+	{% set display = post.header_display %}
+
+	<h1 class="header-title">{{post.post_title}}</h1>
+
+	{% if display == 'image' %}
+
+		{{post.header_image_desktop}}
+		{{post.header_image_tablet}}
+		{{post.header_image_mobile}}
+
+	{% endif %}
+
+	<p class="header-lead">{{post.header_tagline}}</p>
+	<p class="header-summary">{{post.header_summary}}</p>
+
+{% endblock %}

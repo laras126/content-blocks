@@ -10,14 +10,14 @@
         <header class="site-header" role="banner">
             <div class="contain">
                 {% block header %}
-                    {% include 'headers/header-site.twig' %}
+                    {% include 'headers/_header-site.twig' %}
                 {% endblock %}      
             </div>
         </header>
         
         <main id="content" class="main" role="main">
 
-            {% include 'headers/header-page.twig' %}
+            {% include 'headers/_header-page.twig' %}
             
             <div class="page-body">
                 {% block content %}

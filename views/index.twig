@@ -4,7 +4,7 @@
 	<h2>{{foo}}</h2>
 	<p>{{qux}}</p>
 	{% for post in posts %}
-		{% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
+		{% include ['teases/_tease-'~post.post_type~'.twig', 'teases/tease.twig'] %}
 	{% endfor %}
 
 {% endblock %}

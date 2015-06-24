@@ -1,0 +1,10 @@
+{% extends "blocks/block.twig" %}
+
+{% block content %}
+	<h1>block_textimage</h1>
+	{% if block.textimage_format == 'caption'%}
+		{{block.textimage_caption}}
+	{% elseif block.textimage_format == 'paragraph'%}
+		{{block.textimage_text}}
+	{% endif %}
+{% endblock %}

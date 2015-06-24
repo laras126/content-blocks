@@ -28,7 +28,7 @@
                         {
                             "key": "field_54623e9ca566c",
                             "label": "Text",
-                            "name": "text",
+                            "name": "block_text",
                             "type": "wysiwyg",
                             "instructions": "Add text content here. It will display in a column at the center of the page. Take care to use the headings appropriately, and use minimal formatting.",
                             "required": 0,
@@ -56,7 +56,7 @@
                         {
                             "key": "field_545a74693eedc",
                             "label": "Text Format",
-                            "name": "block_textimage_format",
+                            "name": "textimage_format",
                             "type": "radio",
                             "instructions": "What format should the text be?",
                             "required": 0,
@@ -78,7 +78,7 @@
                         {
                             "key": "field_545a73ad3eeda",
                             "label": "Text",
-                            "name": "block_textimage_text",
+                            "name": "textimage_text",
                             "type": "wysiwyg",
                             "instructions": "The text will display in a paragraph format next to the image. The paragraph text should be related to any text above and below.",
                             "required": 0,
@@ -104,7 +104,7 @@
                         {
                             "key": "field_5485990b20199",
                             "label": "Caption",
-                            "name": "block_textimage_caption",
+                            "name": "textimage_caption",
                             "type": "textarea",
                             "instructions": "The caption to be displayed next to the image.",
                             "required": 0,
@@ -133,7 +133,7 @@
                         {
                             "key": "field_545a74233eedb",
                             "label": "Image",
-                            "name": "image",
+                            "name": "textimage_image",
                             "type": "image",
                             "instructions": "Upload an image. If a caption format, it's dimensions should be approximately 800x600. If paragraph, it is best to be the height of the text, likely taller than wide.",
                             "required": 0,
@@ -146,12 +146,12 @@
                             "return_format": "array",
                             "preview_size": "thumbnail",
                             "library": "all",
-                            "min_width": 0,
-                            "min_height": 0,
-                            "min_size": 0,
-                            "max_width": 0,
-                            "max_height": 0,
-                            "max_size": 0,
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
                             "mime_types": ""
                         }
                     ],
@@ -389,17 +389,17 @@
                     "max": ""
                 },
                 {
-                    "key": "548af6f24190c",
-                    "name": "block_testimonial",
-                    "label": "Testimonial",
+                    "key": "558aeb4a163d5",
+                    "name": "block_quote",
+                    "label": "Quote",
                     "display": "row",
                     "sub_fields": [
                         {
-                            "key": "field_548af6f24190f",
-                            "label": "Testimonial",
-                            "name": "testimonial",
-                            "type": "relationship",
-                            "instructions": "Select the testimonial to display.",
+                            "key": "field_558aeb54163d6",
+                            "label": "Quote Text",
+                            "name": "quote_text",
+                            "type": "textarea",
+                            "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -407,17 +407,50 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "post_type": [
-                                "dfi_testimonial"
-                            ],
-                            "taxonomy": [],
-                            "filters": [
-                                "search"
-                            ],
-                            "elements": "",
-                            "max": 1,
-                            "return_format": "object",
-                            "min": 0
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": "",
+                            "new_lines": "br",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_558aed401e4db",
+                            "label": "Source",
+                            "name": "quote_source",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": 50,
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_558aed511e4dc",
+                            "label": "Source URL",
+                            "name": "quote_source_url",
+                            "type": "url",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": 50,
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": ""
                         }
                     ],
                     "min": "",
@@ -500,6 +533,11 @@
                 "param": "post_type",
                 "operator": "==",
                 "value": "page"
+            },
+            {
+                "param": "page_template",
+                "operator": "!=",
+                "value": "template-long_form.php"
             }
         ],
         [
@@ -528,5 +566,5 @@
         "tags",
         "send-trackbacks"
     ],
-    "modified": 1435166569
+    "modified": 1435168095
 }

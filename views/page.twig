@@ -2,6 +2,8 @@
 
 {% block content %}
 	
-	{% include 'partials/flexcontent-logic.twig' %}
+	{% for block in post.get_field('blocks') %} 
+		{% include 'blocks/block-logic.twig' %}
+	{% endfor %}
 
 {% endblock %}
