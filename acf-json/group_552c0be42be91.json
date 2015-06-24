@@ -39,7 +39,7 @@
             "label": "Callout Bar Text",
             "name": "site_callout_bar",
             "type": "wysiwyg",
-            "instructions": "Enter a message to appear in the callout bar.",
+            "instructions": "Enter a message to appear in the callout bar. Keep to about 15-20 words.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -47,8 +47,8 @@
                 "class": "single-line-wysiwg",
                 "id": ""
             },
-            "default_value": "",
-            "tabs": "all",
+            "default_value": "We just launched a blog. <a href=\"#\">Check it out<\/a> and let us know what you think in the comments!",
+            "tabs": "visual",
             "toolbar": "links_only",
             "media_upload": 1
         },
@@ -57,7 +57,7 @@
             "label": "Footer Copyright",
             "name": "site_footer_copyright",
             "type": "text",
-            "instructions": "",
+            "instructions": "Add your company name here. This will appear with the copyright symbol followed by the date.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -65,10 +65,10 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
+            "default_value": "Lara Schenck, LLC",
             "placeholder": "",
-            "prepend": "",
-            "append": "",
+            "prepend": "&copy;",
+            "append": 2015,
             "maxlength": "",
             "readonly": 0,
             "disabled": 0
@@ -78,7 +78,7 @@
             "label": "Footer Credits",
             "name": "site_footer_credits",
             "type": "wysiwyg",
-            "instructions": "",
+            "instructions": "Add credits to any tools or people that helped with the site. Leave blank if you like.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -86,9 +86,9 @@
                 "class": "single-line-wysiwg",
                 "id": ""
             },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "full",
+            "default_value": "Proudly powered by <a href=\"http:\/\/wordpress.org\">WordPress.<\/a>",
+            "tabs": "visual",
+            "toolbar": "links_only",
             "media_upload": 0
         }
     ],
@@ -103,9 +103,9 @@
     ],
     "menu_order": 0,
     "position": "normal",
-    "style": "default",
+    "style": "seamless",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "modified": 1435161741
+    "modified": 1435162880
 }
