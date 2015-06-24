@@ -78,7 +78,7 @@
                         {
                             "key": "field_545a73ad3eeda",
                             "label": "Text",
-                            "name": "textimage_text",
+                            "name": "textimage_paragraph",
                             "type": "wysiwyg",
                             "instructions": "The text will display in a paragraph format next to the image. The paragraph text should be related to any text above and below.",
                             "required": 0,
@@ -199,7 +199,7 @@
                                 "id": ""
                             },
                             "choices": {
-                                "list_free_form": "Free Form",
+                                "free_form": "Free Form",
                                 "list_connected_content": "Connected Content"
                             },
                             "other_choice": 0,
@@ -258,7 +258,7 @@
                                 {
                                     "key": "field_545a7dc339b3e",
                                     "label": "Image",
-                                    "name": "image",
+                                    "name": "item_image",
                                     "type": "image",
                                     "instructions": "300x300",
                                     "required": 0,
@@ -271,12 +271,12 @@
                                     "return_format": "array",
                                     "preview_size": "thumbnail",
                                     "library": "all",
-                                    "min_width": 0,
-                                    "min_height": 0,
-                                    "min_size": 0,
-                                    "max_width": 0,
-                                    "max_height": 0,
-                                    "max_size": 0,
+                                    "min_width": "",
+                                    "min_height": "",
+                                    "min_size": "",
+                                    "max_width": "",
+                                    "max_height": "",
+                                    "max_size": "",
                                     "mime_types": ""
                                 },
                                 {
@@ -303,8 +303,8 @@
                                 {
                                     "key": "field_545a7f60a0bc3",
                                     "label": "Description",
-                                    "name": "description",
-                                    "type": "textarea",
+                                    "name": "item_description",
+                                    "type": "wysiwyg",
                                     "instructions": "A 2-3 sentence description of the item.",
                                     "required": 0,
                                     "conditional_logic": 0,
@@ -314,12 +314,9 @@
                                         "id": ""
                                     },
                                     "default_value": "",
-                                    "placeholder": "",
-                                    "maxlength": "",
-                                    "rows": "",
-                                    "new_lines": "br",
-                                    "readonly": 0,
-                                    "disabled": 0
+                                    "tabs": "visual",
+                                    "toolbar": "links_only",
+                                    "media_upload": 1
                                 }
                             ]
                         },
@@ -362,14 +359,14 @@
                 },
                 {
                     "key": "54623f7eb5035",
-                    "name": "block_blank",
+                    "name": "block_html",
                     "label": "Blank",
                     "display": "row",
                     "sub_fields": [
                         {
                             "key": "field_54623f85b5036",
                             "label": "Shortcode\/HTML",
-                            "name": "block_html",
+                            "name": "html",
                             "type": "wysiwyg",
                             "instructions": "This block should be used for a shortcode or embed code, and not for text or image content.",
                             "required": 0,
@@ -465,7 +462,7 @@
                         {
                             "key": "field_548af71041917",
                             "label": "Text",
-                            "name": "block_cta_text",
+                            "name": "cta_text",
                             "type": "textarea",
                             "instructions": "Something like \"Get in touch to request a quote or just to say hi.\" Tweet length.",
                             "required": 0,
@@ -486,7 +483,7 @@
                         {
                             "key": "field_558ae470bcbc6",
                             "label": "Button Text",
-                            "name": "block_cta_btn_text",
+                            "name": "cta_btn_text",
                             "type": "text",
                             "instructions": "",
                             "required": 0,
@@ -506,8 +503,8 @@
                         },
                         {
                             "key": "field_558ae495bcbc7",
-                            "label": "Button Link",
-                            "name": "block_cta_btn_link",
+                            "label": "Button URL",
+                            "name": "cta_btn_url",
                             "type": "url",
                             "instructions": "",
                             "required": 0,
@@ -566,5 +563,5 @@
         "tags",
         "send-trackbacks"
     ],
-    "modified": 1435168095
+    "modified": 1435175417
 }
