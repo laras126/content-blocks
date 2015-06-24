@@ -1,0 +1,111 @@
+{
+    "key": "group_552c0be42be91",
+    "title": "Site Settings",
+    "fields": [
+        {
+            "key": "field_558ad16e741d5",
+            "label": "About",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "These options will show on every page. Leave blank to not show them.",
+            "esc_html": 0
+        },
+        {
+            "key": "field_552c0bf45d58b",
+            "label": "Show callout bar?",
+            "name": "site_callout_tf",
+            "type": "true_false",
+            "instructions": "This will display as a bar at the top of each page, and is good for news or time-sensitive calls to action.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": 25,
+                "class": "",
+                "id": ""
+            },
+            "message": "Show Callout Bar",
+            "default_value": 0
+        },
+        {
+            "key": "field_552c0c1b5d58c",
+            "label": "Callout Bar Text",
+            "name": "site_callout_bar",
+            "type": "wysiwyg",
+            "instructions": "Enter a message to appear in the callout bar.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": 75,
+                "class": "single-line-wysiwg",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "links_only",
+            "media_upload": 1
+        },
+        {
+            "key": "field_558ad11713279",
+            "label": "Footer Copyright",
+            "name": "site_footer_copyright",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": 25,
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_558ad12b1327a",
+            "label": "Footer Credits",
+            "name": "site_footer_credits",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": 75,
+                "class": "single-line-wysiwg",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-site-wide-options"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "modified": 1435161741
+}
