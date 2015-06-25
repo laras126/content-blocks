@@ -6,7 +6,7 @@ module.exports = function(grunt, config) {
 
             dist: {
                 // [REQUIRED] Path to the build you're using for development.
-                "devFile" : config.jsSrcDir + "modernizr-dev.js",
+                "devFile" : config.bowerDir + "modernizr/modernizr.js",
 
                 // Path to save out the built file.
                 "outputFile" : config.jsConcatDir + "modernizr-custom.js",

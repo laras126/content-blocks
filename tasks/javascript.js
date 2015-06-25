@@ -1,9 +1,11 @@
 module.exports = function(grunt, config) {
     
     var jsFileList = [
-    	config.jsConcatDir + 'bower.js',
+    	config.jsConcatDir + 'modernizr-custom.js',
         config.jsSrcDir + '*.js'
     ];  
+
+    console.log(jsFileList);
 
 	grunt.config.merge({
 		
@@ -24,17 +26,8 @@ module.exports = function(grunt, config) {
 			    cssDest: config.cssDir + 'bower.css',
 			    exclude: [
 					'jquery',
-			      	'modernizr',
-			      	'matchmedia'
-			    ],
-			    // dependencies: {
-			    //   	'underscore': 'jquery',
-			    //   	'backbone': 'underscore',
-			    //   	'jquery-mousewheel': 'jquery'
-			    // },
-			    // bowerOptions: {
-			    //   	relative: false
-			    // }
+			      	'modernizr'
+			    ]
 			}
 		},
 
@@ -43,7 +36,7 @@ module.exports = function(grunt, config) {
 	        },
 	        dist: {
 	            src: jsFileList,
-	            dest: config.jsSrcDir + 'scripts.js',
+	            dest: config.jsConcatDir + 'scripts.js',
 	        },
 	    },
 		

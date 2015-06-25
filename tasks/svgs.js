@@ -40,8 +40,4 @@ module.exports = function(grunt, config) {
         },
     });
 
-    grunt.registerTask('svgs', [
-        // 'svgmin',
-        'svgstore'
-    ]);
 }
