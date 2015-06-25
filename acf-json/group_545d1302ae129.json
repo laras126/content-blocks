@@ -41,7 +41,7 @@
                 ]
             ],
             "wrapper": {
-                "width": "",
+                "width": 33,
                 "class": "",
                 "id": ""
             },
@@ -73,7 +73,7 @@
                 ]
             ],
             "wrapper": {
-                "width": "",
+                "width": 33,
                 "class": "",
                 "id": ""
             },
@@ -105,7 +105,7 @@
                 ]
             ],
             "wrapper": {
-                "width": "",
+                "width": 33,
                 "class": "",
                 "id": ""
             },
@@ -148,8 +148,8 @@
             "key": "field_558add6512d17",
             "label": "Header Tagline",
             "name": "header_tagline",
-            "type": "text",
-            "instructions": "A 15-20 word introduction to the page content.",
+            "type": "textarea",
+            "instructions": "A concise introduction to the page content. ",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -159,9 +159,9 @@
             },
             "default_value": "",
             "placeholder": "",
-            "prepend": "",
-            "append": "",
             "maxlength": "",
+            "rows": 2,
+            "new_lines": "",
             "readonly": 0,
             "disabled": 0
         },
@@ -212,5 +212,5 @@
         "tags",
         "send-trackbacks"
     ],
-    "modified": 1435170077
+    "modified": 1435257799
 }
