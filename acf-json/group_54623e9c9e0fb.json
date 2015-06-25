@@ -40,7 +40,7 @@
                             },
                             "default_value": "",
                             "tabs": "all",
-                            "toolbar": "basic",
+                            "toolbar": "text_based",
                             "media_upload": 0
                         }
                     ],
@@ -98,7 +98,7 @@
                             },
                             "default_value": "",
                             "tabs": "all",
-                            "toolbar": "full",
+                            "toolbar": "text_based",
                             "media_upload": 0
                         },
                         {
@@ -584,5 +584,5 @@
         "tags",
         "send-trackbacks"
     ],
-    "modified": 1435257042
+    "modified": 1435258665
 }

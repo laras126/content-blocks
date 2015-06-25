@@ -11,9 +11,11 @@
 	function tsk_acf_wysiwyg_toolbar( $toolbars ) {
 
 		$toolbars['Links Only'] = array();
+		$toolbars['Text Based'] = array();
 
 		// Only one row of buttons
 		$toolbars['Links Only'][1] = array('link', 'unlink' );
+		$toolbars['Text Based'][1] = array('formatselect', 'bold', 'link', 'italic', 'unlink' );
 
 		return $toolbars;
 	}
