@@ -381,7 +381,7 @@
                 {
                     "key": "54623f7eb5035",
                     "name": "block_html",
-                    "label": "Blank",
+                    "label": "HTML",
                     "display": "row",
                     "sub_fields": [
                         {
@@ -584,5 +584,5 @@
         "tags",
         "send-trackbacks"
     ],
-    "modified": 1435258665
+    "modified": 1435258837
 }
