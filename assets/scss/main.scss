@@ -1,14 +1,15 @@
 
 
-@import 'config/all'; // Mixins, variables, and tools that do not output code
-@import 'elements/all'; // Roots elements
+@import '_config/all'; // Mixins, variables, and tools that do not output code
+// @import '_global/all'; // Global selectors
 
-@import 'headers/all'; // "Block" content type
+@import 'base/all';
+@import 'headers/all';
 @import 'navs/all';
 @import 'teases/all';
 @import 'blocks/all';
 @import 'footers/all';
-@import 'site-options/all';
+@import 'site/all';
 
-@import 'utility'; // For prototyping and should not be used in production
+// @import 'utility'; // For prototyping and should not be used in production
 @import 'holding'; // Styles that need to be removed and handled differently

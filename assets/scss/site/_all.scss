@@ -1,10 +1,5 @@
 
-// Styles used throughout, but not root elements
-@import 'base';
+/// @content [Site-wide elements determined in the Site-wide Options.]
 
-// Global site sections
-@import 'nav';
-@import 'header';
-@import 'page';
-@import 'sections';
-@import 'footer';
+@import 'site-callout_bar';
+@import 'site-colophon';

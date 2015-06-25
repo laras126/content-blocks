@@ -1,14 +1,5 @@
-.block {
-	padding-bottom: $size-h4;
 
-	.page-body & {
-		&:last-child {
-			margin-bottom: 0;
-		}
-	}
-}
-
-// Block modules
+// Blocks!
 
 @import 'block-intro';
 @import 'block-list';

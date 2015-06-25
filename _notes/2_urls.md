@@ -1,21 +1,38 @@
 
 Begin by listing all of your URLs. Examples:
 
+/
+	Purchase
+
 /about/
-/about/faq
-/about/contact
+/login/
+/purchase/
 
-/photo-scanning/
-/photo-scanning/process
+/lesson/
+	embedded video and notes
+	assignments
+/lessons/category
+	/videos/
 
-/video-transfer/
-/video-transfer/process
+/class
 
-/audio-transfer/
-/audio-transfer/process
 
-/film-transfer/
-/film-transfer/process
 
-/order
-/404
+/assignment
+
+User can
+	Sign up to see content
+		125/year
+	Subscribe to content
+	Once in, they can:
+		Purchase office hours
+		Purchase a class
+
+
+Access to all videos
+
+4 office hours/month
+
+Office hours a la carte
+150/hr
+
