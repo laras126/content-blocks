@@ -1,0 +1,26 @@
+
+/// @group buttons
+/// @content [Buttons for stuff]
+
+$buttons: (
+    danger:     ($color-alert-danger, $color-text-light),
+    warning:    ($color-alert-warning, $color-text-light),
+    success:    ($color-alert-success, $color-text-light),
+    cta:        ($color-cta-bkgd, $color-cta-text)
+);
+ 
+.btn {
+    display: inline-block;
+    padding: $size-xsml;
+
+    @each $name, $colors in $buttons {
+        $bgcolor: nth($colors, 1);
+        $fontcolor: nth($colors, 2);
+
+        &--#{$name} {
+            // TODO: Need to deal with hover styles.
+            background-color: $bgcolor;
+            color: $fontcolor;
+        }
+    }
+}
