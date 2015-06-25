@@ -353,7 +353,7 @@
                                     {
                                         "field": "field_545a7b2c8b364",
                                         "operator": "==",
-                                        "value": "list_connected_content"
+                                        "value": "connected_content"
                                     }
                                 ]
                             ],
@@ -584,5 +584,5 @@
         "tags",
         "send-trackbacks"
     ],
-    "modified": 1435186840
+    "modified": 1435257042
 }

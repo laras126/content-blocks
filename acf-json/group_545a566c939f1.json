@@ -89,7 +89,7 @@
                             "disabled": 0
                         },
                         {
-                            "key": "field_558b0d57d1b45",
+                            "key": "field_558c48b6a630c",
                             "label": "Blocks",
                             "name": "blocks",
                             "type": "flexible_content",
@@ -112,7 +112,7 @@
                                     "display": "row",
                                     "sub_fields": [
                                         {
-                                            "key": "field_558b0d57d1b46",
+                                            "key": "field_558c48b7a630d",
                                             "label": "Text",
                                             "name": "block_text",
                                             "type": "wysiwyg",
@@ -140,7 +140,7 @@
                                     "display": "row",
                                     "sub_fields": [
                                         {
-                                            "key": "field_558b0d57d1b47",
+                                            "key": "field_558c48b7a630e",
                                             "label": "Text Format",
                                             "name": "textimage_format",
                                             "type": "radio",
@@ -162,7 +162,7 @@
                                             "layout": "vertical"
                                         },
                                         {
-                                            "key": "field_558b0d57d1b48",
+                                            "key": "field_558c48b7a630f",
                                             "label": "Text",
                                             "name": "textimage_paragraph",
                                             "type": "wysiwyg",
@@ -171,7 +171,7 @@
                                             "conditional_logic": [
                                                 [
                                                     {
-                                                        "field": "field_558b0d57d1b47",
+                                                        "field": "field_558c48b7a630e",
                                                         "operator": "==",
                                                         "value": "paragraph"
                                                     }
@@ -188,7 +188,7 @@
                                             "media_upload": 0
                                         },
                                         {
-                                            "key": "field_558b0d57d1b49",
+                                            "key": "field_558c48b7a6310",
                                             "label": "Caption",
                                             "name": "textimage_caption",
                                             "type": "textarea",
@@ -197,7 +197,7 @@
                                             "conditional_logic": [
                                                 [
                                                     {
-                                                        "field": "field_558b0d57d1b47",
+                                                        "field": "field_558c48b7a630e",
                                                         "operator": "==",
                                                         "value": "caption"
                                                     }
@@ -217,7 +217,7 @@
                                             "disabled": 0
                                         },
                                         {
-                                            "key": "field_558b0d57d1b4a",
+                                            "key": "field_558c48b7a6311",
                                             "label": "Image",
                                             "name": "textimage_image",
                                             "type": "image",
@@ -229,7 +229,7 @@
                                                 "class": "",
                                                 "id": ""
                                             },
-                                            "return_format": "array",
+                                            "return_format": "url",
                                             "preview_size": "thumbnail",
                                             "library": "all",
                                             "min_width": "",
@@ -251,7 +251,7 @@
                                     "display": "block",
                                     "sub_fields": [
                                         {
-                                            "key": "field_558b0d57d1b4b",
+                                            "key": "field_558c48b7a6312",
                                             "label": "List Title",
                                             "name": "list_title",
                                             "type": "text",
@@ -272,7 +272,7 @@
                                             "disabled": 0
                                         },
                                         {
-                                            "key": "field_558b0d57d1b4c",
+                                            "key": "field_558c48b7a6313",
                                             "label": "List Type",
                                             "name": "list_type",
                                             "type": "radio",
@@ -286,7 +286,7 @@
                                             },
                                             "choices": {
                                                 "free_form": "Free Form",
-                                                "list_connected_content": "Connected Content"
+                                                "connected_content": "Connected Content"
                                             },
                                             "other_choice": 0,
                                             "save_other_choice": 0,
@@ -294,7 +294,7 @@
                                             "layout": "vertical"
                                         },
                                         {
-                                            "key": "field_558b0d57d1b4d",
+                                            "key": "field_558c48b7a6314",
                                             "label": "List Display",
                                             "name": "list_display",
                                             "type": "radio",
@@ -316,7 +316,7 @@
                                             "layout": "vertical"
                                         },
                                         {
-                                            "key": "field_558b0d57d1b4e",
+                                            "key": "field_558c48b7a6315",
                                             "label": "Free Form List",
                                             "name": "list_type_freeform",
                                             "type": "repeater",
@@ -325,7 +325,7 @@
                                             "conditional_logic": [
                                                 [
                                                     {
-                                                        "field": "field_558b0d57d1b4c",
+                                                        "field": "field_558c48b7a6313",
                                                         "operator": "==",
                                                         "value": "free_form"
                                                     }
@@ -338,11 +338,11 @@
                                             },
                                             "min": "",
                                             "max": "",
-                                            "layout": "row",
+                                            "layout": "block",
                                             "button_label": "Add Item",
                                             "sub_fields": [
                                                 {
-                                                    "key": "field_558b0d57d1b4f",
+                                                    "key": "field_558c48b7a6316",
                                                     "label": "Image",
                                                     "name": "item_image",
                                                     "type": "image",
@@ -350,7 +350,7 @@
                                                     "required": 0,
                                                     "conditional_logic": 0,
                                                     "wrapper": {
-                                                        "width": "",
+                                                        "width": 66,
                                                         "class": "",
                                                         "id": ""
                                                     },
@@ -366,7 +366,28 @@
                                                     "mime_types": ""
                                                 },
                                                 {
-                                                    "key": "field_558b0d57d1b50",
+                                                    "key": "field_558c48b7a6317",
+                                                    "label": "SVG",
+                                                    "name": "item_svg",
+                                                    "type": "text",
+                                                    "instructions": "Add the name of an SVG here if you are using one e.g. 'facebook-icon'. The \"Image\" field can then be left blank.",
+                                                    "required": 0,
+                                                    "conditional_logic": 0,
+                                                    "wrapper": {
+                                                        "width": 33,
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "default_value": "",
+                                                    "placeholder": "",
+                                                    "prepend": "",
+                                                    "append": "",
+                                                    "maxlength": "",
+                                                    "readonly": 0,
+                                                    "disabled": 0
+                                                },
+                                                {
+                                                    "key": "field_558c48b7a6318",
                                                     "label": "Item Title",
                                                     "name": "item_title",
                                                     "type": "text",
@@ -387,7 +408,7 @@
                                                     "disabled": 0
                                                 },
                                                 {
-                                                    "key": "field_558b0d57d1b51",
+                                                    "key": "field_558c48b7a6319",
                                                     "label": "Description",
                                                     "name": "item_description",
                                                     "type": "wysiwyg",
@@ -402,12 +423,12 @@
                                                     "default_value": "",
                                                     "tabs": "visual",
                                                     "toolbar": "links_only",
-                                                    "media_upload": 1
+                                                    "media_upload": 0
                                                 }
                                             ]
                                         },
                                         {
-                                            "key": "field_558b0d57d1b52",
+                                            "key": "field_558c48b7a631a",
                                             "label": "Connected Content",
                                             "name": "list_type_connected_content",
                                             "type": "relationship",
@@ -416,9 +437,9 @@
                                             "conditional_logic": [
                                                 [
                                                     {
-                                                        "field": "field_558b0d57d1b4c",
+                                                        "field": "field_558c48b7a6313",
                                                         "operator": "==",
-                                                        "value": "list_connected_content"
+                                                        "value": "connected_content"
                                                     }
                                                 ]
                                             ],
@@ -450,7 +471,7 @@
                                     "display": "row",
                                     "sub_fields": [
                                         {
-                                            "key": "field_558b0d57d1b53",
+                                            "key": "field_558c48b7a631b",
                                             "label": "Shortcode\/HTML",
                                             "name": "html",
                                             "type": "wysiwyg",
@@ -478,7 +499,7 @@
                                     "display": "row",
                                     "sub_fields": [
                                         {
-                                            "key": "field_558b0d57d1b54",
+                                            "key": "field_558c48b7a631c",
                                             "label": "Quote Text",
                                             "name": "quote_text",
                                             "type": "textarea",
@@ -499,7 +520,7 @@
                                             "disabled": 0
                                         },
                                         {
-                                            "key": "field_558b0d57d1b55",
+                                            "key": "field_558c48b7a631d",
                                             "label": "Source",
                                             "name": "quote_source",
                                             "type": "text",
@@ -520,7 +541,7 @@
                                             "disabled": 0
                                         },
                                         {
-                                            "key": "field_558b0d57d1b56",
+                                            "key": "field_558c48b7a631e",
                                             "label": "Source URL",
                                             "name": "quote_source_url",
                                             "type": "url",
@@ -546,7 +567,7 @@
                                     "display": "block",
                                     "sub_fields": [
                                         {
-                                            "key": "field_558b0d57d1b57",
+                                            "key": "field_558c48b7a631f",
                                             "label": "Text",
                                             "name": "cta_text",
                                             "type": "textarea",
@@ -567,7 +588,7 @@
                                             "disabled": 0
                                         },
                                         {
-                                            "key": "field_558b0d57d1b58",
+                                            "key": "field_558c48b7a6320",
                                             "label": "Button Text",
                                             "name": "cta_btn_text",
                                             "type": "text",
@@ -588,7 +609,7 @@
                                             "disabled": 0
                                         },
                                         {
-                                            "key": "field_558b0d57d1b59",
+                                            "key": "field_558c48b7a6321",
                                             "label": "Button URL",
                                             "name": "cta_btn_url",
                                             "type": "url",
@@ -643,5 +664,5 @@
         "tags",
         "send-trackbacks"
     ],
-    "modified": 1435176838
+    "modified": 1435257087
 }
