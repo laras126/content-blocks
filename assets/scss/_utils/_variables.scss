@@ -60,6 +60,16 @@ $color-cta-link: 	$color-text-light;
 $color-table-rotate: 	lighten($color-alert-info, 50%);
 
 
+// Used for buttons and alerts
+
+$status-colors: (
+    danger:     ($color-alert-danger, $color-text-light),
+    warning:    ($color-alert-warning, $color-text-light),
+    success:    ($color-alert-success, $color-text-light),
+    cta:        ($color-cta-bkgd, $color-cta-text)
+);
+
+
 
 // ----
 // ---- Size Scale 
@@ -91,12 +101,12 @@ $size-h6:  			$size-sml;
 // ----
 
 $serif:				'Georgia', serif;
-$sans-serif:		'Helvetica', serif;
+$sans-serif:		'Gotham', serif;
 
 $line-height-base: 	1.5;
 $line-height-sm: 	1.3;
 
-$font-heading: 		$serif;
+$font-heading: 		$sans-serif;
 $font-body: 		$sans-serif;
 $font-nav: 			$sans-serif;
 $font-form: 		$sans-serif;

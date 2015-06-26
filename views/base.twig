@@ -7,19 +7,23 @@
 
     <body class="{{body_class}} wf-loading" data-template="base.twig" id="pageTop">
         
-        {# Is this excessive? #}
         {% block header %}
             {% include 'headers/_header-site.twig' with { class: 'header--site', role: 'banner', contain: 'contain' } %}
         {% endblock %}      
         
         <main id="content" class="main contain" role="main">
-
             {% include 'headers/_header-page.twig' %}
             
             <div class="page-body">
+
+                {% block before_content %}{% endblock %}
+
                 {% block content %}
                     Sorry, no content
                 {% endblock %}
+
+                {% block after_content %}{% endblock %}
+
             </div>
 
             {% if sidebar %}

@@ -1,0 +1,18 @@
+
+/// @group alerts
+/// @content [Alerts used for containers around text and buttons.]
+ 
+.alert {
+    padding: $size-sml;
+
+    @each $name, $colors in $status-colors {
+        $bgcolor: nth($colors, 1);
+        $fontcolor: nth($colors, 2);
+
+        &--#{$name} {
+            // TODO: Need to deal with hover styles.
+            background-color: lighten($bgcolor, 20%);
+            color: $fontcolor;
+        }
+    }
+}

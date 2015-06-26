@@ -354,7 +354,7 @@ th {
   padding: 0; }
 
 .contain {
-  max-width: 800px;
+  max-width: 650px;
   margin: 0 auto; }
 
 .animated {
@@ -400,7 +400,7 @@ html {
   line-height: 1.5; }
 
 body {
-  font-family: "Helvetica", serif;
+  font-family: "Gotham", serif;
   font-size: 1rem;
   color: #333; }
 
@@ -415,7 +415,7 @@ a {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3); }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Georgia", serif;
+  font-family: "Gotham", serif;
   margin-bottom: 0;
   line-height: 1.3; }
 
@@ -466,7 +466,7 @@ blockquote {
 label {
   margin-top: 1.3rem;
   margin-bottom: 0.6rem;
-  font-family: "Helvetica", serif; }
+  font-family: "Gotham", serif; }
 
 input[type="search"] {
   -webkit-box-sizing: content-box;
@@ -546,7 +546,7 @@ ul, ol {
 
 table {
   width: 100%;
-  font-family: "Helvetica", serif;
+  font-family: "Gotham", serif;
   margin-bottom: 1.5em; }
   table caption {
     margin: 0 0 7px;
@@ -571,9 +571,6 @@ th {
 
 .header--page__tagline {
   margin-bottom: 20px; }
-
-.block {
-  border: 1px solid #1C7FA6; }
 
 .block_cta {
   text-align: center; }

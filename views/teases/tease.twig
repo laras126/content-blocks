@@ -1,10 +1,14 @@
 <article class="tease tease-{{post.post_type}}" id="tease-{{post.ID}}">
-	{% block content %}
-		<h2><a href="{{post.link}}">{{post.title}}</a></h2>
-		<p>{{post.get_preview}}</p>
 
-		{% if post.get_thumbnail %}
+	{% block content %}
+		{# TODO: it's a hack to use guid here. It needs to be getting the link of the current ID or something. #}
+		<h4 class="h2"><a href="{{post.guid}}">{{post.post_title}}</a></h4>
+		<p>{{post.header_summary}}</p>
+		<a href="{{post.guid}}" class="btn btn--readmore">Read more...</a>
+
+		{% if post.thumbnail.src %}
 			<img src="{{post.thumbnail.src}}" />
 		{% endif %}
 	{% endblock %}
+
 </article>

@@ -45,20 +45,20 @@
 			$context['notes'] = 'These values are available everytime you call Timber::get_context();';
 			$context['menu'] = new TimberMenu();
 			$context['site'] = $this;
-			return $context;
 
 			// Site-wide Settings
-			$context['callout_bool'] = get_field('site_callout_bool', 'options');
-			$context['callout_text'] = get_field('site_callout_text', 'options');
-			$context['footer_copyright'] = get_field('site_footer_copyright', 'options');
-			$context['footer_credits'] = get_field('site_footer_credits', 'options');
+			$context['site_callout_bool'] = get_field('site_callout_bool', 'options');
+			$context['site_callout_text'] = get_field('site_callout_text', 'options');
+			$context['site_footer_copyright'] = get_field('site_footer_copyright', 'options');
+			$context['site_footer_credits'] = get_field('site_footer_credits', 'options');
 	
+			return $context;
 		}
 
 		function add_to_twig($twig){
 			/* this is where you can add your own fuctions to twig */
 			$twig->addExtension(new Twig_Extension_StringLoader());
-			$twig->addFilter('myfoo', new Twig_Filter_Function('myfoo'));
+			// $twig->addFilter('myfoo', new Twig_Filter_Function('myfoo'));
 			return $twig;
 		}
 
@@ -91,10 +91,10 @@
 		// NOTE: will need to change this to get_stylesheet_directory_uri() to allow for child themes later.
 		if( WP_ENV == 'production' ) {
 			wp_enqueue_style( 'tsk-styles', get_template_directory_uri() . '/assets/css/build/main.min.css', 1.0);
-			wp_enqueue_script( 'js', get_template_directory_uri() . '/assets/js/build/scripts.min.js', array('jquery'), '1.0.0', true );
+			wp_enqueue_script( 'tsk-js', get_template_directory_uri() . '/assets/js/build/scripts.min.js', array('jquery'), '1.0.0', true );
 		} else {
 			wp_enqueue_style( 'tsk-styles', get_template_directory_uri() . '/assets/css/main.css', 1.0);
-			wp_enqueue_script( 'js', get_template_directory_uri() . '/assets/js/build/scripts.js', array('jquery'), '1.0.0', true );
+			wp_enqueue_script( 'tsk-js', get_template_directory_uri() . '/assets/js/build/scripts.js', array('jquery'), '1.0.0', true );
 		}
 
 	}

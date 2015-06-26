@@ -4,11 +4,21 @@
 
 <h1><a href="{{site.link}}" title="{{site.name}}" rel="home">{{site.name}}</a>
 </h1>
+
 <nav id="access" class="main-navigation" role="navigation">
     <ul>
     {% for item in menu.items %}
         <li id="menu-item-{{item.ID}}" class="menu-item menu-item-type-{{item.type}} menu-item-object-{{item.object}} menu-item-{{item.ID}}">
             <a href="{{item.link}}">{{item.title}}</a>
+            {% if item.get_children %}
+            	<ul>
+				{% for child in item.get_children %}
+					<li>
+						<a href="{{child.get_link}}">{{child.title}}</a>
+					</li>
+				{% endfor %}
+				</ul>
+            {% endif %}
         </li>
     {% endfor %}
     </ul>
