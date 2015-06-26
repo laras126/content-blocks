@@ -1,0 +1,5 @@
+scssDir: scss/
+jsSrcDir: js/src/
+jsConcatDir: js/build/
+cssDir: css/
+bowerDir: bower_components/

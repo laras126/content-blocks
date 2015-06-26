@@ -46,7 +46,7 @@ module.exports = function(grunt, config) {
 			dist: {
 	            files: {
 					// For some reason this doesn't accept the config variable for the key. Bleh.
-					'assets/js/build/scripts.min.js': ['<%= concat.dist.dest %>']
+					'js/build/scripts.min.js': ['<%= concat.dist.dest %>']
 	            }
 	        }
 	    },
