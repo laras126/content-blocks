@@ -9,6 +9,10 @@
 		<h3 class="list__title">{{block.list_title}}</h3>
 	{% endif %}
 
+	{% if block.list_description %}
+		<p class="list__description">{{block.list_description}}</p>
+	{% endif %}
+
 	<ul class="list list-{{display}} list-{{list|length}}">
 		
 		{% for item in block.list_type_freeform %}

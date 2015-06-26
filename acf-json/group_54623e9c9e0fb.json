@@ -251,6 +251,27 @@
                             "layout": "vertical"
                         },
                         {
+                            "key": "field_558d5b0dc269f",
+                            "label": "List Description",
+                            "name": "list_description",
+                            "type": "textarea",
+                            "instructions": "A few sentences introducing this list. Optional.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": 4,
+                            "new_lines": "br",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
                             "key": "field_545a7d8239b3d",
                             "label": "Free Form List",
                             "name": "list_type_freeform",
@@ -619,5 +640,5 @@
         "featured_image",
         "send-trackbacks"
     ],
-    "modified": 1435291988
+    "modified": 1435327465
 }
