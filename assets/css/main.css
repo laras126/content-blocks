@@ -383,6 +383,18 @@ th {
   -webkit-animation-name: fadeInDown;
   animation-name: fadeInDown; }
 
+* {
+  box-sizing: border-box; }
+
+body {
+  word-wrap: break-word; }
+  @media (min-width: 34em) {
+    body {
+      word-wrap: normal; } }
+
+img {
+  max-width: 100%; }
+
 html {
   font-size: 1rem;
   line-height: 1.5; }
@@ -528,24 +540,40 @@ input[type="checkbox"]:focus {
 fieldset {
   border: 0; }
 
-.btn {
-  display: inline-block;
-  padding: 0.6rem; }
-  .btn--danger {
-    background-color: white;
+ul, ol {
+  margin: 0;
+  padding: 0; }
+
+table {
+  width: 100%;
+  font-family: "Helvetica", serif;
+  margin-bottom: 1.5em; }
+  table caption {
+    margin: 0 0 7px;
+    font-size: 0.6rem;
     color: #F2F2F2; }
-  .btn--warning {
-    background-color: #c1eee1;
-    color: #F2F2F2; }
-  .btn--success {
-    background-color: #1BBF54;
-    color: #F2F2F2; }
-  .btn--cta {
-    background-color: #0d3c4f;
-    color: #F2F2F2; }
+
+tr:nth-child(even) {
+  background-color: #D9F2A2; }
+
+td {
+  padding: 7px;
+  border-right: 1px solid #c1eee1; }
+  td:last-child {
+    border-right: 0; }
+
+th {
+  background-color: #c1eee1;
+  border-bottom: 1px solid #c1eee1;
+  border-right: 1px solid #c1eee1; }
+  th:last-child {
+    border-right: 0; }
 
 .header--page__tagline {
   margin-bottom: 20px; }
+
+.block {
+  border: 1px solid #1C7FA6; }
 
 .block_cta {
   text-align: center; }

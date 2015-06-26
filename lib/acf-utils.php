@@ -15,7 +15,7 @@
 
 		// Only one row of buttons
 		$toolbars['Links Only'][1] = array('link', 'unlink' );
-		$toolbars['Text Based'][1] = array('formatselect', 'bold', 'link', 'italic', 'unlink' );
+		$toolbars['Text Based'][1] = array('formatselect', 'bold', 'italic', 'link', 'unlink', 'bullist', 'numlist' );
 
 		return $toolbars;
 	}

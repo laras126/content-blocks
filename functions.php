@@ -89,11 +89,11 @@
 
 		// Enqueue stylesheet and scripts. Use minified for production.
 		if( WP_ENV == 'production' ) {
-			wp_enqueue_style( 'tsk-styles', get_template_directory_uri() . '/assets/css/build/main.min.css', 1.0);
-			wp_enqueue_script( 'js', get_template_directory_uri() . '/assets/js/build/scripts.min.js', array('jquery'), '1.0.0', true );
+			wp_enqueue_style( 'tsk-styles', get_stylesheet_directory_uri() . '/assets/css/build/main.min.css', 1.0);
+			wp_enqueue_script( 'js', get_stylesheet_directory_uri() . '/assets/js/build/scripts.min.js', array('jquery'), '1.0.0', true );
 		} else {
-			wp_enqueue_style( 'tsk-styles', get_template_directory_uri() . '/assets/css/main.css', 1.0);
-			wp_enqueue_script( 'js', get_template_directory_uri() . '/assets/js/build/scripts.js', array('jquery'), '1.0.0', true );
+			wp_enqueue_style( 'tsk-styles', get_stylesheet_directory_uri() . '/assets/css/main.css', 1.0);
+			wp_enqueue_script( 'js', get_stylesheet_directory_uri() . '/assets/js/build/scripts.js', array('jquery'), '1.0.0', true );
 		}
 
 	}
@@ -203,7 +203,15 @@
 	}
 
 
+	// Add tags and categories to Pages
+	function add_taxonomies_to_pages() {
+		register_taxonomy_for_object_type( 'post_tag', 'page' );
+		register_taxonomy_for_object_type( 'category', 'page' );
+	}
+	add_action( 'init', 'add_taxonomies_to_pages' );
 	
+
+
 	// Google Analytics snippet from HTML5 Boilerplate
 	// Cookie domain is 'auto' configured. See: http://goo.gl/VUCHKM
 

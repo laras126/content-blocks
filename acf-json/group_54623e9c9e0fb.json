@@ -23,8 +23,29 @@
                     "key": "545a677427e71",
                     "name": "block_text",
                     "label": "Text",
-                    "display": "row",
+                    "display": "block",
                     "sub_fields": [
+                        {
+                            "key": "field_558cd0e8f8689",
+                            "label": "Heading",
+                            "name": "block_heading",
+                            "type": "text",
+                            "instructions": "This will render as an &lt;h3>. Leave blank if no heading is necessary.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
                         {
                             "key": "field_54623e9ca566c",
                             "label": "Text",
@@ -262,7 +283,15 @@
                                     "type": "image",
                                     "instructions": "300x300",
                                     "required": 0,
-                                    "conditional_logic": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_54a1747ea852c",
+                                                "operator": "==",
+                                                "value": "major"
+                                            }
+                                        ]
+                                    ],
                                     "wrapper": {
                                         "width": 66,
                                         "class": "",
@@ -286,7 +315,15 @@
                                     "type": "text",
                                     "instructions": "Add the name of an SVG here if you are using one e.g. 'facebook-icon'. The \"Image\" field can then be left blank.",
                                     "required": 0,
-                                    "conditional_logic": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_54a1747ea852c",
+                                                "operator": "==",
+                                                "value": "major"
+                                            }
+                                        ]
+                                    ],
                                     "wrapper": {
                                         "width": 33,
                                         "class": "",
@@ -550,7 +587,7 @@
             {
                 "param": "page_template",
                 "operator": "!=",
-                "value": "page-long_form.php"
+                "value": "default"
             },
             {
                 "param": "post_type",
@@ -580,9 +617,7 @@
         "author",
         "format",
         "featured_image",
-        "categories",
-        "tags",
         "send-trackbacks"
     ],
-    "modified": 1435258837
+    "modified": 1435291988
 }

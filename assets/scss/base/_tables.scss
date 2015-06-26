@@ -8,9 +8,8 @@ table {
 
     caption {
         margin: 0 0 7px;
-        font-size: 0.75em;
+        font-size: $size-xsml;
         color: $color-text-light;
-        @include upperspace;
     }
 }
 

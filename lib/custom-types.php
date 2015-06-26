@@ -14,19 +14,19 @@
 // Sources post type
 
 $labels = array(
-	'name'                => _x( 'Sources', 'Post Type General Name', 'kmg' ),
-	'singular_name'       => _x( 'Source', 'Post Type Singular Name', 'kmg' ),
-	'menu_name'           => __( 'Sources', 'kmg' ),
-	'parent_item_colon'   => __( 'Parent Source:', 'kmg' ),
-	'all_items'           => __( 'All Sources', 'kmg' ),
-	'view_item'           => __( 'View Source', 'kmg' ),
-	'add_new_item'        => __( 'Add New Source', 'kmg' ),
-	'add_new'             => __( 'Add New', 'kmg' ),
-	'edit_item'           => __( 'Edit Source', 'kmg' ),
-	'update_item'         => __( 'Update Source', 'kmg' ),
-	'search_items'        => __( 'Search Source', 'kmg' ),
-	'not_found'           => __( 'Not found', 'kmg' ),
-	'not_found_in_trash'  => __( 'Not found in Trash', 'kmg' ),
+	'name'                => _x( 'Sources', 'Post Type General Name', 'tsk' ),
+	'singular_name'       => _x( 'Source', 'Post Type Singular Name', 'tsk' ),
+	'menu_name'           => __( 'Sources', 'tsk' ),
+	'parent_item_colon'   => __( 'Parent Source:', 'tsk' ),
+	'all_items'           => __( 'All Sources', 'tsk' ),
+	'view_item'           => __( 'View Source', 'tsk' ),
+	'add_new_item'        => __( 'Add New Source', 'tsk' ),
+	'add_new'             => __( 'Add New', 'tsk' ),
+	'edit_item'           => __( 'Edit Source', 'tsk' ),
+	'update_item'         => __( 'Update Source', 'tsk' ),
+	'search_items'        => __( 'Search Source', 'tsk' ),
+	'not_found'           => __( 'Not found', 'tsk' ),
+	'not_found_in_trash'  => __( 'Not found in Trash', 'tsk' ),
 );
 $rewrite = array(
 	'slug'                => 'sources',
@@ -35,11 +35,11 @@ $rewrite = array(
 	'feeds'               => true,
 );
 $args = array(
-	'label'               => __( 'source', 'kmg' ),
-	'description'         => __( 'Sources for portfolio', 'kmg' ),
+	'label'               => __( 'source', 'tsk' ),
+	'description'         => __( 'Sources attached to posts.', 'tsk' ),
 	'labels'              => $labels,
 	'supports'            => array( 'title' ),
-	'taxonomies'          => array( 'category', 'post_tag' ),
+	'taxonomies'          => array( 'source_type', 'post_tag' ),
 	'hierarchical'        => false,
 	'public'              => true,
 	'show_ui'             => true,

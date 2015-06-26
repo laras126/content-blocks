@@ -660,9 +660,8 @@
         "author",
         "format",
         "featured_image",
-        "categories",
-        "tags",
         "send-trackbacks"
     ],
-    "modified": 1435258817
+    "modified": 1435289878,
+    "local": "json"
 }

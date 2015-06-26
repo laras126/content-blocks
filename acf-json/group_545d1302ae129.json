@@ -1,6 +1,6 @@
 {
     "key": "group_545d1302ae129",
-    "title": "Page Header",
+    "title": "Header",
     "fields": [
         {
             "key": "field_545a83096d4b5",
@@ -121,30 +121,6 @@
             "mime_types": ""
         },
         {
-            "key": "field_545a85c3b0f50",
-            "label": "Text Only Header",
-            "name": "",
-            "type": "message",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_545a83096d4b5",
-                        "operator": "==",
-                        "value": "text"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "The \"Text Only\" header will display the page title, tagline, and summary.",
-            "esc_html": 0
-        },
-        {
             "key": "field_558add6512d17",
             "label": "Header Tagline",
             "name": "header_tagline",
@@ -179,7 +155,7 @@
                 "id": ""
             },
             "default_value": "",
-            "tabs": "visual",
+            "tabs": "all",
             "toolbar": "links_only",
             "media_upload": 0
         }
@@ -190,6 +166,13 @@
                 "param": "post_type",
                 "operator": "==",
                 "value": "page"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
             }
         ]
     ],
@@ -208,9 +191,7 @@
         "author",
         "format",
         "featured_image",
-        "categories",
-        "tags",
         "send-trackbacks"
     ],
-    "modified": 1435257799
+    "modified": 1435291626
 }
