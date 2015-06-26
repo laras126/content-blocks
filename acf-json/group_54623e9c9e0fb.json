@@ -608,7 +608,7 @@
             {
                 "param": "page_template",
                 "operator": "!=",
-                "value": "default"
+                "value": "page-sources.php"
             },
             {
                 "param": "post_type",
@@ -640,5 +640,5 @@
         "featured_image",
         "send-trackbacks"
     ],
-    "modified": 1435327465
+    "modified": 1435328307
 }
