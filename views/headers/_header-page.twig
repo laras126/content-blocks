@@ -1,5 +1,7 @@
 {% extends 'headers/header.twig' %}
 
+{% block before_header_content %}{% endblock %}
+
 {% block header_content %}
 	
 	{% set display = post.header_display %}
@@ -18,3 +20,5 @@
 	<p class="summary summary--header">{{post.header_summary}}</p>
 
 {% endblock %}
+
+{% block after_header_content %}{% endblock %}

@@ -353,6 +353,9 @@ td,
 th {
   padding: 0; }
 
+.special {
+  color: #1C7FA6; }
+
 .contain {
   max-width: 650px;
   margin: 0 auto; }
@@ -394,6 +397,17 @@ body {
 
 img {
   max-width: 100%; }
+
+.header--page__tagline {
+  margin-bottom: 20px; }
+
+.title--tease {
+  margin-top: 0; }
+
+.title--support {
+  margin-top: 2.4rem;
+  font-size: 0.75rem;
+  text-transform: uppercase; }
 
 html {
   font-size: 1rem;
@@ -540,9 +554,71 @@ input[type="checkbox"]:focus {
 fieldset {
   border: 0; }
 
-ul, ol {
-  margin: 0;
-  padding: 0; }
+.btn {
+  display: inline-block;
+  padding: 0.6rem;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem; }
+  .btn--danger {
+    background-color: white;
+    color: #F2F2F2; }
+    .btn--danger:hover {
+      background-color: #9999ff;
+      color: #F2F2F2; }
+    .btn--danger:active {
+      background-color: blue;
+      color: #bfbfbf; }
+  .btn--warning {
+    background-color: #c1eee1;
+    color: #F2F2F2; }
+    .btn--warning:hover {
+      background-color: #71d8bb;
+      color: #F2F2F2; }
+    .btn--warning:active {
+      background-color: #268a6e;
+      color: #bfbfbf; }
+  .btn--success {
+    background-color: #1BBF54;
+    color: #F2F2F2; }
+    .btn--success:hover {
+      background-color: #0e662d;
+      color: #F2F2F2; }
+    .btn--success:active {
+      background-color: black;
+      color: #bfbfbf; }
+  .btn--cta {
+    background-color: #0d3c4f;
+    color: #F2F2F2; }
+    .btn--cta:hover {
+      background-color: black;
+      color: #F2F2F2; }
+    .btn--cta:active {
+      background-color: black;
+      color: #bfbfbf; }
+  .btn--readmore {
+    background-color: #1C7FA6;
+    color: #F2F2F2; }
+    .btn--readmore:hover {
+      background-color: #0d3c4f;
+      color: #F2F2F2; }
+    .btn--readmore:active {
+      background-color: black;
+      color: #bfbfbf; }
+
+.alert {
+  padding: 0.75rem; }
+  .alert--danger {
+    background-color: white;
+    color: #F2F2F2; }
+  .alert--warning {
+    background-color: white;
+    color: #F2F2F2; }
+  .alert--success {
+    background-color: #85eeaa;
+    color: #F2F2F2; }
+  .alert--cta {
+    background-color: #23a0d2;
+    color: #F2F2F2; }
 
 table {
   width: 100%;
@@ -568,9 +644,6 @@ th {
   border-right: 1px solid #c1eee1; }
   th:last-child {
     border-right: 0; }
-
-.header--page__tagline {
-  margin-bottom: 20px; }
 
 .block_cta {
   text-align: center; }

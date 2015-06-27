@@ -6,12 +6,15 @@ $buttons: (
     danger:     ($color-alert-danger, $color-text-light),
     warning:    ($color-alert-warning, $color-text-light),
     success:    ($color-alert-success, $color-text-light),
-    cta:        ($color-cta-bkgd, $color-cta-text)
+    cta:        ($color-cta-bkgd, $color-cta-text),
+    readmore:   ($color-accent-med, $color-text-light)
 );
  
 .btn {
     display: inline-block;
     padding: $size-xsml;
+    margin-top: $size-sml;
+    margin-bottom: $size-sml;
 
     @each $name, $colors in $buttons {
         $bgcolor: nth($colors, 1);
@@ -21,6 +24,15 @@ $buttons: (
             // TODO: Need to deal with hover styles.
             background-color: $bgcolor;
             color: $fontcolor;
+
+            &:hover {
+                background-color: darken($bgcolor, 20%);
+                color: $fontcolor;
+            }
+            &:active {
+                background-color: darken($bgcolor, 50%);
+                color: darken($fontcolor, 20%);
+            }
         }
     }
 }

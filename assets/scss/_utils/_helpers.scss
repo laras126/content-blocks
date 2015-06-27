@@ -41,34 +41,9 @@
 // // ----
 
 
-// // Change text alignment at a certain breakpoint.
-
-// @mixin change-text-align($size-base, $bp, $new) {
-//     text-align: $size-base;
-    
-//     @include bp($bp) {
-//         text-align: $new;
-//     }
-// }
-
-
-// // Uppercase and letterspacing.
-
-// @mixin upperspace {
-//     text-transform: uppercase;
-//     letter-spacing: 1px;
-// }
-
-
-// // Small, sans-serif text.
-// // Used primarily for forms and complimentary information.
-
-// @mixin meta {
-//     font-size: $sml;
-//     font-family: $form-font;
-//     margin: 0;
-// }
-
+.special {
+	color: $color-accent-med;
+}
 
 
 

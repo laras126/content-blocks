@@ -12,7 +12,8 @@
         {% endblock %}      
         
         <main id="content" class="main contain" role="main">
-            {% include 'headers/_header-page.twig' %}
+
+            {% include 'headers/_header-' ~ post.post_type ~ '.twig' %}
             
             <div class="page-body">
 

@@ -11,7 +11,7 @@
 
         &--#{$name} {
             // TODO: Need to deal with hover styles.
-            background-color: lighten($bgcolor, 20%);
+            background-color: lighten($bgcolor, 30%);
             color: $fontcolor;
         }
     }
