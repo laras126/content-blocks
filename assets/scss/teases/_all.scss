@@ -1,1 +1,12 @@
+
+// TODO: move this to child theme
+
+.tease__blurb {
+
+}
+
+.tease__meta {
+	@include meta();
+}
+
 @import 'tease-post';

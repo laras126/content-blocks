@@ -13,12 +13,14 @@
 		<p class="list__description">{{block.list_description}}</p>
 	{% endif %}
 
-	<ul class="list list-{{display}} list-{{list|length}}">
+	<ul class="block_list__list list--{{display}} list--{{type}} list--{{list|length}}">
 		
 		{% for item in block.list_type_freeform %}
-			<li>
-				<h5>{{item.item_title}}</h5>
-				{{item.item_description}}
+			<li class="list__item--{{type}}">
+				<h5 class="list__item__title">{{item.item_title}}</h5>
+				<div class="list__item__desc">
+					{{item.item_description}}
+				</div>
 				{% if display == 'major' %}
 					{{item.item_image}}
 				{% endif %}

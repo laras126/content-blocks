@@ -48,6 +48,23 @@
 
 
 
+// ----
+// Typography
+// ----
+
+@mixin upperspace() {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+@mixin meta($color: $color-text-med, $margin: false) {
+    color: $color;
+    font-size: $size-sml;
+
+    @if $margin == false {
+        margin: 0;
+    }
+}
 
 
 

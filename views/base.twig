@@ -13,7 +13,9 @@
         
         <main id="content" class="main contain" role="main">
 
-            {% include 'headers/_header-' ~ post.post_type ~ '.twig' %}
+            {# TODO: This may not always work. Watch out. #}
+            {# {% include 'headers/_header-' ~ post.post_type ~ '.twig' %} #}
+            {% include 'headers/_header-lesson.twig' %}
             
             <div class="page-body">
 

@@ -1,0 +1,39 @@
+
+/// @group Tables
+
+table {
+    width: 100%;
+    font-family: $font-form;
+    margin-bottom: 1.5em;
+
+    caption {
+        margin: 0 0 7px;
+        font-size: $size-xsml;
+        color: $color-text-light;
+    }
+}
+
+tr {
+    &:nth-child(even) {
+        background-color: $color-accent-vlight;
+    }
+}
+
+td {
+    padding: 7px;
+    border-right: 1px solid $color-accent-light;
+
+    &:last-child {
+        border-right: 0;
+    }
+}
+
+th {
+    background-color: $color-accent-light;
+    border-bottom: 1px solid $color-accent-light;
+    border-right: 1px solid $color-accent-light;
+
+    &:last-child {
+        border-right: 0;
+    }
+}
