@@ -11,10 +11,11 @@ $alert-colors: (
     cta:        ($color-cta-bkgd, $color-cta-text)
 );
 
- 
+
 .alert {
     padding: $size-base;
     @include bleed;
+    display: flex;
 
     @each $name, $colors in $alert-colors {
         $bgcolor: nth($colors, 1);
@@ -28,3 +29,18 @@ $alert-colors: (
     }
 }
 
+.alert-img {
+    flex: 1 0;
+}
+
+.alert-cta .icon {
+    fill: $color-text-light;
+}
+
+.alert-content {
+    flex: 2 0;
+}
+
+.alert-title {
+    margin-top: $size-base;
+}

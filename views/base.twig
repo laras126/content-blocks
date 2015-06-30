@@ -6,7 +6,8 @@
 {% endblock %}
 
     <body class="{{body_class}} wf-loading" data-template="base.twig" id="pageTop">
-        <div class="visually-hidden">{% include 'utility/svg-defs.svg' %}</div>
+        
+        <div class="visually-hidden">{% include 'views/utility/svg-defs.svg' %}</div>
         {% block header %}
             {% include 'headers/_header-site.twig' with { class: 'header-site', role: 'banner', contain: 'contain' } %}
         {% endblock %}  

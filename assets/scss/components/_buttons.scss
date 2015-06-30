@@ -20,7 +20,7 @@ $buttons: (
         $bgcolor: nth($colors, 1);
         $fontcolor: nth($colors, 2);
 
-        &--#{$name} {
+        &-#{$name} {
             // TODO: Need to deal with hover styles.
             background-color: $bgcolor;
             color: $fontcolor;

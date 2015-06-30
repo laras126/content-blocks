@@ -32,21 +32,8 @@ $screens: (
 	}
 }
 
-.alert {
-	display: flex;
-}
 
-.alert-img {
-	flex: 1 0;
-}
 
-.alert-content {
-	flex: 2 0;
-}
-
-.alert-title {
-	margin-top: $size-base;
-}
 
 /// @group grid
 /// @content [Gridded styles.]

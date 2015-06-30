@@ -16,9 +16,9 @@ module.exports = function(grunt, config) {
             
             dist: {
                 expand: true,
-                cwd: 'assets/img/svg-raw',
+                cwd: 'img/svg-raw',
                 src: ['*.svg'],
-                dest: 'assets/img/svg-min',
+                dest: 'img/svg-min',
                 ext: '.min.svg'
             }
         },
@@ -34,7 +34,7 @@ module.exports = function(grunt, config) {
             },
             default : {
                 files: {
-                    'views/partials/svg-defs.svg': ['assets/img/svg-min/*.svg'],
+                    'views/utility/svg-defs.svg': ['img/svg-min/*.svg'],
                 }
             }
         },

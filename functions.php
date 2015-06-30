@@ -236,4 +236,3 @@
 	  add_action('wp_footer', 'mtn_google_analytics', 20);
 	}
 
-

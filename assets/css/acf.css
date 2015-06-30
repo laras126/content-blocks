@@ -1,3 +1,7 @@
 
 /* Advanced Custom Fields */
 
+.wysiwg-short iframe {
+  max-height: 100px !important;
+  min-height: 100px !important;
+}

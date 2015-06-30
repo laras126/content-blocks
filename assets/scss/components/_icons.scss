@@ -1,0 +1,23 @@
+%icon-base {
+	width: $size-base;
+	height: $size-base;
+	display: block;
+	margin: 0 auto;
+}
+
+@mixin icon($fill, $hover: $color-accent-med) {
+	@extend %icon-base;
+	fill: $fill;
+	a &:hover {
+		fill: $hover;
+	}
+}
+
+.shape {
+	width: 100%;
+	fill: $color-accent-dark;
+}
+
+.icon {
+	@include icon($color-accent-dark);
+}
