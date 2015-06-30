@@ -11,8 +11,8 @@ $screens: (
 .contain {
 	margin: 0 auto;
 	padding: 0 $size-base;
-	display: flex;
-	flex-flow: row wrap;
+	// display: flex;
+	// flex-flow: row wrap;
 }
 
 @each $name, $size in $screens {  

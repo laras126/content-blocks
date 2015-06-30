@@ -374,6 +374,15 @@ th {
   font-size: 0.825rem;
   margin: 0; }
 
+.text-center {
+  text-align: center; }
+
+.text-left {
+  text-align: left; }
+
+.text-right {
+  text-align: right; }
+
 .edit-link {
   font-size: 0.825rem;
   text-transform: uppercase;
@@ -388,9 +397,7 @@ th {
 
 .contain {
   margin: 0 auto;
-  padding: 0 1.1rem;
-  display: flex;
-  flex-flow: row wrap; }
+  padding: 0 1.1rem; }
 
 .contain-sm {
   max-width: 30em; }
@@ -436,10 +443,7 @@ body {
 img {
   max-width: 100%; }
 
-.title--site {
-  font-size: 1.98rem; }
-
-.header--site {
+.header-site {
   position: fixed;
   left: 0;
   top: 0; }
@@ -447,16 +451,8 @@ img {
 .header--page__tagline {
   margin-bottom: 20px; }
 
-.header--single {
+.header-single {
   margin-bottom: 1.1rem; }
-
-.title--tease {
-  margin-top: 0; }
-
-.title--support {
-  margin-top: 2.53rem;
-  font-size: 0.825rem;
-  text-transform: uppercase; }
 
 .nav-prev,
 .nav-next {
@@ -492,7 +488,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.3; }
 
 h1 {
-  font-size: 3.3rem;
+  font-size: 2.75rem;
   margin-top: 1.98rem; }
 
 h2 {
@@ -530,6 +526,14 @@ p {
 
 .lead {
   font-size: 1.43rem; }
+
+.title-site {
+  font-size: 1.98rem; }
+
+.title-support {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.825rem; }
 
 *:focus {
   outline: 0; }
@@ -742,7 +746,7 @@ th {
 .block {
   margin-bottom: 1.1rem; }
 
-.block_list__list {
+.block_list-list {
   list-style-type: none;
   margin: 0;
   padding: 0; }

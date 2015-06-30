@@ -1,0 +1,24 @@
+.title-tease {
+
+}
+
+.title-header {
+
+}
+
+.title-single {
+
+}
+
+.title-page {
+
+}
+
+.title-site {
+	font-size: $size-h3;
+}
+
+.title-support {
+	@include upperspace();
+	font-size: $size-sml;
+}
