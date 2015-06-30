@@ -55,7 +55,6 @@ module.exports = function(grunt, config) {
 	    	js: {
 				files: jsFileList,
 				tasks: [
-					'jshint',
 					'concat'
 				]
 	    	}

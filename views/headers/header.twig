@@ -1,12 +1,11 @@
 
 {# Base header template #}
 
-{# Consolidating these to be a little cleaner. #}
 {% set h_class = ' class="' ~ class ~ '"' %}
 {% set h_role = ' role="' ~ role ~ '"' %}
 
 <header{{ class ? h_class }}{{role ? h_role }}>
-	{% if contain %}<div class="{{ contain }}">{% endif %}
+	<div class="contain contain-md">
 		{% block header_content %}{% endblock %}
-	{% if contain %}</div>{% endif %}
+	</div>
 </header>

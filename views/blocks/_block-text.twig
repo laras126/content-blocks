@@ -1,6 +1,8 @@
 {% extends "blocks/block.twig" %}
 
 {% block content %}
-	<h3>{{block.block_heading}}</h3>
+	{% if block.block_heading %}
+		<h3>{{block.block_heading}}</h3>
+	{% endif %}
 	{{block.block_text}}
 {% endblock %}

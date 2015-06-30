@@ -1,5 +1,9 @@
 {% extends "base.twig" %}
 
+{% block before_content %}
+	{% include 'headers/_header-single.twig' with { class : 'header-single' } %}
+{% endblock %}
+
 {% block content %}
 	{% for block in post.get_field('blocks') %} 
 		{% include 'blocks/block-logic.twig' %}

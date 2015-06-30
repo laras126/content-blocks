@@ -8,16 +8,12 @@
     <body class="{{body_class}} wf-loading" data-template="base.twig" id="pageTop">
         
         {% block header %}
-            {% include 'headers/_header-site.twig' with { class: 'header--site', role: 'banner', contain: 'contain' } %}
-        {% endblock %}      
+            {% include 'headers/_header-site.twig' with { class: 'header-site', role: 'banner', contain: 'contain' } %}
+        {% endblock %}  
         
-        <main id="content" class="main contain" role="main">
+        <main class="site-main" role="main">
 
-            {# TODO: This may not always work. Watch out. #}
-            {# {% include 'headers/_header-' ~ post.post_type ~ '.twig' %} #}
-            {% include 'headers/_header-lesson.twig' %}
-            
-            <div class="page-body">
+            <div class="site-content">
 
                 {% block before_content %}{% endblock %}
 
@@ -30,7 +26,7 @@
             </div>
 
             {% if sidebar %}
-                <aside class="layout-sidebar">
+                <aside class="site-sidebar">
                     {{sidebar}}
                 </aside>
             {% endif %}
@@ -38,15 +34,8 @@
         </main>
 
         {% block footer %}
-
-            <footer id="footer" class="site-footer" role="contentinfo">
-                <div class="contain">
-                    {% include 'footers/_footer-site.twig' %}    
-                </div>
-            </footer>
-
+            {% include 'footers/_footer-site.twig' with { class : 'footer-site' } %}   
             {{ function('wp_footer') }}
-            
         {% endblock %}
 
     </body>

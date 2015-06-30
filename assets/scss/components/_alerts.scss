@@ -3,7 +3,8 @@
 /// @content [Alerts used for containers around text and buttons.]
  
 .alert {
-    padding: $size-sml;
+    padding: $size-base;
+    @include bleed;
 
     @each $name, $colors in $status-colors {
         $bgcolor: nth($colors, 1);

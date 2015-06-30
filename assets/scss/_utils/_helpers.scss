@@ -19,32 +19,29 @@
 // */
 
 
-// // ----
-// // Formatting
-// // ----
 
-// @mixin center-block() {
-//     margin: 0 auto;
-//     display: block;
-// }
-
-// .clearfix {
-//     @include clearfix;
-// }
-
-
-
-
-
-// // ----
-// // Typography
-// // ----
-
+// ----
+// Typography
+// ----
 
 .special {
 	color: $color-accent-med;
 }
 
+.meta {
+	@include meta();
+}
+
+.meta-dark {
+	@include meta($color-body-text);
+}
+
+.edit-link {
+	font-size: $size-sml;
+	@include upperspace();
+	font-weight: $font-weight-strong;
+	color: $color-alert-danger;
+}
 
 
 // // ----

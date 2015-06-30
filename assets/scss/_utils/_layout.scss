@@ -1,13 +1,44 @@
 
-// // ----
-// // Generate Utility Classes
-// // ----
+/// @group containers
+/// @content [Containers for screen sized]
 
-
+$screens: (
+    sm:    	$screen-sm,
+    md:    	$screen-md,
+    lg: 	$screen-lg
+);
+ 
 .contain {
-	max-width: 750px;
 	margin: 0 auto;
+	padding: 0 $size-base;
+	display: flex;
+	flex-flow: row wrap;
 }
+
+@each $name, $size in $screens {  
+    .contain-#{$name} {
+   		max-width: $size;
+    }
+}
+
+
+/// @group bleeds
+/// @content [Bleed an element slightly out of its container.]
+
+@mixin bleed($size: $size-base) {
+	@include bp(sm) {
+		margin-right: -$size-base;
+	    margin-left: -$size-base;
+	}
+}
+
+
+
+
+/// @group grid
+/// @content [Gridded styles.]
+
+
 
 // @for $i from 1 to $grid-columns {
 //     .col-xs-#{$i} { @include make-xs-column($i); }

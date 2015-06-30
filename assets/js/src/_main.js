@@ -29,6 +29,9 @@ $(document).ready(function() {
 	});
 		
 
+	// $.get("/taxonomies", function(data){
+	// 	console.log(data);
+	// });
 
 
 
@@ -150,6 +153,11 @@ $(document).ready(function() {
 
 
 
+	// ----
+	// Plugins
+	// ----
+
+	// $('.main').fitVids();
 
 
 	// ----

@@ -32,11 +32,9 @@
 			array_unshift($templates, 'archive-'.get_query_var('cat').'.twig');
 		} else if (is_tax()){
 			// TODO: Not great to have these hardcoded
-		    $term = $wp_query->get_queried_object();
-		    if (get_taxonomy('class')) {
-				$data['title'] = 'Class: '.$term->name;
-		    } else if(get_taxonomy('source_type')) {
-				$data['title'] = 'Resource Type: '.$term->name;
+		    $term = get_queried_object();
+		    if(get_taxonomy('source_type')) {
+				$data['title'] = 'Resource: '.$term->name;
 		    }
 			// array_unshift($templates, 'taxonomy.twig', 'taxonomy-'.get_query_var('cat').'.twig');
 		} else if (is_post_type_archive()){

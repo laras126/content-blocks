@@ -83,13 +83,13 @@ $MQs: true;
         $bp-lg: "(min-width: #{$screen-lg})";
         $bp-xl: "(min-width: #{$screen-xl})";
 
-        @if $point == small {
+        @if $point == sm {
             @media #{$bp-sm} { @content; }
         }
-        @else if $point == med {
+        @else if $point == md {
             @media #{$bp-md} { @content; }
         }
-        @else if $point == large {
+        @else if $point == lg {
             @media #{$bp-lg} { @content; }
         }
         @else if $point == xl {

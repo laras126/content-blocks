@@ -1,3 +1,11 @@
-<footer class="footer--{{post.post_type}}">
-	{% block footer_content %}{% endblock %}
+
+{# Base footer template #}
+
+{% set f_class = ' class="' ~ class ~ '"' %}
+{% set f_role = ' role="' ~ role ~ '"' %}
+
+<footer{{ class ? f_class }}{{role ? f_role }}>
+	<div class="contain contain-md">
+		{% block footer_content %}{% endblock %}
+	</div>
 </footer>

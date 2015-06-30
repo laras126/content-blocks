@@ -356,9 +356,37 @@ th {
 .special {
   color: #1C7FA6; }
 
+.meta {
+  color: #9E9E9E;
+  font-size: 0.825rem;
+  margin: 0; }
+
+.meta-dark {
+  color: #333;
+  font-size: 0.825rem;
+  margin: 0; }
+
+.edit-link {
+  font-size: 0.825rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+  color: white; }
+
 .contain {
-  max-width: 750px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding: 0 1.1rem;
+  display: flex;
+  flex-flow: row wrap; }
+
+.contain-sm {
+  max-width: 30em; }
+
+.contain-md {
+  max-width: 40em; }
+
+.contain-lg {
+  max-width: 50em; }
 
 .animated {
   -webkit-animation-duration: 1s;
@@ -391,41 +419,47 @@ th {
 
 body {
   word-wrap: break-word; }
-  @media (min-width: 34em) {
-    body {
-      word-wrap: normal; } }
 
 img {
   max-width: 100%; }
 
+.title--site {
+  font-size: 1.98rem; }
+
+.header--site {
+  position: fixed;
+  left: 0;
+  top: 0; }
+
 .header--page__tagline {
   margin-bottom: 20px; }
+
+.header--single {
+  margin-bottom: 1.1rem; }
 
 .title--tease {
   margin-top: 0; }
 
 .title--support {
-  margin-top: 2.76rem;
-  font-size: 0.9rem;
+  margin-top: 2.53rem;
+  font-size: 0.825rem;
   text-transform: uppercase; }
 
+.nav-prev,
+.nav-next {
+  flex: 1 0; }
+
+.nav-prev {
+  text-align: right; }
+
 html {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   line-height: 1.5;
   font-weight: 300; }
-  @media (min-width: 34em) {
-    html {
-      font-size: 98%; } }
-  @media (min-width: 34em) {
-    html {
-      font-size: 102%; } }
-  @media (min-width: 34em) {
-    html {
-      font-size: 110%; } }
 
 body {
-  font-family: "Museo Sans", serif;
-  font-size: 1.2rem;
+  font-family: "Gotham", serif;
+  font-size: 1.1rem;
   color: #333; }
 
 a {
@@ -439,54 +473,58 @@ a {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3); }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Museo Slab", serif;
+  font-family: "Gotham", serif;
   font-weight: 500;
   margin-bottom: 0;
   line-height: 1.3; }
 
 h1 {
-  font-size: 3.6rem;
-  margin-top: 2.16rem; }
+  font-size: 3.3rem;
+  margin-top: 1.98rem; }
 
 h2 {
-  font-size: 2.76rem; }
+  font-size: 2.53rem; }
 
 h3 {
-  font-size: 2.16rem; }
+  font-size: 1.98rem; }
 
 h4 {
-  font-size: 1.56rem; }
+  font-size: 1.43rem; }
 
 h5 {
-  font-size: 1.32rem;
-  font-family: "Museo Sans", serif; }
+  font-size: 1.21rem;
+  font-family: "Gotham", serif; }
 
 h6 {
-  font-family: "Museo Sans", serif;
-  font-size: 0.9rem;
+  font-family: "Gotham", serif;
+  font-size: 0.825rem;
   text-transform: uppercase;
   letter-spacing: 1px; }
 
 small {
-  font-size: 0.9rem; }
+  font-size: 0.825rem; }
 
 strong {
   font-weight: 500; }
 
 blockquote {
-  font-size: 1.56rem;
+  font-size: 1.43rem;
   font-style: italic; }
 
+p {
+  margin-top: 0.66rem;
+  margin-bottom: 0.66rem; }
+
 .lead {
-  font-size: 1.56rem; }
+  font-size: 1.43rem; }
 
 *:focus {
   outline: 0; }
 
 label {
-  margin-top: 1.56rem;
-  margin-bottom: 0.72rem;
-  font-family: "Museo Sans", serif; }
+  margin-top: 1.43rem;
+  margin-bottom: 0.66rem;
+  font-family: "Gotham", serif; }
 
 input[type="search"] {
   -webkit-box-sizing: content-box;
@@ -538,7 +576,7 @@ input[type="tel"] {
 input[type="radio"],
 input[type="checkbox"] {
   margin: 4px 0 0;
-  margin-right: 0.72rem;
+  margin-right: 0.66rem;
   margin-top: 1px \9;
   *margin-top: 0;
   line-height: normal;
@@ -562,9 +600,9 @@ fieldset {
 
 .btn {
   display: inline-block;
-  padding: 0.72rem;
-  margin-top: 0.9rem;
-  margin-bottom: 0.9rem; }
+  padding: 0.66rem;
+  margin-top: 0.825rem;
+  margin-bottom: 0.825rem; }
   .btn--danger {
     background-color: white;
     color: #F2F2F2; }
@@ -612,7 +650,11 @@ fieldset {
       color: #bfbfbf; }
 
 .alert {
-  padding: 0.9rem; }
+  padding: 1.1rem; }
+  @media (min-width: 30em) {
+    .alert {
+      margin-right: -1.1rem;
+      margin-left: -1.1rem; } }
   .alert--danger {
     background-color: white;
     color: #F2F2F2; }
@@ -628,11 +670,11 @@ fieldset {
 
 table {
   width: 100%;
-  font-family: "Museo Sans", serif;
+  font-family: "Gotham", serif;
   margin-bottom: 1.5em; }
   table caption {
     margin: 0 0 7px;
-    font-size: 0.72rem;
+    font-size: 0.66rem;
     color: #F2F2F2; }
 
 tr:nth-child(even) {
@@ -653,10 +695,18 @@ th {
 
 .tease__meta {
   color: #9E9E9E;
-  font-size: 0.9rem;
+  font-size: 0.825rem;
   margin: 0; }
+
+.block {
+  margin-bottom: 1.1rem; }
 
 .block_list__list {
   list-style-type: none;
   margin: 0;
   padding: 0; }
+
+.footer--site {
+  color: #9E9E9E;
+  font-size: 0.825rem;
+  margin: 0; }

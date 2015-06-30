@@ -113,6 +113,10 @@ blockquote {
 	}
 }
 
+p {
+	margin-top: $size-xsml;
+	margin-bottom: $size-xsml;
+}
 
 
 /// @group typography-helpers
@@ -125,4 +129,3 @@ blockquote {
 .summary {
 
 }
-
