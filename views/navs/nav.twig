@@ -1,0 +1,11 @@
+
+{# Base nav template #}
+
+{% set n_class = ' class="' ~ class ~ '"' %}
+{% set n_role = ' role="' ~ role ~ '"' %}
+
+<nav{{ class ? h_class }}{{role ? h_role }}>
+	<div class="contain {{contain}}">
+		{% block nav_content %}{% endblock %}
+	</div>
+</nav>

@@ -1,0 +1,16 @@
+{% extends 'headers/header.twig' %}
+
+{% block before_header_content %}{% endblock %}
+
+{% block header_content %}
+	
+	{% set display = post.header_display %}
+
+	<h1 class="header-title">{{title}}</h1>
+
+	<p class="lead lead--header">{{post.header_tagline}}</p>
+	<p class="summary summary--header">{{post.header_summary}}</p>
+
+{% endblock %}
+
+{% block after_header_content %}{% endblock %}

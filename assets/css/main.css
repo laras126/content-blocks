@@ -373,6 +373,11 @@ th {
   font-weight: 500;
   color: white; }
 
+.visually-hidden {
+  position: absolute;
+  top: -9999999px;
+  left: -999999px; }
+
 .contain {
   margin: 0 auto;
   padding: 0 1.1rem;

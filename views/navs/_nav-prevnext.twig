@@ -1,0 +1,14 @@
+{% extends 'navs/nav.twig' %}
+
+{% block nav_content %}
+	<div class="nav-next">
+		{% if post.next %}
+			<a href="{{post.next.link}}">&larr;{{post.next.title}}</a>	
+		{% endif %}
+	</div>
+	<div class="nav-prev">
+		{% if post.prev %}
+			<a href="{{post.prev.link}}">{{post.prev.title}}&rarr;</a>
+		{% endif %}
+	</div>
+{% endblock %}
