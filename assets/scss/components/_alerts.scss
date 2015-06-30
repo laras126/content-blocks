@@ -1,16 +1,26 @@
 
 /// @group alerts
 /// @content [Alerts used for containers around text and buttons.]
+
+// Used for buttons and alerts
+
+$alert-colors: (
+    danger:     ($color-alert-danger, $color-text-light),
+    warning:    ($color-alert-warning, $color-text-light),
+    success:    ($color-alert-success, $color-text-light),
+    cta:        ($color-cta-bkgd, $color-cta-text)
+);
+
  
 .alert {
     padding: $size-base;
     @include bleed;
 
-    @each $name, $colors in $status-colors {
+    @each $name, $colors in $alert-colors {
         $bgcolor: nth($colors, 1);
         $fontcolor: nth($colors, 2);
 
-        &--#{$name} {
+        &-#{$name} {
             // TODO: Need to deal with hover styles.
             background-color: lighten($bgcolor, 30%);
             color: $fontcolor;

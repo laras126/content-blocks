@@ -1,24 +1,4 @@
 
-// /*  
-
-// Harry Roberts says:
-
-// "Only use @extend when the rulesets that you are trying 
-// to DRY out are inherently and thematically related."
-
-// - http://csswizardry.com/2014/11/when-to-use-extend-when-to-use-a-mixin/
-// - http://www.sitepoint.com/avoid-sass-extend/
-
-// These are mixins because they are "helpers" and not used
-// in a thematically related fashion.
-
-// There are a few classes printed here as well as mixins.
-// Those are primarily for prototyping purposes, but not
-// exclusively.
-
-// */
-
-
 
 // ----
 // Typography
@@ -30,11 +10,25 @@
 
 .meta {
 	@include meta();
+	line-height: $line-height-sm;
 }
 
-.meta-dark {
-	@include meta($color-body-text);
-}
+	.meta-light {
+		line-height: $line-height-sm;
+		@include meta($color-text-light);
+	}
+
+	.meta-dark {
+		line-height: $line-height-sm;
+		@include meta($color-body-text);
+	}
+
+
+
+
+// ----
+// Elements
+// ----
 
 .edit-link {
 	font-size: $size-sml;
@@ -42,6 +36,8 @@
 	font-weight: $font-weight-strong;
 	color: $color-alert-danger;
 }
+
+
 
 
 

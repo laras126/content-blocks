@@ -359,9 +359,17 @@ th {
 .meta {
   color: #9E9E9E;
   font-size: 0.825rem;
+  margin: 0;
+  line-height: 1.3; }
+
+.meta-light {
+  line-height: 1.3;
+  color: #F2F2F2;
+  font-size: 0.825rem;
   margin: 0; }
 
 .meta-dark {
+  line-height: 1.3;
   color: #333;
   font-size: 0.825rem;
   margin: 0; }
@@ -392,6 +400,18 @@ th {
 
 .contain-lg {
   max-width: 50em; }
+
+.alert {
+  display: flex; }
+
+.alert-img {
+  flex: 1 0; }
+
+.alert-content {
+  flex: 2 0; }
+
+.alert-title {
+  margin-top: 1.1rem; }
 
 .animated {
   -webkit-animation-duration: 1s;
@@ -660,16 +680,16 @@ fieldset {
     .alert {
       margin-right: -1.1rem;
       margin-left: -1.1rem; } }
-  .alert--danger {
+  .alert-danger {
     background-color: white;
     color: #F2F2F2; }
-  .alert--warning {
+  .alert-warning {
     background-color: white;
     color: #F2F2F2; }
-  .alert--success {
+  .alert-success {
     background-color: #85eeaa;
     color: #F2F2F2; }
-  .alert--cta {
+  .alert-cta {
     background-color: #23a0d2;
     color: #F2F2F2; }
 
