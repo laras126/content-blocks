@@ -11,8 +11,6 @@ $screens: (
 .contain {
 	margin: 0 auto;
 	padding: 0 $size-base;
-	// display: flex;
-	// flex-flow: row wrap;
 }
 
 @each $name, $size in $screens {  
@@ -21,6 +19,29 @@ $screens: (
     }
 }
 
+.contain-flex {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.contain-flex .tease-source {
+
+	@include bp(md) {
+		margin-right: 1%;
+		margin-left: 1%;
+		width: 48%;
+	}
+	
+	margin-top: 1%;
+	margin-bottom: 1%;
+
+	background-color: $color-accent-vlight;
+	padding-left: $size-base; 
+	padding-right: $size-base; 
+	padding-bottom: $size-base; 
+	
+	// flex: 1 0;
+}
 
 /// @group bleeds
 /// @content [Bleed an element slightly out of its container.]

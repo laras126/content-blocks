@@ -1,9 +1,7 @@
 <div class="block {{block_class}}{{blck.cta_rotate ? ' rotate-' ~ blck.cta_rotate }}">
-	<div class="contain contain-md">
-
-		{% block content %}
-			<p>Nothing in this Block</p>
-		{% endblock %}
-
+	<div class="contain contain-{{block.contain}}">
+	{% block content %}
+		<p>Nothing in this Block</p>
+	{% endblock %}
 	</div>
 </div> <!-- /.{{block_class}} -->

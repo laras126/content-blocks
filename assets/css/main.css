@@ -408,6 +408,23 @@ th {
 .contain-lg {
   max-width: 50em; }
 
+.contain-flex {
+  display: flex;
+  flex-flow: row wrap; }
+
+.contain-flex .tease-source {
+  margin-top: 1%;
+  margin-bottom: 1%;
+  background-color: #D9F2A2;
+  padding-left: 1.1rem;
+  padding-right: 1.1rem;
+  padding-bottom: 1.1rem; }
+  @media (min-width: 40em) {
+    .contain-flex .tease-source {
+      margin-right: 1%;
+      margin-left: 1%;
+      width: 48%; } }
+
 .animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
@@ -442,11 +459,6 @@ body {
 
 img {
   max-width: 100%; }
-
-.header-site {
-  position: fixed;
-  left: 0;
-  top: 0; }
 
 .header--page__tagline {
   margin-bottom: 20px; }
@@ -526,14 +538,6 @@ p {
 
 .lead {
   font-size: 1.43rem; }
-
-.title-site {
-  font-size: 1.98rem; }
-
-.title-support {
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 0.825rem; }
 
 *:focus {
   outline: 0; }

@@ -6,19 +6,19 @@
 	{% set display = block.list_display %}
 
 	{% if block.list_title %}
-		<h3 class="list__title">{{block.list_title}}</h3>
+		<h4 class="list-title">{{block.list_title}}</h4>
 	{% endif %}
 
 	{% if block.list_description %}
-		<p class="list__description">{{block.list_description}}</p>
+		<p class="list-description">{{block.list_description}}</p>
 	{% endif %}
 
-	<ul class="block_list__list list--{{display}} list--{{type}} list--{{list|length}}">
+	<ul class="block_list-list list--{{display}} list--{{type}}">
 		
 		{% for item in block.list_type_freeform %}
-			<li class="list__item--{{type}}">
-				<h5 class="list__item__title">{{item.item_title}}</h5>
-				<div class="list__item__desc">
+			<li class="list-item--{{type}}">
+				<h5 class="list-item-title">{{item.item_title}}</h5>
+				<div class="list-item-desc">
 					{{item.item_description}}
 				</div>
 				{% if display == 'major' %}

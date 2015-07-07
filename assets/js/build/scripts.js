@@ -161,7 +161,7 @@ $(document).ready(function() {
 	// Plugins
 	// ----
 
-	// $('.main').fitVids();
+	$('.site-main').fitVids();
 
 
 	// ----

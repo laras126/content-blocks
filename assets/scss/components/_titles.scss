@@ -2,10 +2,6 @@
 
 }
 
-.title-header {
-
-}
-
 .title-single {
 
 }
@@ -14,11 +10,14 @@
 
 }
 
+.title-section {
+
+}
+
 .title-site {
-	font-size: $size-h3;
+
 }
 
 .title-support {
-	@include upperspace();
-	font-size: $size-sml;
+
 }
