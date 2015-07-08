@@ -7,7 +7,7 @@
 		<p class="page-tagline">{{post.summary}}</p>
 	</header>
 
-	{% include 'partials/section-nav.twig'%}
+	{# {% include 'partials/section-nav.twig'%} #}
 	
 	{% for section in post.get_field('sections') %}
 		<section class="page-section" id="{{section.menu_item_title|replace({ (' '): '_' })}}">
@@ -19,11 +19,10 @@
 				</div>
 			</header>
 
-				{% for block in section.blocks %} 
-					{% include 'blocks/block-logic.twig' %}
-				{% endfor %}
+			{% for block in section.blocks %} 
+				{% include 'blocks/block-logic.twig' %}
+			{% endfor %}
 
-		
 		</section>
 	{% endfor %}
 	

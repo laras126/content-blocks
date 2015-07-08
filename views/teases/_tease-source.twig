@@ -1,0 +1,46 @@
+{% extends "teases/tease.twig" %}
+
+{% block content %}
+
+	<div class="tease-content">
+		<h5 class="title-tease title-tease--source">
+			{# {% include 'utility/svg.twig' with { file: 'link', prefix: 'icon' } %} #}
+			<a href="{{post.source_url}}" target="blank">{{post.post_title}}</a>
+		{# 	{% for type in post.terms('source_type') %}
+				<span class="meta title-tease-meta">{{type.name}}{{ loop.last ? '' : ', ' }}</span>
+			{% endfor %} #}
+		</h5>
+
+		{# TODO: Can this be cleaned up? #}
+		{% if post.source_author or post.source_publication %}
+			<p class="tease-meta--source">
+			{% if post.source_author %}
+				{{post.source_author_link ? 'By <a href="' ~ post.source_author_link ~ '" target="blank">'}}
+					{{post.source_author}}
+				{{post.source_author_link ? '</a>'}}
+			{% endif %}
+
+			{% if post.source_publication %}
+				{{post.source_author ? ' | ' }}
+				{{post.source_publication_link ? '<a href="' ~ post.source_publication_link ~ '" target="blank">'}}
+				{{post.source_publication}}
+				{{post.source_publication_link ? '</a>'}}
+			{% endif %}
+			</p>
+		{% endif %}
+
+
+		{{post.source_blurb ? '<p class="blurb-tease--source meta-dark">' ~ post.source_blurb ~ '</p>'}}
+		
+		{% if post.terms('category') %}
+			<p class="meta">
+			{% for type in post.terms('category') %}
+				{{type.name}}{{ loop.last ? '' : ', ' }}
+			{% endfor %}
+			</p>
+		{% endif %}
+
+		{{function('edit_post_link', 'Edit', '<span class="edit-link">', '</span>', post.ID)}}
+	</div>
+
+{% endblock %}
