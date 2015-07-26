@@ -1,21 +1,21 @@
-{% for blck in section.blocks %} 
+{% for block in section.blocks %}
 
-    {% set block_class = blck.acf_fc_layout %}
-    
-    {% if blck.acf_fc_layout == 'block_text' %}
-        {% include 'blocks/block-text.twig' %}   
-    {% elseif blck.acf_fc_layout == 'block_textimage' %}
+    {% set block_class = block.acf_fc_layout %}
+
+    {% if block.acf_fc_layout == 'block_text' %}
+        {% include 'blocks/block-text.twig' %}
+    {% elseif block.acf_fc_layout == 'block_textimage' %}
         {% include 'blocks/block-textimage.twig' %}
-    {% elseif blck.acf_fc_layout == 'block_related_page' %}
+    {% elseif block.acf_fc_layout == 'block_related_page' %}
         {% include 'blocks/block-related.twig' %}
-    {% elseif blck.acf_fc_layout == 'block_blank' %}
+    {% elseif block.acf_fc_layout == 'block_blank' %}
         {% include 'blocks/block-blank.twig' %}
-    {% elseif blck.acf_fc_layout == 'block_list' %}
+    {% elseif block.acf_fc_layout == 'block_list' %}
         {% include 'blocks/block-list.twig' %}
-    {% elseif blck.acf_fc_layout == 'block_cta' %}
+    {% elseif block.acf_fc_layout == 'block_cta' %}
         {% include 'blocks/block-cta.twig' %}
-    {% elseif blck.acf_fc_layout == 'block_testimonial' %}
+    {% elseif block.acf_fc_layout == 'block_testimonial' %}
         {% include 'blocks/block-testimonial.twig' %}
     {% endif %}
-    
+
 {% endfor %}
