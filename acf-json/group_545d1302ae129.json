@@ -164,21 +164,14 @@
         [
             {
                 "param": "post_type",
-                "operator": "==",
-                "value": "page"
-            }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "post"
+                "operator": "!=",
+                "value": "source"
             }
         ]
     ],
     "menu_order": 0,
     "position": "acf_after_title",
-    "style": "seamless",
+    "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": [
@@ -193,5 +186,5 @@
         "featured_image",
         "send-trackbacks"
     ],
-    "modified": 1435291626
+    "modified": 1438711373
 }

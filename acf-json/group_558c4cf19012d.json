@@ -11,7 +11,7 @@
             "required": 1,
             "conditional_logic": 0,
             "wrapper": {
-                "width": 33,
+                "width": 50,
                 "class": "",
                 "id": ""
             },
@@ -27,7 +27,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": 33,
+                "width": 50,
                 "class": "",
                 "id": ""
             },
@@ -48,7 +48,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": 33,
+                "width": 50,
                 "class": "",
                 "id": ""
             },
@@ -59,6 +59,23 @@
             "maxlength": "",
             "readonly": 0,
             "disabled": 0
+        },
+        {
+            "key": "field_55a42d1361531",
+            "label": "Date",
+            "name": "source_date",
+            "type": "date_picker",
+            "instructions": "Will not display if blank.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": 50,
+                "class": "",
+                "id": ""
+            },
+            "display_format": "F j, Y",
+            "return_format": "F j, Y",
+            "first_day": 0
         },
         {
             "key": "field_558c4d52649d4",
@@ -110,5 +127,5 @@
         "page_attributes",
         "send-trackbacks"
     ],
-    "modified": 1435326851
+    "modified": 1436822894
 }
