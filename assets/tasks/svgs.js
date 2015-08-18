@@ -34,7 +34,7 @@ module.exports = function(grunt, config) {
             },
             default : {
                 files: {
-                    '../views/utility/svg-defs.svg': ['img/svg-min/*.svg'],
+                    '../views/partials/svg-defs.svg': ['img/svg-min/*.svg'],
                 }
             }
         },
