@@ -28,7 +28,7 @@
 		{% endfor %}
 
 		{% for post in block.list_type_connected_content %}
-			<li>
+			<li class="list-item--{{type}}">
 				{% include 'teases/_tease-' ~ post.post_type ~ '.twig' %}
 			</li>
 		{% endfor %}
