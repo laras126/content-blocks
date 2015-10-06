@@ -53,10 +53,6 @@
 			$context['site_footer_copyright'] = get_field('site_footer_copyright', 'options');
 			$context['site_footer_credits'] = get_field('site_footer_credits', 'options');
 
-			// Restrict content pro shortcuts	
-			$context['registration_page'] = get_page_by_title('Register');
-			$context['access'] = rcp_is_active();
-
 			return $context;
 		}
 
