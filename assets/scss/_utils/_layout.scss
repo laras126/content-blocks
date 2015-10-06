@@ -1,97 +1,146 @@
 
-/// @group containers
-/// @content [Containers for screen sized]
-
-$screens: (
-    sm:    	$screen-sm,
-    md:    	$screen-md,
-    lg: 	$screen-lg
+$directions: (
+    top: flex-start,
+    bottom: flex-end,
+    center: center
 );
- 
-.contain {
-	margin: 0 auto;
-	padding: 0 $size-base;
+
+$sizes: (
+  full:   100%,
+  half:   50%,
+  third:  33.333333%,
+  fourth: 25%,
+  sixth:  16.66666667%
+);
+
+// Spaghetti for dinner?
+
+@mixin cell($size: false, $direction: false, $guttered: true, $is_first: true) {
+
+    @if $is_first == true {
+        position: relative;
+
+        @if $guttered {
+          padding-left: $gutter/2;
+          padding-right: $gutter/2;
+        }
+
+        @if $direction != false {
+          align-self: map-get($directions, $direction);
+        }   
+    }
+
+    @if $size != false {
+        flex: 0 0 map-get($sizes, $size);
+        max-width: map-get($sizes, $size); // Fix for Firefox
+    } @else {
+        flex: 1;    
+    }
+
 }
 
-@each $name, $size in $screens {  
-    .contain-#{$name} {
-   		max-width: $size;
+@mixin grid($guttered: true, $align: false, $bp: md, $wrap: row wrap) {
+
+    display: flex;
+    flex-flow: $wrap;
+    position: relative;
+        
+    @if $align != false {
+      align-items: map-get($directions, $align);
+    }
+        
+    @if $guttered {
+      margin-left: -$gutter/2;
+      margin-right: -$gutter/2;
     }
 }
 
-.contain-flex {
-	display: flex;
-	flex-flow: row wrap;
+
+
+/// @group containers
+// TODO: this could be a map
+
+.contain {
+    margin: 0 auto;
+    width: 90%;
+    position: relative;
 }
 
-.contain-flex .tease-source {
-
-	@include bp(md) {
-		margin-right: 1%;
-		margin-left: 1%;
-		width: 48%;
-	}
-	
-	margin-top: 1%;
-	margin-bottom: 1%;
-
-	background-color: $color-accent-vlight;
-	padding-left: $size-base; 
-	padding-right: $size-base; 
-	padding-bottom: $size-base; 
-	
-	// flex: 1 0;
+.contain--lg {
+    @extend .contain;
+    max-width: $screen-lg;
 }
+
+.contain--md {
+    @extend .contain;
+    max-width: $screen-md;
+}
+
+.contain--sm {
+    @extend .contain;
+    max-width: $screen-sm;
+}
+
+.contain--xl {
+    @extend .contain;
+    max-width: $screen-xl;
+}
+
+
 
 /// @group bleeds
-/// @content [Bleed an element slightly out of its container.]
+/// @description [Bleed an element slightly out of its container.]
 
-@mixin bleed($size: $size-base) {
-	@include bp(sm) {
-		margin-right: -$size-base;
-	    margin-left: -$size-base;
+@mixin bleed($size: -3%) {
+	@include bp(md) {
+		margin-right: $size;
+    margin-left: $size;
 	}
+}
+
+.bleed--baby {
+	@include bleed;
+}
+
+.bleed--big {
+  @include bleed(-10%);
 }
 
 
 
+// Prototyping classes
 
-/// @group grid
-/// @content [Gridded styles.]
+.grid {
+    @include bp(sm) {
+        @include grid;
+    }
+}
 
+.grid--center {
+    @include bp(sm) {
+        align-items: center;
+    }
+}
 
+.grid--right {
+    @include bp(sm) {
+        align-items: right;
+    }   
+}
 
-// @for $i from 1 to $grid-columns {
-//     .col-xs-#{$i} { @include make-xs-column($i); }
-//     .col-xs-push-#{$i} { @include make-xs-column-push($i); }
-//     .col-xs-pull-#{$i} { @include make-xs-column-pull($i); }
-//     // .col-xs-#{$i}-offset { @include make-xs-column-offset($i); }
-//     .col-xs-#{$i}-np { @include make-xs-column($i, 0); }
+.cell {
+    @include cell;
+}
 
-// }
-// @for $i from 1 to $grid-columns {
-//     .col-sm-#{$i} { @include make-sm-column($i); }
-//     .col-sm-push-#{$i} { @include make-sm-column-push($i); }
-//     .col-sm-pull-#{$i} { @include make-sm-column-pull($i); }
-//     .col-sm-offset-#{$i} { @include make-sm-column-offset($i); }
-//     .col-sm-#{$i}-np { @include make-sm-column($i, 0); }
-// }
-// @for $i from 1 to $grid-columns {
-//     .col-md-#{$i} { @include make-md-column($i); }
-//     .col-md-push-#{$i} { @include make-md-column-push($i); }
-//     .col-md-#{$i}-pull { @include make-md-column-pull($i); }
-//     .col-md-#{$i}-np { @include make-md-column($i, 0); }
-//     // .col-md-#{$i}-offset { @include make-md-column-offset($i); }
-// }
-// @for $i from 1 to $grid-columns {
-//     .col-lg-#{$i} { @include make-lg-column($i); }
-//     .col-lg-push-#{$i} { @include make-lg-column-push($i); }
-//     .col-lg-pull-#{$i} { @include make-lg-column-pull($i); }
-//     .col-lg-#{$i}-np { @include make-lg-column($i, 0); }
+.cell--right {
+    @include bp(sm) {
+        align-self: right;
+    }   
+}
 
-//     .col-lg-offset-#{$i} { @include make-lg-column-offset($i); }
-// }
-
-
-
+.cell--half {
+    @include bp(sm) {
+        @include cell($size: half);
+    }
+}
 
