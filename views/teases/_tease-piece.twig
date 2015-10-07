@@ -1,0 +1,13 @@
+{% extends "teases/tease.twig" %}
+
+{% block content %}
+	{% if post.thumbnail %}
+		<img src="{{post.thumbnail.src|resize(500, 500)}}" alt="{{post.post_title}} Thumbnail">
+	{% else %}
+		{# TODO: replace this with something we serve. #}
+		<img src="http://placehold.it/500x500" alt="Default Thumbnail">
+	{% endif %}
+	<h4><a href="{{post.link}}">{{post.post_title}}</a></h4>
+	<p>{{post.header_tagline}}</p>
+	<a class="btn btn--readmore" href="{{post.link}}">See piece details</a>
+{% endblock %}

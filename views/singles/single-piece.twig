@@ -1,0 +1,19 @@
+{% extends "singles/single.twig" %}
+
+{% block content %}
+	<div class="contain--md">
+		{{post.size}}
+		<h4>Available in:</h4>
+		<ul>
+		{% for style in post.get_field('styles_of_printing') %}
+			<li>{{style.medium}}</li>
+		{% endfor %}
+		</ul>
+	</div>
+	<div class="contain--md">
+		{% include 'partials/_gallery.twig' with { gallery: post.get_field('gallery') } %}
+	</div>
+	{% for block in post.get_field('blocks') %} 
+		{% include 'blocks/block-logic.twig' %}
+	{% endfor %}
+{% endblock %}
