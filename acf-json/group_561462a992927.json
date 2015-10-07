@@ -27,8 +27,8 @@
             "key": "field_56146396d95de",
             "label": "Styles of Printing",
             "name": "styles_of_printing",
-            "type": "checkbox",
-            "instructions": "Select the options available for printing.",
+            "type": "repeater",
+            "instructions": "Add the options available for printing.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -36,14 +36,33 @@
                 "class": "",
                 "id": ""
             },
-            "choices": {
-                "letterpress": "Letter Press",
-                "matte": "Matte",
-                "gloss": "Gloss"
-            },
-            "default_value": [],
-            "layout": "horizontal",
-            "toggle": 0
+            "min": "",
+            "max": "",
+            "layout": "table",
+            "button_label": "Add Row",
+            "sub_fields": [
+                {
+                    "key": "field_56153a54bf527",
+                    "label": "Medium",
+                    "name": "medium",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                }
+            ]
         },
         {
             "key": "field_561466fd521b7",
@@ -114,5 +133,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1444178089
+    "modified": 1444231791
 }
