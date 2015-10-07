@@ -4,8 +4,8 @@
     "fields": [
         {
             "key": "field_56153f2545f6b",
-            "label": "Header Gallery",
-            "name": "header_gallery",
+            "label": "Collection Gallery",
+            "name": "collection_gallery",
             "type": "gallery",
             "instructions": "Images to display in the header carousel. Dimensions TBD.",
             "required": 0,
@@ -31,7 +31,7 @@
             "key": "field_5615443f14ffb",
             "label": "Featured Image",
             "name": "featured_image",
-            "type": "text",
+            "type": "image",
             "instructions": "This image will display wherever a list of all collections is present e.g. on the \"Collections\" page or in search results.",
             "required": 0,
             "conditional_logic": 0,
@@ -40,13 +40,16 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": "",
-            "readonly": 0,
-            "disabled": 0
+            "return_format": "id",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
         }
     ],
     "location": [
@@ -66,5 +69,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1444234375
+    "modified": 1444244665
 }
