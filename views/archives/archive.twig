@@ -6,6 +6,7 @@
 
 {% block content %}
 	{% for post in posts %}
+		{% set post = TimberPost(post) %}
 		{% include 'teases/_tease-' ~ post.post_type ~ '.twig' %}
 	{% endfor %}
 {% endblock %}
