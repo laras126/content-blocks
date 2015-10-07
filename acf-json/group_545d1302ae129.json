@@ -151,7 +151,7 @@
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
-                "class": "",
+                "class": "wysiwyg-short",
                 "id": ""
             },
             "default_value": "",
@@ -165,7 +165,7 @@
             {
                 "param": "post_type",
                 "operator": "!=",
-                "value": "source"
+                "value": "post"
             }
         ]
     ],
@@ -186,5 +186,7 @@
         "featured_image",
         "send-trackbacks"
     ],
-    "modified": 1438711373
+    "active": 1,
+    "description": "",
+    "modified": 1444177815
 }

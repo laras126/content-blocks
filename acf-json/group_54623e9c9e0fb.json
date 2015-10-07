@@ -34,7 +34,7 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": 66,
+                                "width": "",
                                 "class": "",
                                 "id": ""
                             },
@@ -61,8 +61,173 @@
                             },
                             "default_value": "",
                             "tabs": "all",
-                            "toolbar": "text_based",
-                            "media_upload": 0
+                            "toolbar": "basic",
+                            "media_upload": 1
+                        },
+                        {
+                            "key": "field_55d60fa27acc7",
+                            "label": "Container",
+                            "name": "contain",
+                            "type": "radio",
+                            "instructions": "Select the container size for this block. <strong>Small<\/strong> is good for text, <strong>Medium<\/strong> for slightly bleeding images, <strong>Large<\/strong> for things like infographics and important photos.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": 50,
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "contain--sm": "Small",
+                                "contain--md": "Medium",
+                                "contain--xl": "Large",
+                                "full": "Full"
+                            },
+                            "other_choice": 0,
+                            "save_other_choice": 0,
+                            "default_value": "contain--md",
+                            "layout": "vertical"
+                        },
+                        {
+                            "key": "field_560ee9834f7ab",
+                            "label": "Class",
+                            "name": "class",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": 50,
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "55d39e4acc312",
+                    "name": "block_gallery",
+                    "label": "Gallery",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_55d8925d87eeb",
+                            "label": "Is this a gallery of videos?",
+                            "name": "video_gallery",
+                            "type": "true_false",
+                            "instructions": "Check if yes.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0
+                        },
+                        {
+                            "key": "field_55d8b660f6648",
+                            "label": "Video Instructions",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_55d8925d87eeb",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "Make sure to fill out the \"Title\", \"Caption\", and \"Vimeo ID\" fields for each image uploaded below. \r\n\r\nThumbnails for each video should be the <strong>same dimensions as the video<\/strong> and between 800 and 1200px wide.",
+                            "esc_html": 0
+                        },
+                        {
+                            "key": "field_55d39e57cc316",
+                            "label": "Images",
+                            "name": "gallery_images",
+                            "type": "gallery",
+                            "instructions": "Select images for a gallery. They can be expanded with a lightbox effect.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "min": "",
+                            "max": "",
+                            "preview_size": "thumbnail",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_55944debb3bbd",
+                            "label": "Container",
+                            "name": "contain",
+                            "type": "radio",
+                            "instructions": "Select the container size for this block. <strong>Small<\/strong> is good for text, <strong>Medium<\/strong> for slightly bleeding images, <strong>Large<\/strong> for things like infographics and important photos.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": 50,
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "contain--sm": "Small",
+                                "contain--md": "Medium",
+                                "contain--xl": "Large",
+                                "full": "Full"
+                            },
+                            "other_choice": 0,
+                            "save_other_choice": 0,
+                            "default_value": "contain--sm",
+                            "layout": "horizontal"
+                        },
+                        {
+                            "key": "field_560ee95d4f7a9",
+                            "label": "Class",
+                            "name": "class",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": 50,
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
                         }
                     ],
                     "min": "",
@@ -72,7 +237,7 @@
                     "key": "545a739c3eed9",
                     "name": "block_textimage",
                     "label": "Text and Image",
-                    "display": "row",
+                    "display": "block",
                     "sub_fields": [
                         {
                             "key": "field_545a74693eedc",
@@ -89,12 +254,13 @@
                             },
                             "choices": {
                                 "caption": "Caption",
-                                "paragraph": "Paragraph"
+                                "paragraph": "Paragraph",
+                                "prompt": "Image and Prompt"
                             },
                             "other_choice": 0,
                             "save_other_choice": 0,
                             "default_value": "",
-                            "layout": "vertical"
+                            "layout": "horizontal"
                         },
                         {
                             "key": "field_545a73ad3eeda",
@@ -152,11 +318,93 @@
                             "disabled": 0
                         },
                         {
+                            "key": "field_55d77bbc3fe42",
+                            "label": "Prompt Text",
+                            "name": "prompt_text",
+                            "type": "text",
+                            "instructions": "A sentence prompt for downloading the image.",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_545a74693eedc",
+                                        "operator": "==",
+                                        "value": "prompt"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": 75,
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_55d77d9b3b981",
+                            "label": "Download Button Text",
+                            "name": "download_button_text",
+                            "type": "text",
+                            "instructions": "e.g. \"Download PDF\".",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_545a74693eedc",
+                                        "operator": "==",
+                                        "value": "prompt"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": 25,
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_55d77be03fe43",
+                            "label": "Download Link",
+                            "name": "download_link",
+                            "type": "url",
+                            "instructions": "Link to the full image or PDF. If uploaded in WordPress, you can find this URL in the \"Media Upload\" section or paste an external link.",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_545a74693eedc",
+                                        "operator": "==",
+                                        "value": "prompt"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": ""
+                        },
+                        {
                             "key": "field_545a74233eedb",
                             "label": "Image",
                             "name": "textimage_image",
                             "type": "image",
-                            "instructions": "Upload an image. If a caption format, it's dimensions should be approximately 800x600. If paragraph, it is best to be the height of the text, likely taller than wide.",
+                            "instructions": "Recommended 1800px wide.",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -174,27 +422,73 @@
                             "max_height": "",
                             "max_size": "",
                             "mime_types": ""
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
-                },
-                {
-                    "key": "545a7b248b363",
-                    "name": "block_list",
-                    "label": "List",
-                    "display": "block",
-                    "sub_fields": [
+                        },
                         {
-                            "key": "field_54a1792d4f9c2",
-                            "label": "List Title",
-                            "name": "list_title",
-                            "type": "text",
-                            "instructions": "Only needed if it requires separation from the previous block. Limit to a few words, something like \"Our Services\".",
+                            "key": "field_55d77f702146e",
+                            "label": "Image (mobile)",
+                            "name": "textimage_image_mobile",
+                            "type": "image",
+                            "instructions": "Recommended 800px wide.",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_545a74693eedc",
+                                        "operator": "==",
+                                        "value": "prompt"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": 50,
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "thumbnail",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_55d60fc37acc8",
+                            "label": "Container",
+                            "name": "contain",
+                            "type": "radio",
+                            "instructions": "Select the container size for this block. <strong>Small<\/strong> is good for text, <strong>Medium<\/strong> for slightly bleeding images, <strong>Large<\/strong> for things like infographics and important photos.",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": 33,
+                                "width": 50,
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "contain--sm": "Small",
+                                "contain--md": "Medium",
+                                "contain--xl": "Large",
+                                "full": "Full"
+                            },
+                            "other_choice": 0,
+                            "save_other_choice": 0,
+                            "default_value": "contain--xl",
+                            "layout": "horizontal"
+                        },
+                        {
+                            "key": "field_560ee94d4f7a8",
+                            "label": "Class",
+                            "name": "class",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": 50,
                                 "class": "",
                                 "id": ""
                             },
@@ -205,232 +499,6 @@
                             "maxlength": "",
                             "readonly": 0,
                             "disabled": 0
-                        },
-                        {
-                            "key": "field_545a7b2c8b364",
-                            "label": "List Type",
-                            "name": "list_type",
-                            "type": "radio",
-                            "instructions": "Would you like to connect existing content, or create customized text?",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": 33,
-                                "class": "",
-                                "id": ""
-                            },
-                            "choices": {
-                                "free_form": "Free Form",
-                                "connected_content": "Connected Content"
-                            },
-                            "other_choice": 0,
-                            "save_other_choice": 0,
-                            "default_value": "",
-                            "layout": "vertical"
-                        },
-                        {
-                            "key": "field_54a1747ea852c",
-                            "label": "List Display",
-                            "name": "list_display",
-                            "type": "radio",
-                            "instructions": "Major is recommended for items with photos, Minor for items with icons.",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": 33,
-                                "class": "",
-                                "id": ""
-                            },
-                            "choices": {
-                                "major": "Major",
-                                "minor": "Minor"
-                            },
-                            "other_choice": 0,
-                            "save_other_choice": 0,
-                            "default_value": "",
-                            "layout": "vertical"
-                        },
-                        {
-                            "key": "field_558d5b0dc269f",
-                            "label": "List Description",
-                            "name": "list_description",
-                            "type": "textarea",
-                            "instructions": "A few sentences introducing this list. Optional.",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "maxlength": "",
-                            "rows": 4,
-                            "new_lines": "br",
-                            "readonly": 0,
-                            "disabled": 0
-                        },
-                        {
-                            "key": "field_545a7d8239b3d",
-                            "label": "Free Form List",
-                            "name": "list_type_freeform",
-                            "type": "repeater",
-                            "instructions": "Create a free form list of items with text and a accompanying images.",
-                            "required": 0,
-                            "conditional_logic": [
-                                [
-                                    {
-                                        "field": "field_545a7b2c8b364",
-                                        "operator": "==",
-                                        "value": "free_form"
-                                    }
-                                ]
-                            ],
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "min": "",
-                            "max": "",
-                            "layout": "block",
-                            "button_label": "Add Item",
-                            "sub_fields": [
-                                {
-                                    "key": "field_545a7dc339b3e",
-                                    "label": "Image",
-                                    "name": "item_image",
-                                    "type": "image",
-                                    "instructions": "300x300",
-                                    "required": 0,
-                                    "conditional_logic": [
-                                        [
-                                            {
-                                                "field": "field_54a1747ea852c",
-                                                "operator": "==",
-                                                "value": "major"
-                                            }
-                                        ]
-                                    ],
-                                    "wrapper": {
-                                        "width": 66,
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "return_format": "array",
-                                    "preview_size": "thumbnail",
-                                    "library": "all",
-                                    "min_width": "",
-                                    "min_height": "",
-                                    "min_size": "",
-                                    "max_width": "",
-                                    "max_height": "",
-                                    "max_size": "",
-                                    "mime_types": ""
-                                },
-                                {
-                                    "key": "field_558b3015123af",
-                                    "label": "SVG",
-                                    "name": "item_svg",
-                                    "type": "text",
-                                    "instructions": "Add the name of an SVG here if you are using one e.g. 'facebook-icon'. The \"Image\" field can then be left blank.",
-                                    "required": 0,
-                                    "conditional_logic": [
-                                        [
-                                            {
-                                                "field": "field_54a1747ea852c",
-                                                "operator": "==",
-                                                "value": "major"
-                                            }
-                                        ]
-                                    ],
-                                    "wrapper": {
-                                        "width": 33,
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "",
-                                    "placeholder": "",
-                                    "prepend": "",
-                                    "append": "",
-                                    "maxlength": "",
-                                    "readonly": 0,
-                                    "disabled": 0
-                                },
-                                {
-                                    "key": "field_545a7f76a0bc4",
-                                    "label": "Item Title",
-                                    "name": "item_title",
-                                    "type": "text",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "",
-                                    "placeholder": "",
-                                    "prepend": "",
-                                    "append": "",
-                                    "maxlength": "",
-                                    "readonly": 0,
-                                    "disabled": 0
-                                },
-                                {
-                                    "key": "field_545a7f60a0bc3",
-                                    "label": "Description",
-                                    "name": "item_description",
-                                    "type": "wysiwyg",
-                                    "instructions": "A 2-3 sentence description of the item.",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "",
-                                    "tabs": "visual",
-                                    "toolbar": "links_only",
-                                    "media_upload": 0
-                                }
-                            ]
-                        },
-                        {
-                            "key": "field_545fae2b2e782",
-                            "label": "Connected Content",
-                            "name": "list_type_connected_content",
-                            "type": "relationship",
-                            "instructions": "Show a list of connected content.",
-                            "required": 0,
-                            "conditional_logic": [
-                                [
-                                    {
-                                        "field": "field_545a7b2c8b364",
-                                        "operator": "==",
-                                        "value": "connected_content"
-                                    }
-                                ]
-                            ],
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "post_type": [],
-                            "taxonomy": [],
-                            "filters": [
-                                "search",
-                                "post_type",
-                                "taxonomy"
-                            ],
-                            "elements": "",
-                            "min": "",
-                            "max": "",
-                            "return_format": "object"
                         }
                     ],
                     "min": "",
@@ -457,8 +525,53 @@
                             },
                             "default_value": "",
                             "tabs": "text",
-                            "toolbar": "full",
+                            "toolbar": "basic",
                             "media_upload": 0
+                        },
+                        {
+                            "key": "field_55d6105f7acca",
+                            "label": "Container",
+                            "name": "contain",
+                            "type": "radio",
+                            "instructions": "Select the container size for this block. <strong>Small<\/strong> is good for text, <strong>Medium<\/strong> for slightly bleeding images, <strong>Large<\/strong> for things like infographics and important photos.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": 50,
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "contain--sm": "Small",
+                                "contain--md": "Medium",
+                                "contain--xl": "Large",
+                                "full": "Full"
+                            },
+                            "other_choice": 0,
+                            "save_other_choice": 0,
+                            "default_value": "contain--sm",
+                            "layout": "horizontal"
+                        },
+                        {
+                            "key": "field_560ee9404f7a7",
+                            "label": "Class",
+                            "name": "class",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": 50,
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
                         }
                     ],
                     "min": "",
@@ -527,39 +640,35 @@
                             },
                             "default_value": "",
                             "placeholder": ""
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
-                },
-                {
-                    "key": "548af71041913",
-                    "name": "block_cta",
-                    "label": "Call to Action",
-                    "display": "block",
-                    "sub_fields": [
+                        },
                         {
-                            "key": "field_548af71041917",
-                            "label": "Text",
-                            "name": "cta_text",
-                            "type": "wysiwyg",
-                            "instructions": "Something like \"Get in touch to request a quote or just to say hi.\" Tweet length.",
+                            "key": "field_55d610907accc",
+                            "label": "Container",
+                            "name": "contain",
+                            "type": "radio",
+                            "instructions": "Select the container size for this block. <strong>Small<\/strong> is good for text, <strong>Medium<\/strong> for slightly bleeding images, <strong>Large<\/strong> for things like infographics and important photos.",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "",
+                                "width": 50,
                                 "class": "",
                                 "id": ""
                             },
-                            "default_value": "",
-                            "tabs": "all",
-                            "toolbar": "links_only",
-                            "media_upload": 1
+                            "choices": {
+                                "contain--sm": "Small",
+                                "contain--md": "Medium",
+                                "contain--xl": "Large",
+                                "full": "Full"
+                            },
+                            "other_choice": 0,
+                            "save_other_choice": 0,
+                            "default_value": "contain--sm",
+                            "layout": "horizontal"
                         },
                         {
-                            "key": "field_558ae470bcbc6",
-                            "label": "Button Text",
-                            "name": "cta_btn_text",
+                            "key": "field_560ee9154f7a6",
+                            "label": "Class",
+                            "name": "class",
                             "type": "text",
                             "instructions": "",
                             "required": 0,
@@ -576,12 +685,108 @@
                             "maxlength": "",
                             "readonly": 0,
                             "disabled": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "55ef0955b03d1",
+                    "name": "block_video",
+                    "label": "Ambient Video",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_55ef08e8b256c",
+                            "label": "Ambient Video (mp4)",
+                            "name": "video_mp4",
+                            "type": "file",
+                            "instructions": "Upload a video mp4 file.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": 33,
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "url",
+                            "library": "all",
+                            "min_size": "",
+                            "max_size": "",
+                            "mime_types": ""
                         },
                         {
-                            "key": "field_558ae495bcbc7",
-                            "label": "Button URL",
-                            "name": "cta_btn_url",
-                            "type": "url",
+                            "key": "field_55ef08edb256d",
+                            "label": "Ambient Video (webm)",
+                            "name": "video_webm",
+                            "type": "file",
+                            "instructions": "Upload a webm video file.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": 33,
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "url",
+                            "library": "all",
+                            "min_size": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_55ef08f1b256e",
+                            "label": "Placeholder Image",
+                            "name": "placeholder_image",
+                            "type": "image",
+                            "instructions": "Upload an image to display while the video is loading. This should be the same dimensions as the image.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": 33,
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "url",
+                            "preview_size": "thumbnail",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_55ef098ab03d2",
+                            "label": "Container",
+                            "name": "contain",
+                            "type": "radio",
+                            "instructions": "Select the container size for this block. <strong>Small<\/strong> is good for text, <strong>Medium<\/strong> for slightly bleeding images, <strong>Large<\/strong> for things like infographics and important photos.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": 50,
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "contain--sm": "Small",
+                                "contain--md": "Medium",
+                                "contain--xl": "Large",
+                                "full": "Full"
+                            },
+                            "other_choice": 0,
+                            "save_other_choice": 0,
+                            "default_value": "contain--sm",
+                            "layout": "horizontal"
+                        },
+                        {
+                            "key": "field_560ee9014f7a5",
+                            "label": "Class",
+                            "name": "class",
+                            "type": "text",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -591,7 +796,12 @@
                                 "id": ""
                             },
                             "default_value": "",
-                            "placeholder": ""
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
                         }
                     ],
                     "min": "",
@@ -603,32 +813,51 @@
     "location": [
         [
             {
-                "param": "page_template",
-                "operator": "!=",
-                "value": "page-long_form.php"
-            },
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ],
+        [
             {
                 "param": "post_type",
+                "operator": "==",
+                "value": "chapter"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ],
+        [
+            {
+                "param": "page_type",
                 "operator": "!=",
-                "value": "source"
+                "value": "front_page"
             }
         ]
     ],
-    "menu_order": 3,
+    "menu_order": 1,
     "position": "normal",
     "style": "seamless",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": [
         "the_content",
-        "excerpt",
         "custom_fields",
         "discussion",
         "comments",
+        "revisions",
         "author",
         "format",
-        "featured_image",
+        "categories",
+        "tags",
         "send-trackbacks"
     ],
-    "modified": 1438709848
+    "active": 1,
+    "description": "",
+    "modified": 1443817929
 }
