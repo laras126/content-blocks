@@ -11,7 +11,7 @@
 	$labels = array(
 		'name'                       => _x( 'Collections', 'Taxonomy General Name', 'yld' ),
 		'singular_name'              => _x( 'Collection', 'Taxonomy Singular Name', 'yld' ),
-		'menu_name'                  => __( 'Collection', 'yld' ),
+		'menu_name'                  => __( 'Collections', 'yld' ),
 		'all_items'                  => __( 'All Collections', 'yld' ),
 		'parent_item'                => __( 'Parent Collection', 'yld' ),
 		'parent_item_colon'          => __( 'Parent Collection:', 'yld' ),
@@ -38,4 +38,3 @@
 	);
 	register_taxonomy( 'collection', array( 'piece' ), $args );
 
- ?>

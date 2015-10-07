@@ -110,7 +110,7 @@
 	$labels = array(
 		'name'                => _x( 'Project', 'Post Type General Name', 'yld' ),
 		'singular_name'       => _x( 'Project', 'Post Type Singular Name', 'yld' ),
-		'menu_name'           => __( 'Projects', 'yld' ),
+		'menu_name'           => __( 'Client Projects', 'yld' ),
 		'name_admin_bar'      => __( 'Project', 'yld' ),
 		'parent_item_colon'   => __( 'Parent Project:', 'yld' ),
 		'all_items'           => __( 'All Projects', 'yld' ),
@@ -154,5 +154,3 @@
 	register_post_type( 'project', $args );
  
 
-
- ?>
