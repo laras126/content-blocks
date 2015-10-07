@@ -1,0 +1,15 @@
+{% extends 'headers/header.twig' %}
+
+{% block before_header_content %}{% endblock %}
+
+{% block header_content %}
+	<h1>{{term.name}}</h1>
+	<p>{{term.description}}</p>	
+	<pre>Collection gallery</pre>
+	{% include 'partials/_gallery.twig' with { gallery: term.collection_gallery } %}
+	<hr>
+	<pre>Featured image</pre>
+	<img src="{{TimberImage(term.featured_image).src}}" alt="{{term.name}} Thumbnail">
+{% endblock %}
+
+{% block after_header_content %}{% endblock %}
