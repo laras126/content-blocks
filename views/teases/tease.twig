@@ -1,8 +1,13 @@
-<article class="tease tease--{{post.post_type}}" id="tease-{{post.ID}}">
+
+{# Base tease template #}
+
+{% set t_class = class %}
+
+<article class="tease--{{post.post_type}}{{ t_class ? ' ' ~ class }}">
 
 	{% block content %}
-		{# TODO: it's a hack to use guid here. It needs to be getting the link of the current ID or something. #}
-		<h4><a href="{{post.guid}}">{{post.post_title}}</a></h4>
+		{# The default markup for a tease. #}
+		<h4><a href="{{post.link}}">{{post.post_title}}</a></h4>
 		<p>{{post.header_summary}}</p>
 		<a href="{{post.guid}}" class="btn btn-readmore">Read more...</a>
 
