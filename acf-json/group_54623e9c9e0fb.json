@@ -927,6 +927,13 @@
                 "operator": "==",
                 "value": "project"
             }
+        ],
+        [
+            {
+                "param": "taxonomy",
+                "operator": "==",
+                "value": "collection"
+            }
         ]
     ],
     "menu_order": 3,
@@ -947,5 +954,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1444233890
+    "modified": 1444244654
 }
