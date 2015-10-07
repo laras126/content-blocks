@@ -1,6 +1,6 @@
 {
     "key": "group_56153f1cce040",
-    "title": "Collections Header",
+    "title": "Collections",
     "fields": [
         {
             "key": "field_56153f2545f6b",
@@ -26,6 +26,27 @@
             "max_height": "",
             "max_size": "",
             "mime_types": ""
+        },
+        {
+            "key": "field_5615443f14ffb",
+            "label": "Featured Image",
+            "name": "featured_image",
+            "type": "text",
+            "instructions": "This image will display wherever a list of all collections is present e.g. on the \"Collections\" page or in search results.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
         }
     ],
     "location": [
@@ -45,5 +66,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1444233058
+    "modified": 1444234375
 }
