@@ -1,0 +1,3 @@
+{% for image in gallery %}
+	<img src="{{image.url|resize(500)}}" alt="{{image.title}}">
+{% endfor %}
