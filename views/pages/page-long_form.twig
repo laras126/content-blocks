@@ -2,6 +2,8 @@
 
 {% block content %}
 
+	{% include 'headers/_header-page.twig' with { h_class: 'header--page' } %}
+
 	<header class="page-header">
 		<h2>{{post.title}}</h2>
 		<p class="page-tagline">{{post.summary}}</p>
@@ -10,20 +12,14 @@
 	{% include 'partials/section-nav.twig'%}
 	
 	{% for section in post.get_field('sections') %}
-		<section class="page-section" id="{{section.menu_item_title|replace({ (' '): '_' })}}">
+		<section class="section" id="{{section.menu_item_title|replace({ (' '): '_' })}}">
 			
-			<header class="section-header">
-				<div class="contain contain-md-squish">
-					<h3>{{section.section_title}}</h3>
-					<p class="lead">{{section.lead}}</p>
-				</div>
-			</header>
+			{% include 'headers/_header-single.twig' with { h_class: 'header--section' } %}
 
-				{% for block in section.blocks %} 
-					{% include 'blocks/block-logic.twig' %}
-				{% endfor %}
+			{% for block in section.blocks %} 
+				{% include 'blocks/block-logic.twig' %}
+			{% endfor %}
 
-		
 		</section>
 	{% endfor %}
 	
