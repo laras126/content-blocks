@@ -1,0 +1,118 @@
+{
+    "key": "group_561462a992927",
+    "title": "Piece Details",
+    "fields": [
+        {
+            "key": "field_561462d1d95dd",
+            "label": "Size",
+            "name": "size",
+            "type": "text",
+            "instructions": "The size or dimensions of the piece, e.g. 12\" x 10\". Be consistent in their formatting.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": 33,
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_56146396d95de",
+            "label": "Styles of Printing",
+            "name": "styles_of_printing",
+            "type": "checkbox",
+            "instructions": "Select the options available for printing.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": 66,
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "letterpress": "Letter Press",
+                "matte": "Matte",
+                "gloss": "Gloss"
+            },
+            "default_value": [],
+            "layout": "horizontal",
+            "toggle": 0
+        },
+        {
+            "key": "field_561466fd521b7",
+            "label": "Gallery",
+            "name": "gallery",
+            "type": "gallery",
+            "instructions": "Upload the images for this piece. ",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "min": "",
+            "max": "",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_561466d8d8087",
+            "label": "Long Description",
+            "name": "long_description",
+            "type": "wysiwyg",
+            "instructions": "A longer description of this piece. It should elaborate on the summary above, and can be a few paragraphs long.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "text_based",
+            "media_upload": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "piece"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content",
+        "custom_fields",
+        "discussion",
+        "comments",
+        "author",
+        "format",
+        "send-trackbacks"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1444178089
+}
