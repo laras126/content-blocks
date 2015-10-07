@@ -14,7 +14,7 @@
  * @since 		Timber 0.2
  */
 
-		$templates = array('archive.twig', 'index.twig');
+		$templates = array('archives/archive.twig', 'index.twig');
 
 		$data = Timber::get_context();
 
@@ -29,17 +29,15 @@
 			$data['title'] = 'Tagged: '.single_tag_title('', false);
 		} else if (is_category()){
 			$data['title'] = 'Category: '.single_cat_title('', false);
-			array_unshift($templates, 'archive-'.get_query_var('cat').'.twig');
+			array_unshift($templates, 'archives/archive-'.get_query_var('cat').'.twig');
 		} else if (is_tax()){
-			// TODO: Not great to have these hardcoded
-		    $term = get_queried_object();
-		    if(get_taxonomy('source_type')) {
-				$data['title'] = 'Resource: '.$term->name;
-		    }
-			// array_unshift($templates, 'taxonomy.twig', 'taxonomy-'.get_query_var('cat').'.twig');
+		    $term = get_queried_object(); // Is this the appropriate way to do it?
+			$data['title'] = $term->name;
+			$data['term'] = $term;
+			array_unshift($templates, 'archives/taxonomy-'.$term->taxonomy.'.twig', 'archives/taxonomy.twig');
 		} else if (is_post_type_archive()){
 			$data['title'] = post_type_archive_title('', false);
-			array_unshift($templates, 'archive-'.get_post_type().'.twig');
+			array_unshift($templates, 'archives/archive-'.get_post_type().'.twig');
 		}
 
 		$data['posts'] = Timber::get_posts();
