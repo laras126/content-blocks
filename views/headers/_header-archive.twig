@@ -5,12 +5,10 @@
 {% block header_content %}
 		
 	{% set display = post.header_display %}
-	<div class="contain--md">
-		<h1 class="header-title">{{title}}</h1>
+	<h1 class="header-title">{{title}}</h1>
 
-		<p class="lead lead--header">{{post.header_tagline}}</p>
-		<p class="summary summary--header">{{post.header_summary}}</p>
-	</div>
+	<p class="lead lead--header">{{post.header_tagline}}</p>
+	<p class="summary summary--header">{{post.header_summary}}</p>
 {% endblock %}
 
 {% block after_header_content %}{% endblock %}

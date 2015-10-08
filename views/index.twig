@@ -1,7 +1,10 @@
 {% extends "base.twig" %}
 
 {% block content %}
-	{% for post in posts %}
-		{% include ['teases/_tease-'~post.post_type~'.twig', 'teases/tease.twig'] %}
-	{% endfor %}
+	<div class="contain--md">
+		{% for post in posts %}
+			{% set post = TimberPost(post) %}
+			{% include ['teases/_tease-'~post.post_type~'.twig', 'teases/tease.twig'] %}
+		{% endfor %}
+	</div>
 {% endblock %}
