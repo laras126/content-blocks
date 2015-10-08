@@ -22,7 +22,7 @@
 		'not_found_in_trash'  => __( 'Not found in Trash', 'yld' ),
 	);
 	$rewrite = array(
-		'slug'                => 'collection',
+		'slug'                => 'collections',
 		'with_front'          => true,
 		'pages'               => true,
 		'feeds'               => true,
@@ -74,7 +74,7 @@
 		'not_found_in_trash'  => __( 'Not found in Trash', 'yld' ),
 	);
 	$rewrite = array(
-		'slug'                => 'piece',
+		'slug'                => 'pieces',
 		'with_front'          => true,
 		'pages'               => true,
 		'feeds'               => true,
@@ -125,7 +125,7 @@
 		'not_found_in_trash'  => __( 'Not found in Trash', 'yld' ),
 	);
 	$rewrite = array(
-		'slug'                => 'project',
+		'slug'                => 'projects',
 		'with_front'          => true,
 		'pages'               => true,
 		'feeds'               => true,
