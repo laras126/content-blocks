@@ -8,12 +8,12 @@
 <nav id="access" class="nav-main" role="navigation">
     <ul class="nav nav--site">
     {% for item in menu.items %}
-        <li class="nav-item--site">
+        <li class="nav__item--site">
             <a href="{{item.link}}">{{item.title}}</a>
             {% if item.get_children %}
-            	<ul class="nav subnav--site">
+            	<ul class="subnav--site">
 				{% for child in item.get_children %}
-					<li class="subnav-item">
+					<li class="nav__item">
 						<a href="{{child.get_link}}">{{child.title}}</a>
 					</li>
 				{% endfor %}
