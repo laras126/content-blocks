@@ -491,11 +491,32 @@ body {
 img {
   max-width: 100%; }
 
+.header--site {
+  text-align: center; }
+
 .header--page__tagline {
   margin-bottom: 20px; }
 
 .header-single {
   margin-bottom: 1.1rem; }
+
+.nav__items--site {
+  display: flex;
+  flex-flow: row wrap;
+  position: relative;
+  margin-left: -0.55rem;
+  margin-right: -0.55rem;
+  list-style-type: none;
+  padding-left: 0; }
+
+.nav__item--site {
+  position: relative;
+  padding-left: 0.55rem;
+  padding-right: 0.55rem;
+  flex: 1; }
+
+.subnav__item {
+  font-size: 0.825rem; }
 
 .nav-prev,
 .nav-next {

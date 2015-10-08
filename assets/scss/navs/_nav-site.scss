@@ -1,6 +1,22 @@
 
-.nav__item {
+.nav__items {
+
+	&--site {
+		@include grid;
+		list-style-type: none;
+		padding-left: 0;
+	}
 	
+}
+
+.nav__item {
+	&--site {
+		@include cell;
+	}
+}
+
+.subnav__item {
+	font-size: $size-sml;
 }
 
 .nav-site {

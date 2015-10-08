@@ -5,15 +5,15 @@
 <h1 class="title-site"><a href="{{site.link}}" title="{{site.name}}" rel="home">{{site.name}}</a>
 </h1>
 
-<nav id="access" class="nav-main" role="navigation">
-    <ul class="nav nav--site">
+<nav class="nav--site" role="navigation">
+    <ul class="nav__items--site">
     {% for item in menu.items %}
         <li class="nav__item--site">
             <a href="{{item.link}}">{{item.title}}</a>
             {% if item.get_children %}
             	<ul class="subnav--site">
 				{% for child in item.get_children %}
-					<li class="nav__item">
+					<li class="subnav__item">
 						<a href="{{child.get_link}}">{{child.title}}</a>
 					</li>
 				{% endfor %}
