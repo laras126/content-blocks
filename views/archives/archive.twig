@@ -1,12 +1,14 @@
-{% extends 'base.twig' %}
+{% extends 'index.twig' %}
 
 {% block before_content %}
 	{% include 'headers/_header-archive.twig' with { class : 'header--archive' } %}
 {% endblock %}
-
+{# 
 {% block content %}
+	<div class="contain--md">
 	{% for post in posts %}
 		{% set post = TimberPost(post) %}
 		{% include 'teases/_tease-' ~ post.post_type ~ '.twig' %}
 	{% endfor %}
-{% endblock %}
+	</div>
+{% endblock %} #}
